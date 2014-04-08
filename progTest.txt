@@ -12,11 +12,13 @@ program test3
 	
 program test4
 	function pouetpouet () : void 
+		{}
 	{}
 	
 program test5 
 	function pouetpouet (hugo : bool , ref mathieu : int) : bool 
-	 {}
+	 	{}
+	{}
 	
 program test6 
 	function pouetpouet (hugo : bool , ref mathieu : int) : bool 
@@ -30,7 +32,7 @@ program test7
 		var soupe : int ;
 		{
 			soupe = mathieu + 2 ;			
-			return not hugo
+			return not hugo ;
 		}
 	 {}
 		
@@ -52,7 +54,7 @@ program test8
 		
 program test9
 	var martini : int ;
-	martini = 88 
+	martini = 88 ;
 
 program test10
 	var iable : int ;
@@ -64,16 +66,16 @@ program test10
 	
 program test11
 	if true
-	then
-	else 
+	then {}
+	else {}
 	
 program test12
 	var picon : int ;
-	picon = 1+1-1 
+	picon = 1+1-1 ;
 	
 program test13
 	var picon : int ;
-	picon = 1 + 1 - 1
+	picon = 1 + 1 - 1 ;
 	
 program test14
 	var bortchtch, hugo : int ;
@@ -103,13 +105,13 @@ program test14
 			{
 				write hugo ;
 				mathieu = not mathieu ;
-				write mathieu
+				write mathieu ;
 			}
 		if mathieu != true and hugo > 1000 
 		then	
-			read hugo
+			read hugo ;
 		else
-			write false
+			write false ;
 		;
 	}
 		
