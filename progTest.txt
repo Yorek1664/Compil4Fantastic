@@ -1,0 +1,123 @@
+program test1 {}
+
+
+program test2 
+	var bortchtch : void ;
+	 {}
+	
+program test3
+	var bortchtch, hugo : int ;
+	var mathieu : bool ;
+	{}
+	
+program test4
+	function pouetpouet () : void 
+	{}
+	
+program test5 
+	function pouetpouet (hugo : bool , ref mathieu : int) : bool 
+	 {}
+	
+program test6 
+	function pouetpouet (hugo : bool , ref mathieu : int) : bool 
+		var soupe : int ;
+		soupe = mathieu + 2 ;
+	 	{}
+ 	{}
+
+program test7
+	function pouetpouet (hugo : bool , ref mathieu : int) : bool 
+		var soupe : int ;
+		{
+			soupe = mathieu + 2 ;			
+			return not hugo
+		}
+	 {}
+		
+program test8
+	function pouetpouet (hugo : bool , ref mathieu : int) : int
+		var soupe : int ;
+		{
+			if hugo
+			then
+				{
+					soupe = mathieu + 2 ;
+				}
+			else
+			{};
+			return soupe;
+			
+		}
+	 {}
+		
+program test9
+	var martini : int ;
+	martini = 88 
+
+program test10
+	var iable : int ;
+	{
+		iable = - 2 ;
+		while iable <= 10 do 
+			iable = iable + 1;	
+	}
+	
+program test11
+	if true
+	then
+	else 
+	
+program test12
+	var picon : int ;
+	picon = 1+1-1 
+	
+program test13
+	var picon : int ;
+	picon = 1 + 1 - 1
+	
+program test14
+	var bortchtch, hugo : int ;
+	var mathieu : bool ;
+	function f1 ( cadric : bool, rebaudo : int ) : void
+		var x, y, z : int ;
+		{
+			read x ;
+			write y ;
+			write 14 ;
+			x = 12 ;
+			return ;
+		}
+	function f2 ( ) : int
+		var x, y, z : int ;
+		{	
+			x = 12 ;
+			y = 15 ;
+			z = ( ( 15 * y ) * x ) / 2 ;
+			return z ;
+		}
+	{
+		hugo = f2 ( ) ;
+		bortchtch = ( ( 1 * 2 ) / ( ( 1 + 6 ) * 5 ) ) * 4 ;
+		mathieu = true ;
+		while hugo < 1000 do
+			{
+				write hugo ;
+				mathieu = not mathieu ;
+				write mathieu
+			}
+		if mathieu != true and hugo > 1000 
+		then	
+			read hugo
+		else
+			write false
+		;
+	}
+		
+
+
+	
+	
+	
+	
+	
+	
