@@ -6,15 +6,9 @@ options
 }
 
 
-progr        : expression
-            ;
-            
-
-expression 
-	: subExpr ('noeud' subExpr)
-	;
+progr        : subExpr ;
  
-subExpr : logicalAndExp (addSubtractOp logicalAndExp)*
+ subExpr : logicalAndExp (addSubtractOp logicalAndExp)*
 	;	
  
 logicalAndExp
@@ -22,7 +16,7 @@ logicalAndExp
 	;
  
 logicalOrExp
-	: comparatorExp ('caret'  comparatorExp)* 	
+	: comparatorExp ('&&'  comparatorExp)* 	
 	;
  
 comparatorExp
@@ -33,13 +27,13 @@ powExp 	: multExp ('||'   multExp)*
 	;
  
 multExp	
-	:  expressionAtom ('AMPAMP' expressionAtom)*
+	:  expressionAtom ('^' expressionAtom)*
 	;
  
 expressionAtom
 	: 
 	|   INT
-	|  ( 'LPAREN' subExpr 'RPAREN' ) 
+	|  ( '(' subExpr ')' ) 
 	;
  
  
@@ -49,7 +43,7 @@ addSubtractOp
 	;    
  
 multiplyDivideOp 
-	:	'*'
+	:	'*' 
 	|       	'/'
 	;    
  
@@ -61,8 +55,6 @@ comparatorOp
 	|	'!='
 	;
 
-ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
-    ;
 
 INT :	'0'..'9'+
     ;

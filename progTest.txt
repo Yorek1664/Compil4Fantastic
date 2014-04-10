@@ -46,7 +46,7 @@ program test8
 					soupe = mathieu + 2 ;
 				}
 			else
-			{};
+			{}
 			return soupe;
 			
 		}
@@ -112,7 +112,7 @@ program test14
 			read hugo ;
 		else
 			write false ;
-		;
+		
 	}
 		
 
