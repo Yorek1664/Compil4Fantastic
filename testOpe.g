@@ -6,34 +6,35 @@ options
 }
 
 
-progr        : subExpr ;
+progr        : add ;
  
- subExpr : logicalAndExp (addSubtractOp logicalAndExp)*
+add : mult (addSubtractOp add)?
 	;	
  
-logicalAndExp
-	: logicalOrExp (multiplyDivideOp  logicalOrExp)*	 
+mult
+	: and (multiplyDivideOp  mult)? 
+	;
+
+and
+	: comp ('&&'  and)* 	
 	;
  
-logicalOrExp
-	: comparatorExp ('&&'  comparatorExp)* 	
+comp
+	: or (comparatorOp  comp)* 	
 	;
  
-comparatorExp
-	: powExp (comparatorOp  powExp)* 	
+or 	: puis ('||'  or)*  
 	;
  
-powExp 	: multExp ('||'   multExp)*  
+puis	
+	:  expressionAtom ('^' puis)*
 	;
  
-multExp	
-	:  expressionAtom ('^' expressionAtom)*
-	;
- 
-expressionAtom
+	
+ expressionAtom
 	: 
 	|   INT
-	|  ( '(' subExpr ')' ) 
+	|  ( '(' add ')' ) 
 	;
  
  
