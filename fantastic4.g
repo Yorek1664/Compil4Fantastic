@@ -2,33 +2,35 @@ grammar fantastic4;
 
 options
 {
+    output=AST;
+    ASTLabelType=CommonTree;
     language=Java;
 }
 
 
-prog        : 'program' IDF vardeclist? funcdeclist? instr
+prog        : 'program' IDF vardeclist? funcdeclist? instr -> ^('program' IDF)
             ;
 
-vardeclist  : varsuitdecl vardeclist?
+vardeclist  : varsuitdecl vardeclist? 
             ;
             
-varsuitdecl : 'var' idenlist ':' typename ';'
+varsuitdecl : 'var' idenlist ':' typename ';' -> 'var'
             ;
             
-idenlist    : IDF
-            | IDF ',' idenlist
+idenlist    : IDF		-> ^(IDF ':')
+            | IDF ',' idenlist	-> ^(IDF ',')
             ;
             
-typename    : 'void'
-            | 'bool'
-            | 'int'
-            | 'char'
+typename    : 'void' -> 'void'
+            | 'bool' -> 'bool'
+            | 'int'  -> 'int'
+            | 'char' -> 'char'
             ;
             
 funcdeclist : funcdecl funcdeclist?
             ;
             
-funcdecl    : 'function' IDF '(' arglist ')' ':' typename vardeclist? instr
+funcdecl    : 'function' IDF '(' arglist ')' ':' typename vardeclist? instr -> ^('function' IDF '(' ')' ':')
             ;
 
 arglist     :
