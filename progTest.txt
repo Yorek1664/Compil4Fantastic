@@ -107,19 +107,10 @@ program test14
 				mathieu = not mathieu ;
 				write mathieu ;
 			}
-		if mathieu != true and hugo > 1000 
+		if mathieu != true && hugo > 1000 
 		then	
 			read hugo ;
 		else
 			write false ;
 		
 	}
-		
-
-
-	
-	
-	
-	
-	
-	
