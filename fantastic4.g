@@ -69,17 +69,64 @@ nextexpr    :
             | ',' expr
             ;
 
-expr        : cste expr2
-            | '(' expr ')' expr2
+expr        : operation
+            | IDF '(' exprlist ')' expr
+            | IDF '(' ')' expr
+            | IDF expr
             | opun expr
-            | IDF '(' exprlist ')' expr2
-            | IDF '(' ')' expr2
-            | IDF expr2
             ;
-            
-expr2		: opb expr
-			| 
-			;
+
+operation	: add
+	;
+	
+add : mult (addSubtractOp add)?
+	;	
+ 
+mult
+	: and (multiplyDivideOp  mult)? 
+	;
+
+and
+	: comp ('&&'  and)?
+	;
+ 
+comp
+	: or (comparatorOp  comp)? 	
+	;
+ 
+or 	: puis ('||'  or)? 
+	;
+ 
+puis	
+	:  expressionAtom ('^' puis)?
+	;
+ 
+	
+ expressionAtom
+	: 
+	|   cste
+	|   IDF
+	|  ( '(' add ')' ) 
+	;
+ 
+ 
+addSubtractOp 
+	: '+'
+	|   '-'
+	;    
+ 
+multiplyDivideOp 
+	: '*' 
+	|   '/'
+	;    
+ 
+comparatorOp 
+	: '>'
+	|  '<'
+	|  '>='
+	| '<='
+	| '!='
+	;
 
 cste		: CSTEINT
 			| CSTEBOOL
@@ -96,8 +143,8 @@ opb         : '+'
             | '>='
             | '=='
             | '!='
-            | 'and'
-            | 'or'
+            | '&&'
+            | '||'
             ;
             
 opun        : '-'
