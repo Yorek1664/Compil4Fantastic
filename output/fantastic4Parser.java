@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g 2014-05-20 16:30:51
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g 2014-05-20 17:04:14
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -9,7 +9,7 @@ import org.antlr.runtime.debug.*;
 import java.io.IOException;
 public class fantastic4Parser extends DebugParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "IDF", "CSTEINT", "CSTEBOOL", "CSTESTRING", "COMM", "WS", "'program'", "'var'", "':'", "';'", "','", "'void'", "'bool'", "'int'", "'char'", "'function'", "'('", "')'", "'ref'", "'if'", "'then'", "'else'", "'while'", "'do'", "'='", "'return'", "'{'", "'}'", "'read'", "'write'", "'+'", "'-'", "'*'", "'/'", "'<'", "'<='", "'>'", "'>='", "'=='", "'!='", "'and'", "'or'", "'not'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "IDF", "CSTEINT", "CSTEBOOL", "CSTESTRING", "COMM", "WS", "'program'", "'var'", "':'", "';'", "','", "'void'", "'bool'", "'int'", "'char'", "'function'", "'('", "')'", "'ref'", "'if'", "'then'", "'else'", "'while'", "'do'", "'='", "'return'", "'{'", "'}'", "'read'", "'write'", "'&&'", "'||'", "'^'", "'+'", "'-'", "'*'", "'/'", "'>'", "'<'", "'>='", "'<='", "'!='", "'=='", "'not'"
     };
     public static final int T__29=29;
     public static final int T__28=28;
@@ -39,8 +39,9 @@ public class fantastic4Parser extends DebugParser {
     public static final int T__43=43;
     public static final int T__40=40;
     public static final int T__41=41;
-    public static final int T__46=46;
     public static final int CSTEINT=5;
+    public static final int T__46=46;
+    public static final int T__47=47;
     public static final int T__44=44;
     public static final int T__45=45;
     public static final int COMM=8;
@@ -60,10 +61,11 @@ public class fantastic4Parser extends DebugParser {
     // delegators
 
     public static final String[] ruleNames = new String[] {
-        "invalidRule", "instr", "nextexpr", "idenlist", "opun", "exprlist", 
-        "writable", "expr2", "varsuitdecl", "sequence", "opb", "returnable", 
-        "typename", "cste", "arg", "funcdecl", "arglist", "prog", "expr", 
-        "vardeclist", "funcdeclist"
+        "invalidRule", "and", "expressionAtom", "cste", "arglist", "puis", 
+        "add", "funcdeclist", "writable", "returnable", "comparatorOp", 
+        "typename", "varsuitdecl", "multiplyDivideOp", "exprlist", "vardeclist", 
+        "nextexpr", "expr", "comp", "opun", "sequence", "arg", "opb", "addSubtractOp", 
+        "instr", "or", "idenlist", "prog", "funcdecl", "mult"
     };
      
         public int ruleLevel = 0;
@@ -1052,7 +1054,7 @@ public class fantastic4Parser extends DebugParser {
 
 
     // $ANTLR start "returnable"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:53:1: returnable : ( ';' | expr ';' );
+    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:53:1: returnable : expr ';' ;
     public final void returnable() throws RecognitionException {
         try { dbg.enterRule(getGrammarFileName(), "returnable");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -1060,16 +1062,62 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(53, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:53:12: ( ';' | expr ';' )
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:53:12: ( expr ';' )
+            dbg.enterAlt(1);
+
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:53:14: expr ';'
+            {
+            dbg.location(53,14);
+            pushFollow(FOLLOW_expr_in_returnable653);
+            expr();
+
+            state._fsp--;
+
+            dbg.location(53,19);
+            match(input,13,FOLLOW_13_in_returnable655); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        dbg.location(54, 4);
+
+        }
+        finally {
+            dbg.exitRule(getGrammarFileName(), "returnable");
+            decRuleLevel();
+            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        }
+
+        return ;
+    }
+    // $ANTLR end "returnable"
+
+
+    // $ANTLR start "writable"
+    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:56:1: writable : ( IDF | cste );
+    public final void writable() throws RecognitionException {
+        try { dbg.enterRule(getGrammarFileName(), "writable");
+        if ( getRuleLevel()==0 ) {dbg.commence();}
+        incRuleLevel();
+        dbg.location(56, 1);
+
+        try {
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:56:13: ( IDF | cste )
             int alt10=2;
             try { dbg.enterDecision(10);
 
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==13) ) {
+            if ( (LA10_0==IDF) ) {
                 alt10=1;
             }
-            else if ( ((LA10_0>=IDF && LA10_0<=CSTESTRING)||LA10_0==20||LA10_0==35||LA10_0==46) ) {
+            else if ( ((LA10_0>=CSTEINT && LA10_0<=CSTESTRING)) ) {
                 alt10=2;
             }
             else {
@@ -1085,100 +1133,20 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:53:14: ';'
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:56:15: IDF
                     {
-                    dbg.location(53,14);
-                    match(input,13,FOLLOW_13_in_returnable653); 
+                    dbg.location(56,15);
+                    match(input,IDF,FOLLOW_IDF_in_writable670); 
 
                     }
                     break;
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:54:6: expr ';'
-                    {
-                    dbg.location(54,6);
-                    pushFollow(FOLLOW_expr_in_returnable660);
-                    expr();
-
-                    state._fsp--;
-
-                    dbg.location(54,11);
-                    match(input,13,FOLLOW_13_in_returnable662); 
-
-                    }
-                    break;
-
-            }
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-        }
-        dbg.location(55, 4);
-
-        }
-        finally {
-            dbg.exitRule(getGrammarFileName(), "returnable");
-            decRuleLevel();
-            if ( getRuleLevel()==0 ) {dbg.terminate();}
-        }
-
-        return ;
-    }
-    // $ANTLR end "returnable"
-
-
-    // $ANTLR start "writable"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:57:1: writable : ( IDF | cste );
-    public final void writable() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "writable");
-        if ( getRuleLevel()==0 ) {dbg.commence();}
-        incRuleLevel();
-        dbg.location(57, 1);
-
-        try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:57:13: ( IDF | cste )
-            int alt11=2;
-            try { dbg.enterDecision(11);
-
-            int LA11_0 = input.LA(1);
-
-            if ( (LA11_0==IDF) ) {
-                alt11=1;
-            }
-            else if ( ((LA11_0>=CSTEINT && LA11_0<=CSTESTRING)) ) {
-                alt11=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 11, 0, input);
-
-                dbg.recognitionException(nvae);
-                throw nvae;
-            }
-            } finally {dbg.exitDecision(11);}
-
-            switch (alt11) {
-                case 1 :
-                    dbg.enterAlt(1);
-
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:57:15: IDF
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:57:15: cste
                     {
                     dbg.location(57,15);
-                    match(input,IDF,FOLLOW_IDF_in_writable677); 
-
-                    }
-                    break;
-                case 2 :
-                    dbg.enterAlt(2);
-
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:58:15: cste
-                    {
-                    dbg.location(58,15);
-                    pushFollow(FOLLOW_cste_in_writable693);
+                    pushFollow(FOLLOW_cste_in_writable686);
                     cste();
 
                     state._fsp--;
@@ -1195,7 +1163,7 @@ public class fantastic4Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(59, 13);
+        dbg.location(58, 13);
 
         }
         finally {
@@ -1210,56 +1178,56 @@ public class fantastic4Parser extends DebugParser {
 
 
     // $ANTLR start "sequence"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:61:1: sequence : ( | instr sequence );
+    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:60:1: sequence : ( | instr sequence );
     public final void sequence() throws RecognitionException {
         try { dbg.enterRule(getGrammarFileName(), "sequence");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(61, 1);
+        dbg.location(60, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:61:13: ( | instr sequence )
-            int alt12=2;
-            try { dbg.enterDecision(12);
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:60:13: ( | instr sequence )
+            int alt11=2;
+            try { dbg.enterDecision(11);
 
-            int LA12_0 = input.LA(1);
+            int LA11_0 = input.LA(1);
 
-            if ( (LA12_0==31) ) {
-                alt12=1;
+            if ( (LA11_0==31) ) {
+                alt11=1;
             }
-            else if ( (LA12_0==IDF||LA12_0==23||LA12_0==26||(LA12_0>=29 && LA12_0<=30)||(LA12_0>=32 && LA12_0<=33)) ) {
-                alt12=2;
+            else if ( (LA11_0==IDF||LA11_0==23||LA11_0==26||(LA11_0>=29 && LA11_0<=30)||(LA11_0>=32 && LA11_0<=33)) ) {
+                alt11=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 12, 0, input);
+                    new NoViableAltException("", 11, 0, input);
 
                 dbg.recognitionException(nvae);
                 throw nvae;
             }
-            } finally {dbg.exitDecision(12);}
+            } finally {dbg.exitDecision(11);}
 
-            switch (alt12) {
+            switch (alt11) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:62:13: 
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:61:13: 
                     {
                     }
                     break;
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:62:15: instr sequence
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:61:15: instr sequence
                     {
-                    dbg.location(62,15);
-                    pushFollow(FOLLOW_instr_in_sequence732);
+                    dbg.location(61,15);
+                    pushFollow(FOLLOW_instr_in_sequence725);
                     instr();
 
                     state._fsp--;
 
-                    dbg.location(62,22);
-                    pushFollow(FOLLOW_sequence_in_sequence735);
+                    dbg.location(61,22);
+                    pushFollow(FOLLOW_sequence_in_sequence728);
                     sequence();
 
                     state._fsp--;
@@ -1276,7 +1244,7 @@ public class fantastic4Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(63, 13);
+        dbg.location(62, 13);
 
         }
         finally {
@@ -1291,27 +1259,27 @@ public class fantastic4Parser extends DebugParser {
 
 
     // $ANTLR start "exprlist"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:65:1: exprlist : expr nextexpr ;
+    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:64:1: exprlist : expr nextexpr ;
     public final void exprlist() throws RecognitionException {
         try { dbg.enterRule(getGrammarFileName(), "exprlist");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(65, 1);
+        dbg.location(64, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:65:13: ( expr nextexpr )
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:64:13: ( expr nextexpr )
             dbg.enterAlt(1);
 
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:65:15: expr nextexpr
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:64:15: expr nextexpr
             {
-            dbg.location(65,15);
-            pushFollow(FOLLOW_expr_in_exprlist771);
+            dbg.location(64,15);
+            pushFollow(FOLLOW_expr_in_exprlist764);
             expr();
 
             state._fsp--;
 
-            dbg.location(65,20);
-            pushFollow(FOLLOW_nextexpr_in_exprlist773);
+            dbg.location(64,20);
+            pushFollow(FOLLOW_nextexpr_in_exprlist766);
             nextexpr();
 
             state._fsp--;
@@ -1326,7 +1294,7 @@ public class fantastic4Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(66, 13);
+        dbg.location(65, 13);
 
         }
         finally {
@@ -1341,52 +1309,52 @@ public class fantastic4Parser extends DebugParser {
 
 
     // $ANTLR start "nextexpr"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:68:1: nextexpr : ( | ',' expr );
+    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:67:1: nextexpr : ( | ',' expr );
     public final void nextexpr() throws RecognitionException {
         try { dbg.enterRule(getGrammarFileName(), "nextexpr");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(68, 1);
+        dbg.location(67, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:68:13: ( | ',' expr )
-            int alt13=2;
-            try { dbg.enterDecision(13);
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:67:13: ( | ',' expr )
+            int alt12=2;
+            try { dbg.enterDecision(12);
 
-            int LA13_0 = input.LA(1);
+            int LA12_0 = input.LA(1);
 
-            if ( (LA13_0==21) ) {
-                alt13=1;
+            if ( (LA12_0==21) ) {
+                alt12=1;
             }
-            else if ( (LA13_0==14) ) {
-                alt13=2;
+            else if ( (LA12_0==14) ) {
+                alt12=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 12, 0, input);
 
                 dbg.recognitionException(nvae);
                 throw nvae;
             }
-            } finally {dbg.exitDecision(13);}
+            } finally {dbg.exitDecision(12);}
 
-            switch (alt13) {
+            switch (alt12) {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:69:13: 
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:68:13: 
                     {
                     }
                     break;
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:69:15: ',' expr
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:68:15: ',' expr
                     {
-                    dbg.location(69,15);
-                    match(input,14,FOLLOW_14_in_nextexpr811); 
-                    dbg.location(69,19);
-                    pushFollow(FOLLOW_expr_in_nextexpr813);
+                    dbg.location(68,15);
+                    match(input,14,FOLLOW_14_in_nextexpr804); 
+                    dbg.location(68,19);
+                    pushFollow(FOLLOW_expr_in_nextexpr806);
                     expr();
 
                     state._fsp--;
@@ -1403,7 +1371,7 @@ public class fantastic4Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(70, 13);
+        dbg.location(69, 13);
 
         }
         finally {
@@ -1418,209 +1386,28 @@ public class fantastic4Parser extends DebugParser {
 
 
     // $ANTLR start "expr"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:72:1: expr : ( cste expr2 | '(' expr ')' expr2 | opun expr | IDF '(' exprlist ')' expr2 | IDF '(' ')' expr2 | IDF expr2 );
+    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:71:1: expr : add ;
     public final void expr() throws RecognitionException {
         try { dbg.enterRule(getGrammarFileName(), "expr");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(72, 1);
+        dbg.location(71, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:72:13: ( cste expr2 | '(' expr ')' expr2 | opun expr | IDF '(' exprlist ')' expr2 | IDF '(' ')' expr2 | IDF expr2 )
-            int alt14=6;
-            try { dbg.enterDecision(14);
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:71:6: ( add )
+            dbg.enterAlt(1);
 
-            switch ( input.LA(1) ) {
-            case CSTEINT:
-            case CSTEBOOL:
-            case CSTESTRING:
-                {
-                alt14=1;
-                }
-                break;
-            case 20:
-                {
-                alt14=2;
-                }
-                break;
-            case 35:
-            case 46:
-                {
-                alt14=3;
-                }
-                break;
-            case IDF:
-                {
-                int LA14_4 = input.LA(2);
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:71:8: add
+            {
+            dbg.location(71,8);
+            pushFollow(FOLLOW_add_in_expr827);
+            add();
 
-                if ( (LA14_4==20) ) {
-                    int LA14_5 = input.LA(3);
+            state._fsp--;
 
-                    if ( (LA14_5==21) ) {
-                        alt14=5;
-                    }
-                    else if ( ((LA14_5>=IDF && LA14_5<=CSTESTRING)||LA14_5==20||LA14_5==35||LA14_5==46) ) {
-                        alt14=4;
-                    }
-                    else {
-                        NoViableAltException nvae =
-                            new NoViableAltException("", 14, 5, input);
 
-                        dbg.recognitionException(nvae);
-                        throw nvae;
-                    }
-                }
-                else if ( ((LA14_4>=13 && LA14_4<=14)||LA14_4==21||LA14_4==24||LA14_4==27||(LA14_4>=34 && LA14_4<=45)) ) {
-                    alt14=6;
-                }
-                else {
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 14, 4, input);
-
-                    dbg.recognitionException(nvae);
-                    throw nvae;
-                }
-                }
-                break;
-            default:
-                NoViableAltException nvae =
-                    new NoViableAltException("", 14, 0, input);
-
-                dbg.recognitionException(nvae);
-                throw nvae;
             }
 
-            } finally {dbg.exitDecision(14);}
-
-            switch (alt14) {
-                case 1 :
-                    dbg.enterAlt(1);
-
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:72:15: cste expr2
-                    {
-                    dbg.location(72,15);
-                    pushFollow(FOLLOW_cste_in_expr841);
-                    cste();
-
-                    state._fsp--;
-
-                    dbg.location(72,20);
-                    pushFollow(FOLLOW_expr2_in_expr843);
-                    expr2();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-                case 2 :
-                    dbg.enterAlt(2);
-
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:73:15: '(' expr ')' expr2
-                    {
-                    dbg.location(73,15);
-                    match(input,20,FOLLOW_20_in_expr859); 
-                    dbg.location(73,19);
-                    pushFollow(FOLLOW_expr_in_expr861);
-                    expr();
-
-                    state._fsp--;
-
-                    dbg.location(73,24);
-                    match(input,21,FOLLOW_21_in_expr863); 
-                    dbg.location(73,28);
-                    pushFollow(FOLLOW_expr2_in_expr865);
-                    expr2();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-                case 3 :
-                    dbg.enterAlt(3);
-
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:74:15: opun expr
-                    {
-                    dbg.location(74,15);
-                    pushFollow(FOLLOW_opun_in_expr881);
-                    opun();
-
-                    state._fsp--;
-
-                    dbg.location(74,20);
-                    pushFollow(FOLLOW_expr_in_expr883);
-                    expr();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-                case 4 :
-                    dbg.enterAlt(4);
-
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:75:15: IDF '(' exprlist ')' expr2
-                    {
-                    dbg.location(75,15);
-                    match(input,IDF,FOLLOW_IDF_in_expr899); 
-                    dbg.location(75,19);
-                    match(input,20,FOLLOW_20_in_expr901); 
-                    dbg.location(75,23);
-                    pushFollow(FOLLOW_exprlist_in_expr903);
-                    exprlist();
-
-                    state._fsp--;
-
-                    dbg.location(75,32);
-                    match(input,21,FOLLOW_21_in_expr905); 
-                    dbg.location(75,36);
-                    pushFollow(FOLLOW_expr2_in_expr907);
-                    expr2();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-                case 5 :
-                    dbg.enterAlt(5);
-
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:76:15: IDF '(' ')' expr2
-                    {
-                    dbg.location(76,15);
-                    match(input,IDF,FOLLOW_IDF_in_expr923); 
-                    dbg.location(76,19);
-                    match(input,20,FOLLOW_20_in_expr925); 
-                    dbg.location(76,23);
-                    match(input,21,FOLLOW_21_in_expr927); 
-                    dbg.location(76,27);
-                    pushFollow(FOLLOW_expr2_in_expr929);
-                    expr2();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-                case 6 :
-                    dbg.enterAlt(6);
-
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:77:15: IDF expr2
-                    {
-                    dbg.location(77,15);
-                    match(input,IDF,FOLLOW_IDF_in_expr945); 
-                    dbg.location(77,19);
-                    pushFollow(FOLLOW_expr2_in_expr947);
-                    expr2();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
         }
         catch (RecognitionException re) {
             reportError(re);
@@ -1628,7 +1415,7 @@ public class fantastic4Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(78, 13);
+        dbg.location(72, 6);
 
         }
         finally {
@@ -1642,33 +1429,200 @@ public class fantastic4Parser extends DebugParser {
     // $ANTLR end "expr"
 
 
-    // $ANTLR start "expr2"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:80:1: expr2 : ( opb expr | );
-    public final void expr2() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "expr2");
+    // $ANTLR start "add"
+    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:74:1: add : mult ( addSubtractOp add )? ;
+    public final void add() throws RecognitionException {
+        try { dbg.enterRule(getGrammarFileName(), "add");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(80, 1);
+        dbg.location(74, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:80:8: ( opb expr | )
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:74:5: ( mult ( addSubtractOp add )? )
+            dbg.enterAlt(1);
+
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:74:7: mult ( addSubtractOp add )?
+            {
+            dbg.location(74,7);
+            pushFollow(FOLLOW_mult_in_add842);
+            mult();
+
+            state._fsp--;
+
+            dbg.location(74,12);
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:74:12: ( addSubtractOp add )?
+            int alt13=2;
+            try { dbg.enterSubRule(13);
+            try { dbg.enterDecision(13);
+
+            int LA13_0 = input.LA(1);
+
+            if ( ((LA13_0>=37 && LA13_0<=38)) ) {
+                alt13=1;
+            }
+            } finally {dbg.exitDecision(13);}
+
+            switch (alt13) {
+                case 1 :
+                    dbg.enterAlt(1);
+
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:74:13: addSubtractOp add
+                    {
+                    dbg.location(74,13);
+                    pushFollow(FOLLOW_addSubtractOp_in_add845);
+                    addSubtractOp();
+
+                    state._fsp--;
+
+                    dbg.location(74,27);
+                    pushFollow(FOLLOW_add_in_add847);
+                    add();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+            } finally {dbg.exitSubRule(13);}
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        dbg.location(75, 2);
+
+        }
+        finally {
+            dbg.exitRule(getGrammarFileName(), "add");
+            decRuleLevel();
+            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        }
+
+        return ;
+    }
+    // $ANTLR end "add"
+
+
+    // $ANTLR start "mult"
+    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:77:1: mult : and ( multiplyDivideOp mult )? ;
+    public final void mult() throws RecognitionException {
+        try { dbg.enterRule(getGrammarFileName(), "mult");
+        if ( getRuleLevel()==0 ) {dbg.commence();}
+        incRuleLevel();
+        dbg.location(77, 1);
+
+        try {
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:78:2: ( and ( multiplyDivideOp mult )? )
+            dbg.enterAlt(1);
+
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:78:4: and ( multiplyDivideOp mult )?
+            {
+            dbg.location(78,4);
+            pushFollow(FOLLOW_and_in_mult862);
+            and();
+
+            state._fsp--;
+
+            dbg.location(78,8);
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:78:8: ( multiplyDivideOp mult )?
+            int alt14=2;
+            try { dbg.enterSubRule(14);
+            try { dbg.enterDecision(14);
+
+            int LA14_0 = input.LA(1);
+
+            if ( ((LA14_0>=39 && LA14_0<=40)) ) {
+                alt14=1;
+            }
+            } finally {dbg.exitDecision(14);}
+
+            switch (alt14) {
+                case 1 :
+                    dbg.enterAlt(1);
+
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:78:9: multiplyDivideOp mult
+                    {
+                    dbg.location(78,9);
+                    pushFollow(FOLLOW_multiplyDivideOp_in_mult865);
+                    multiplyDivideOp();
+
+                    state._fsp--;
+
+                    dbg.location(78,27);
+                    pushFollow(FOLLOW_mult_in_mult868);
+                    mult();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+            } finally {dbg.exitSubRule(14);}
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        dbg.location(79, 2);
+
+        }
+        finally {
+            dbg.exitRule(getGrammarFileName(), "mult");
+            decRuleLevel();
+            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        }
+
+        return ;
+    }
+    // $ANTLR end "mult"
+
+
+    // $ANTLR start "and"
+    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:81:1: and : comp ( '&&' and )? ;
+    public final void and() throws RecognitionException {
+        try { dbg.enterRule(getGrammarFileName(), "and");
+        if ( getRuleLevel()==0 ) {dbg.commence();}
+        incRuleLevel();
+        dbg.location(81, 1);
+
+        try {
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:82:2: ( comp ( '&&' and )? )
+            dbg.enterAlt(1);
+
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:82:4: comp ( '&&' and )?
+            {
+            dbg.location(82,4);
+            pushFollow(FOLLOW_comp_in_and882);
+            comp();
+
+            state._fsp--;
+
+            dbg.location(82,9);
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:82:9: ( '&&' and )?
             int alt15=2;
+            try { dbg.enterSubRule(15);
             try { dbg.enterDecision(15);
 
             int LA15_0 = input.LA(1);
 
-            if ( ((LA15_0>=34 && LA15_0<=45)) ) {
+            if ( (LA15_0==34) ) {
                 alt15=1;
-            }
-            else if ( ((LA15_0>=13 && LA15_0<=14)||LA15_0==21||LA15_0==24||LA15_0==27) ) {
-                alt15=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 15, 0, input);
-
-                dbg.recognitionException(nvae);
-                throw nvae;
             }
             } finally {dbg.exitDecision(15);}
 
@@ -1676,28 +1630,438 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:80:10: opb expr
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:82:10: '&&' and
                     {
-                    dbg.location(80,10);
-                    pushFollow(FOLLOW_opb_in_expr2981);
-                    opb();
-
-                    state._fsp--;
-
-                    dbg.location(80,14);
-                    pushFollow(FOLLOW_expr_in_expr2983);
-                    expr();
+                    dbg.location(82,10);
+                    match(input,34,FOLLOW_34_in_and885); 
+                    dbg.location(82,16);
+                    pushFollow(FOLLOW_and_in_and888);
+                    and();
 
                     state._fsp--;
 
 
                     }
                     break;
+
+            }
+            } finally {dbg.exitSubRule(15);}
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        dbg.location(83, 2);
+
+        }
+        finally {
+            dbg.exitRule(getGrammarFileName(), "and");
+            decRuleLevel();
+            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        }
+
+        return ;
+    }
+    // $ANTLR end "and"
+
+
+    // $ANTLR start "comp"
+    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:85:1: comp : or ( comparatorOp comp )? ;
+    public final void comp() throws RecognitionException {
+        try { dbg.enterRule(getGrammarFileName(), "comp");
+        if ( getRuleLevel()==0 ) {dbg.commence();}
+        incRuleLevel();
+        dbg.location(85, 1);
+
+        try {
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:86:2: ( or ( comparatorOp comp )? )
+            dbg.enterAlt(1);
+
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:86:4: or ( comparatorOp comp )?
+            {
+            dbg.location(86,4);
+            pushFollow(FOLLOW_or_in_comp902);
+            or();
+
+            state._fsp--;
+
+            dbg.location(86,7);
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:86:7: ( comparatorOp comp )?
+            int alt16=2;
+            try { dbg.enterSubRule(16);
+            try { dbg.enterDecision(16);
+
+            int LA16_0 = input.LA(1);
+
+            if ( ((LA16_0>=41 && LA16_0<=45)) ) {
+                alt16=1;
+            }
+            } finally {dbg.exitDecision(16);}
+
+            switch (alt16) {
+                case 1 :
+                    dbg.enterAlt(1);
+
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:86:8: comparatorOp comp
+                    {
+                    dbg.location(86,8);
+                    pushFollow(FOLLOW_comparatorOp_in_comp905);
+                    comparatorOp();
+
+                    state._fsp--;
+
+                    dbg.location(86,22);
+                    pushFollow(FOLLOW_comp_in_comp908);
+                    comp();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+            } finally {dbg.exitSubRule(16);}
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        dbg.location(87, 2);
+
+        }
+        finally {
+            dbg.exitRule(getGrammarFileName(), "comp");
+            decRuleLevel();
+            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        }
+
+        return ;
+    }
+    // $ANTLR end "comp"
+
+
+    // $ANTLR start "or"
+    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:89:1: or : puis ( '||' or )? ;
+    public final void or() throws RecognitionException {
+        try { dbg.enterRule(getGrammarFileName(), "or");
+        if ( getRuleLevel()==0 ) {dbg.commence();}
+        incRuleLevel();
+        dbg.location(89, 1);
+
+        try {
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:89:5: ( puis ( '||' or )? )
+            dbg.enterAlt(1);
+
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:89:7: puis ( '||' or )?
+            {
+            dbg.location(89,7);
+            pushFollow(FOLLOW_puis_in_or924);
+            puis();
+
+            state._fsp--;
+
+            dbg.location(89,12);
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:89:12: ( '||' or )?
+            int alt17=2;
+            try { dbg.enterSubRule(17);
+            try { dbg.enterDecision(17);
+
+            int LA17_0 = input.LA(1);
+
+            if ( (LA17_0==35) ) {
+                alt17=1;
+            }
+            } finally {dbg.exitDecision(17);}
+
+            switch (alt17) {
+                case 1 :
+                    dbg.enterAlt(1);
+
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:89:13: '||' or
+                    {
+                    dbg.location(89,13);
+                    match(input,35,FOLLOW_35_in_or927); 
+                    dbg.location(89,19);
+                    pushFollow(FOLLOW_or_in_or930);
+                    or();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+            } finally {dbg.exitSubRule(17);}
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        dbg.location(90, 2);
+
+        }
+        finally {
+            dbg.exitRule(getGrammarFileName(), "or");
+            decRuleLevel();
+            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        }
+
+        return ;
+    }
+    // $ANTLR end "or"
+
+
+    // $ANTLR start "puis"
+    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:92:1: puis : expressionAtom ( '^' puis )? ;
+    public final void puis() throws RecognitionException {
+        try { dbg.enterRule(getGrammarFileName(), "puis");
+        if ( getRuleLevel()==0 ) {dbg.commence();}
+        incRuleLevel();
+        dbg.location(92, 1);
+
+        try {
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:93:2: ( expressionAtom ( '^' puis )? )
+            dbg.enterAlt(1);
+
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:93:5: expressionAtom ( '^' puis )?
+            {
+            dbg.location(93,5);
+            pushFollow(FOLLOW_expressionAtom_in_puis947);
+            expressionAtom();
+
+            state._fsp--;
+
+            dbg.location(93,20);
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:93:20: ( '^' puis )?
+            int alt18=2;
+            try { dbg.enterSubRule(18);
+            try { dbg.enterDecision(18);
+
+            int LA18_0 = input.LA(1);
+
+            if ( (LA18_0==36) ) {
+                alt18=1;
+            }
+            } finally {dbg.exitDecision(18);}
+
+            switch (alt18) {
+                case 1 :
+                    dbg.enterAlt(1);
+
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:93:21: '^' puis
+                    {
+                    dbg.location(93,21);
+                    match(input,36,FOLLOW_36_in_puis950); 
+                    dbg.location(93,25);
+                    pushFollow(FOLLOW_puis_in_puis952);
+                    puis();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+            } finally {dbg.exitSubRule(18);}
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        dbg.location(94, 2);
+
+        }
+        finally {
+            dbg.exitRule(getGrammarFileName(), "puis");
+            decRuleLevel();
+            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        }
+
+        return ;
+    }
+    // $ANTLR end "puis"
+
+
+    // $ANTLR start "expressionAtom"
+    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:97:2: expressionAtom : ( | cste | IDF | ( '(' add ')' ) | IDF '(' exprlist ')' );
+    public final void expressionAtom() throws RecognitionException {
+        try { dbg.enterRule(getGrammarFileName(), "expressionAtom");
+        if ( getRuleLevel()==0 ) {dbg.commence();}
+        incRuleLevel();
+        dbg.location(97, 2);
+
+        try {
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:98:2: ( | cste | IDF | ( '(' add ')' ) | IDF '(' exprlist ')' )
+            int alt19=5;
+            try { dbg.enterDecision(19);
+
+            switch ( input.LA(1) ) {
+            case 13:
+            case 14:
+            case 21:
+            case 24:
+            case 27:
+            case 34:
+            case 35:
+            case 36:
+            case 37:
+            case 38:
+            case 39:
+            case 40:
+            case 41:
+            case 42:
+            case 43:
+            case 44:
+            case 45:
+                {
+                alt19=1;
+                }
+                break;
+            case CSTEINT:
+            case CSTEBOOL:
+            case CSTESTRING:
+                {
+                alt19=2;
+                }
+                break;
+            case IDF:
+                {
+                int LA19_3 = input.LA(2);
+
+                if ( (LA19_3==20) ) {
+                    alt19=5;
+                }
+                else if ( ((LA19_3>=13 && LA19_3<=14)||LA19_3==21||LA19_3==24||LA19_3==27||(LA19_3>=34 && LA19_3<=45)) ) {
+                    alt19=3;
+                }
+                else {
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 19, 3, input);
+
+                    dbg.recognitionException(nvae);
+                    throw nvae;
+                }
+                }
+                break;
+            case 20:
+                {
+                alt19=4;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 19, 0, input);
+
+                dbg.recognitionException(nvae);
+                throw nvae;
+            }
+
+            } finally {dbg.exitDecision(19);}
+
+            switch (alt19) {
+                case 1 :
+                    dbg.enterAlt(1);
+
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:99:2: 
+                    {
+                    }
+                    break;
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:82:4: 
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:99:6: cste
                     {
+                    dbg.location(99,6);
+                    pushFollow(FOLLOW_cste_in_expressionAtom975);
+                    cste();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+                case 3 :
+                    dbg.enterAlt(3);
+
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:100:6: IDF
+                    {
+                    dbg.location(100,6);
+                    match(input,IDF,FOLLOW_IDF_in_expressionAtom982); 
+
+                    }
+                    break;
+                case 4 :
+                    dbg.enterAlt(4);
+
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:101:5: ( '(' add ')' )
+                    {
+                    dbg.location(101,5);
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:101:5: ( '(' add ')' )
+                    dbg.enterAlt(1);
+
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:101:7: '(' add ')'
+                    {
+                    dbg.location(101,7);
+                    match(input,20,FOLLOW_20_in_expressionAtom990); 
+                    dbg.location(101,11);
+                    pushFollow(FOLLOW_add_in_expressionAtom992);
+                    add();
+
+                    state._fsp--;
+
+                    dbg.location(101,15);
+                    match(input,21,FOLLOW_21_in_expressionAtom994); 
+
+                    }
+
+
+                    }
+                    break;
+                case 5 :
+                    dbg.enterAlt(5);
+
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:102:4: IDF '(' exprlist ')'
+                    {
+                    dbg.location(102,4);
+                    match(input,IDF,FOLLOW_IDF_in_expressionAtom1001); 
+                    dbg.location(102,8);
+                    match(input,20,FOLLOW_20_in_expressionAtom1003); 
+                    dbg.location(102,12);
+                    pushFollow(FOLLOW_exprlist_in_expressionAtom1005);
+                    exprlist();
+
+                    state._fsp--;
+
+                    dbg.location(102,21);
+                    match(input,21,FOLLOW_21_in_expressionAtom1007); 
+
                     }
                     break;
 
@@ -1709,35 +2073,182 @@ public class fantastic4Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(82, 4);
+        dbg.location(103, 2);
 
         }
         finally {
-            dbg.exitRule(getGrammarFileName(), "expr2");
+            dbg.exitRule(getGrammarFileName(), "expressionAtom");
             decRuleLevel();
             if ( getRuleLevel()==0 ) {dbg.terminate();}
         }
 
         return ;
     }
-    // $ANTLR end "expr2"
+    // $ANTLR end "expressionAtom"
 
 
-    // $ANTLR start "cste"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:84:1: cste : ( CSTEINT | CSTEBOOL | CSTESTRING );
-    public final void cste() throws RecognitionException {
-        try { dbg.enterRule(getGrammarFileName(), "cste");
+    // $ANTLR start "addSubtractOp"
+    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:106:1: addSubtractOp : ( '+' | '-' );
+    public final void addSubtractOp() throws RecognitionException {
+        try { dbg.enterRule(getGrammarFileName(), "addSubtractOp");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(84, 1);
+        dbg.location(106, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:84:7: ( CSTEINT | CSTEBOOL | CSTESTRING )
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:107:2: ( '+' | '-' )
             dbg.enterAlt(1);
 
             // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:
             {
-            dbg.location(84,7);
+            dbg.location(107,2);
+            if ( (input.LA(1)>=37 && input.LA(1)<=38) ) {
+                input.consume();
+                state.errorRecovery=false;
+            }
+            else {
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                dbg.recognitionException(mse);
+                throw mse;
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        dbg.location(109, 2);
+
+        }
+        finally {
+            dbg.exitRule(getGrammarFileName(), "addSubtractOp");
+            decRuleLevel();
+            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        }
+
+        return ;
+    }
+    // $ANTLR end "addSubtractOp"
+
+
+    // $ANTLR start "multiplyDivideOp"
+    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:111:1: multiplyDivideOp : ( '*' | '/' );
+    public final void multiplyDivideOp() throws RecognitionException {
+        try { dbg.enterRule(getGrammarFileName(), "multiplyDivideOp");
+        if ( getRuleLevel()==0 ) {dbg.commence();}
+        incRuleLevel();
+        dbg.location(111, 1);
+
+        try {
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:112:2: ( '*' | '/' )
+            dbg.enterAlt(1);
+
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:
+            {
+            dbg.location(112,2);
+            if ( (input.LA(1)>=39 && input.LA(1)<=40) ) {
+                input.consume();
+                state.errorRecovery=false;
+            }
+            else {
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                dbg.recognitionException(mse);
+                throw mse;
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        dbg.location(114, 2);
+
+        }
+        finally {
+            dbg.exitRule(getGrammarFileName(), "multiplyDivideOp");
+            decRuleLevel();
+            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        }
+
+        return ;
+    }
+    // $ANTLR end "multiplyDivideOp"
+
+
+    // $ANTLR start "comparatorOp"
+    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:116:1: comparatorOp : ( '>' | '<' | '>=' | '<=' | '!=' );
+    public final void comparatorOp() throws RecognitionException {
+        try { dbg.enterRule(getGrammarFileName(), "comparatorOp");
+        if ( getRuleLevel()==0 ) {dbg.commence();}
+        incRuleLevel();
+        dbg.location(116, 1);
+
+        try {
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:117:2: ( '>' | '<' | '>=' | '<=' | '!=' )
+            dbg.enterAlt(1);
+
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:
+            {
+            dbg.location(117,2);
+            if ( (input.LA(1)>=41 && input.LA(1)<=45) ) {
+                input.consume();
+                state.errorRecovery=false;
+            }
+            else {
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                dbg.recognitionException(mse);
+                throw mse;
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        dbg.location(122, 2);
+
+        }
+        finally {
+            dbg.exitRule(getGrammarFileName(), "comparatorOp");
+            decRuleLevel();
+            if ( getRuleLevel()==0 ) {dbg.terminate();}
+        }
+
+        return ;
+    }
+    // $ANTLR end "comparatorOp"
+
+
+    // $ANTLR start "cste"
+    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:124:1: cste : ( CSTEINT | CSTEBOOL | CSTESTRING );
+    public final void cste() throws RecognitionException {
+        try { dbg.enterRule(getGrammarFileName(), "cste");
+        if ( getRuleLevel()==0 ) {dbg.commence();}
+        incRuleLevel();
+        dbg.location(124, 1);
+
+        try {
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:124:7: ( CSTEINT | CSTEBOOL | CSTESTRING )
+            dbg.enterAlt(1);
+
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:
+            {
+            dbg.location(124,7);
             if ( (input.LA(1)>=CSTEINT && input.LA(1)<=CSTESTRING) ) {
                 input.consume();
                 state.errorRecovery=false;
@@ -1758,7 +2269,7 @@ public class fantastic4Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(87, 4);
+        dbg.location(127, 4);
 
         }
         finally {
@@ -1773,21 +2284,21 @@ public class fantastic4Parser extends DebugParser {
 
 
     // $ANTLR start "opb"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:89:1: opb : ( '+' | '-' | '*' | '/' | '<' | '<=' | '>' | '>=' | '==' | '!=' | 'and' | 'or' );
+    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:129:1: opb : ( '+' | '-' | '*' | '/' | '<' | '<=' | '>' | '>=' | '==' | '!=' | '&&' | '||' );
     public final void opb() throws RecognitionException {
         try { dbg.enterRule(getGrammarFileName(), "opb");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(89, 1);
+        dbg.location(129, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:89:13: ( '+' | '-' | '*' | '/' | '<' | '<=' | '>' | '>=' | '==' | '!=' | 'and' | 'or' )
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:129:13: ( '+' | '-' | '*' | '/' | '<' | '<=' | '>' | '>=' | '==' | '!=' | '&&' | '||' )
             dbg.enterAlt(1);
 
             // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:
             {
-            dbg.location(89,13);
-            if ( (input.LA(1)>=34 && input.LA(1)<=45) ) {
+            dbg.location(129,13);
+            if ( (input.LA(1)>=34 && input.LA(1)<=35)||(input.LA(1)>=37 && input.LA(1)<=46) ) {
                 input.consume();
                 state.errorRecovery=false;
             }
@@ -1807,7 +2318,7 @@ public class fantastic4Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(101, 13);
+        dbg.location(141, 13);
 
         }
         finally {
@@ -1822,21 +2333,21 @@ public class fantastic4Parser extends DebugParser {
 
 
     // $ANTLR start "opun"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:103:1: opun : ( '-' | 'not' );
+    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:143:1: opun : ( '-' | 'not' );
     public final void opun() throws RecognitionException {
         try { dbg.enterRule(getGrammarFileName(), "opun");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(103, 1);
+        dbg.location(143, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:103:13: ( '-' | 'not' )
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:143:13: ( '-' | 'not' )
             dbg.enterAlt(1);
 
             // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:
             {
-            dbg.location(103,13);
-            if ( input.LA(1)==35||input.LA(1)==46 ) {
+            dbg.location(143,13);
+            if ( input.LA(1)==38||input.LA(1)==47 ) {
                 input.consume();
                 state.errorRecovery=false;
             }
@@ -1856,7 +2367,7 @@ public class fantastic4Parser extends DebugParser {
         }
         finally {
         }
-        dbg.location(105, 13);
+        dbg.location(145, 13);
 
         }
         finally {
@@ -1883,7 +2394,7 @@ public class fantastic4Parser extends DebugParser {
     static final String DFA7_maxS =
         "\1\26\1\uffff\1\14\1\4\1\22\1\14\1\25\1\22\2\uffff\1\25";
     static final String DFA7_acceptS =
-        "\1\uffff\1\1\6\uffff\1\3\1\2\1\uffff";
+        "\1\uffff\1\1\6\uffff\1\2\1\3\1\uffff";
     static final String DFA7_specialS =
         "\13\uffff}>";
     static final String[] DFA7_transitionS = {
@@ -1893,11 +2404,11 @@ public class fantastic4Parser extends DebugParser {
             "\1\5",
             "\4\6",
             "\1\7",
-            "\1\10\6\uffff\1\11",
+            "\1\11\6\uffff\1\10",
             "\4\12",
             "",
             "",
-            "\1\10\6\uffff\1\11"
+            "\1\11\6\uffff\1\10"
     };
 
     static final short[] DFA7_eot = DFA.unpackEncodedString(DFA7_eotS);
@@ -2039,24 +2550,24 @@ public class fantastic4Parser extends DebugParser {
     public static final BitSet FOLLOW_IDF_in_arg447 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_12_in_arg449 = new BitSet(new long[]{0x0000000000078000L});
     public static final BitSet FOLLOW_typename_in_arg451 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_instr478 = new BitSet(new long[]{0x00004008001000F0L});
+    public static final BitSet FOLLOW_23_in_instr478 = new BitSet(new long[]{0x00000010001000F0L});
     public static final BitSet FOLLOW_expr_in_instr480 = new BitSet(new long[]{0x0000000001000000L});
     public static final BitSet FOLLOW_24_in_instr482 = new BitSet(new long[]{0x0000000364880810L});
     public static final BitSet FOLLOW_instr_in_instr484 = new BitSet(new long[]{0x0000000002000000L});
     public static final BitSet FOLLOW_25_in_instr486 = new BitSet(new long[]{0x0000000364880810L});
     public static final BitSet FOLLOW_instr_in_instr488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_instr504 = new BitSet(new long[]{0x00004008001000F0L});
+    public static final BitSet FOLLOW_26_in_instr504 = new BitSet(new long[]{0x00000010001000F0L});
     public static final BitSet FOLLOW_expr_in_instr506 = new BitSet(new long[]{0x0000000008000000L});
     public static final BitSet FOLLOW_27_in_instr508 = new BitSet(new long[]{0x0000000364880810L});
     public static final BitSet FOLLOW_instr_in_instr510 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_IDF_in_instr526 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_instr528 = new BitSet(new long[]{0x00004008001000F0L});
+    public static final BitSet FOLLOW_28_in_instr528 = new BitSet(new long[]{0x00000010001000F0L});
     public static final BitSet FOLLOW_expr_in_instr530 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_13_in_instr532 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_instr548 = new BitSet(new long[]{0x00004008001020F0L});
+    public static final BitSet FOLLOW_29_in_instr548 = new BitSet(new long[]{0x00000010001000F0L});
     public static final BitSet FOLLOW_returnable_in_instr550 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_IDF_in_instr566 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_instr568 = new BitSet(new long[]{0x00004008001000F0L});
+    public static final BitSet FOLLOW_20_in_instr568 = new BitSet(new long[]{0x00000010001000F0L});
     public static final BitSet FOLLOW_exprlist_in_instr570 = new BitSet(new long[]{0x0000000000200000L});
     public static final BitSet FOLLOW_21_in_instr572 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_30_in_instr588 = new BitSet(new long[]{0x00000003E4880810L});
@@ -2068,38 +2579,47 @@ public class fantastic4Parser extends DebugParser {
     public static final BitSet FOLLOW_33_in_instr628 = new BitSet(new long[]{0x00000000000000F0L});
     public static final BitSet FOLLOW_writable_in_instr630 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_13_in_instr632 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_returnable653 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expr_in_returnable660 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_returnable662 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDF_in_writable677 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_cste_in_writable693 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_instr_in_sequence732 = new BitSet(new long[]{0x0000000364880810L});
-    public static final BitSet FOLLOW_sequence_in_sequence735 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expr_in_exprlist771 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_nextexpr_in_exprlist773 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_nextexpr811 = new BitSet(new long[]{0x00004008001000F0L});
-    public static final BitSet FOLLOW_expr_in_nextexpr813 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_cste_in_expr841 = new BitSet(new long[]{0x00003FFC00000000L});
-    public static final BitSet FOLLOW_expr2_in_expr843 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_expr859 = new BitSet(new long[]{0x00004008001000F0L});
-    public static final BitSet FOLLOW_expr_in_expr861 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_expr863 = new BitSet(new long[]{0x00003FFC00000000L});
-    public static final BitSet FOLLOW_expr2_in_expr865 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_opun_in_expr881 = new BitSet(new long[]{0x00004008001000F0L});
-    public static final BitSet FOLLOW_expr_in_expr883 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDF_in_expr899 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_expr901 = new BitSet(new long[]{0x00004008001000F0L});
-    public static final BitSet FOLLOW_exprlist_in_expr903 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_expr905 = new BitSet(new long[]{0x00003FFC00000000L});
-    public static final BitSet FOLLOW_expr2_in_expr907 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDF_in_expr923 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_expr925 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_expr927 = new BitSet(new long[]{0x00003FFC00000000L});
-    public static final BitSet FOLLOW_expr2_in_expr929 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDF_in_expr945 = new BitSet(new long[]{0x00003FFC00000000L});
-    public static final BitSet FOLLOW_expr2_in_expr947 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_opb_in_expr2981 = new BitSet(new long[]{0x00004008001000F0L});
-    public static final BitSet FOLLOW_expr_in_expr2983 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expr_in_returnable653 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_13_in_returnable655 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDF_in_writable670 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_cste_in_writable686 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_instr_in_sequence725 = new BitSet(new long[]{0x0000000364880810L});
+    public static final BitSet FOLLOW_sequence_in_sequence728 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expr_in_exprlist764 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_nextexpr_in_exprlist766 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_nextexpr804 = new BitSet(new long[]{0x00000010001000F0L});
+    public static final BitSet FOLLOW_expr_in_nextexpr806 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_add_in_expr827 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_mult_in_add842 = new BitSet(new long[]{0x0000006000000002L});
+    public static final BitSet FOLLOW_addSubtractOp_in_add845 = new BitSet(new long[]{0x00000010001000F0L});
+    public static final BitSet FOLLOW_add_in_add847 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_and_in_mult862 = new BitSet(new long[]{0x0000018000000002L});
+    public static final BitSet FOLLOW_multiplyDivideOp_in_mult865 = new BitSet(new long[]{0x00000010001000F0L});
+    public static final BitSet FOLLOW_mult_in_mult868 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_comp_in_and882 = new BitSet(new long[]{0x0000000400000002L});
+    public static final BitSet FOLLOW_34_in_and885 = new BitSet(new long[]{0x00000010001000F0L});
+    public static final BitSet FOLLOW_and_in_and888 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_or_in_comp902 = new BitSet(new long[]{0x00003E0000000002L});
+    public static final BitSet FOLLOW_comparatorOp_in_comp905 = new BitSet(new long[]{0x00000010001000F0L});
+    public static final BitSet FOLLOW_comp_in_comp908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_puis_in_or924 = new BitSet(new long[]{0x0000000800000002L});
+    public static final BitSet FOLLOW_35_in_or927 = new BitSet(new long[]{0x00000010001000F0L});
+    public static final BitSet FOLLOW_or_in_or930 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expressionAtom_in_puis947 = new BitSet(new long[]{0x0000001000000002L});
+    public static final BitSet FOLLOW_36_in_puis950 = new BitSet(new long[]{0x00000010001000F0L});
+    public static final BitSet FOLLOW_puis_in_puis952 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_cste_in_expressionAtom975 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDF_in_expressionAtom982 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_expressionAtom990 = new BitSet(new long[]{0x00000010001000F0L});
+    public static final BitSet FOLLOW_add_in_expressionAtom992 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_expressionAtom994 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDF_in_expressionAtom1001 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_expressionAtom1003 = new BitSet(new long[]{0x00000010001000F0L});
+    public static final BitSet FOLLOW_exprlist_in_expressionAtom1005 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_expressionAtom1007 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_set_in_addSubtractOp0 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_set_in_multiplyDivideOp0 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_set_in_comparatorOp0 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_cste0 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_opb0 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_opun0 = new BitSet(new long[]{0x0000000000000002L});

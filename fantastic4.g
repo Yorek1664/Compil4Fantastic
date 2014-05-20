@@ -50,8 +50,7 @@ instr       : 'if' expr 'then' instr 'else' instr
             | 'write' writable ';'
             ;
 
-returnable	: ';'
-			| expr ';'
+returnable	: expr ';'
 			;
 
 writable    : IDF
@@ -69,15 +68,8 @@ nextexpr    :
             | ',' expr
             ;
 
-expr        : operation
-            | IDF '(' exprlist ')' expr
-            | IDF '(' ')' expr
-            | IDF expr
-            | opun expr
-            ;
-
-operation	: add
-	;
+expr	: add
+	    ;
 	
 add : mult (addSubtractOp add)?
 	;	
@@ -102,12 +94,12 @@ puis
 	;
  
 	
- expressionAtom
-	: 
-	|   cste
-	|   IDF
-	|  ( '(' add ')' ) 
-	;
+ expressionAtom : 
+				|   cste
+				|   IDF
+				|  ( '(' add ')' )
+				|	IDF '(' exprlist ')'
+				;
  
  
 addSubtractOp 
