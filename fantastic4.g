@@ -90,9 +90,11 @@ or 	: puis ('||'  or)?
 	;
  
 puis	
-	:  expressionAtom ('^' puis)?
+	:  negExpression ('^' puis)?
 	;
  
+negExpression: neg? expressionAtom
+	;
 	
  expressionAtom : 
 				|   cste
@@ -124,24 +126,10 @@ cste		: CSTEINT
 			| CSTEBOOL
 			| CSTESTRING
 			;
-
-opb         : '+'
-            | '-'
-            | '*'
-            | '/'
-            | '<'
-            | '<='
-            | '>'
-            | '>='
-            | '=='
-            | '!='
-            | '&&'
-            | '||'
-            ;
             
-opun        : '-'
-            | 'not'
-            ;
+neg        	: 'not'
+	|'!'
+            	;
 
 
 CSTEBOOL    :('true'|'false')								;
