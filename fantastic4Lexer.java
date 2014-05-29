@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 fantastic4.g 2014-04-07 09:48:09
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 fantastic4.g 2014-05-29 15:55:21
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -7,8 +7,6 @@ import java.util.ArrayList;
 
 public class fantastic4Lexer extends Lexer {
     public static final int EOF=-1;
-    public static final int T__8=8;
-    public static final int T__9=9;
     public static final int T__10=10;
     public static final int T__11=11;
     public static final int T__12=12;
@@ -44,10 +42,15 @@ public class fantastic4Lexer extends Lexer {
     public static final int T__42=42;
     public static final int T__43=43;
     public static final int T__44=44;
+    public static final int T__45=45;
+    public static final int T__46=46;
+    public static final int T__47=47;
     public static final int IDF=4;
-    public static final int CSTE=5;
-    public static final int COMM=6;
-    public static final int WS=7;
+    public static final int CSTEINT=5;
+    public static final int CSTEBOOL=6;
+    public static final int CSTESTRING=7;
+    public static final int COMM=8;
+    public static final int WS=9;
 
     // delegates
     // delegators
@@ -62,57 +65,16 @@ public class fantastic4Lexer extends Lexer {
     }
     public String getGrammarFileName() { return "fantastic4.g"; }
 
-    // $ANTLR start "T__8"
-    public final void mT__8() throws RecognitionException {
-        try {
-            int _type = T__8;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:7:6: ( 'program' )
-            // fantastic4.g:7:8: 'program'
-            {
-            match("program"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__8"
-
-    // $ANTLR start "T__9"
-    public final void mT__9() throws RecognitionException {
-        try {
-            int _type = T__9;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:8:6: ( 'var' )
-            // fantastic4.g:8:8: 'var'
-            {
-            match("var"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__9"
-
     // $ANTLR start "T__10"
     public final void mT__10() throws RecognitionException {
         try {
             int _type = T__10;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:9:7: ( ':' )
-            // fantastic4.g:9:9: ':'
+            // fantastic4.g:7:7: ( 'program' )
+            // fantastic4.g:7:9: 'program'
             {
-            match(':'); 
+            match("program"); 
+
 
             }
 
@@ -129,10 +91,11 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:10:7: ( ',' )
-            // fantastic4.g:10:9: ','
+            // fantastic4.g:8:7: ( 'var' )
+            // fantastic4.g:8:9: 'var'
             {
-            match(','); 
+            match("var"); 
+
 
             }
 
@@ -149,11 +112,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:11:7: ( 'void' )
-            // fantastic4.g:11:9: 'void'
+            // fantastic4.g:9:7: ( ':' )
+            // fantastic4.g:9:9: ':'
             {
-            match("void"); 
-
+            match(':'); 
 
             }
 
@@ -170,11 +132,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:12:7: ( 'bool' )
-            // fantastic4.g:12:9: 'bool'
+            // fantastic4.g:10:7: ( ';' )
+            // fantastic4.g:10:9: ';'
             {
-            match("bool"); 
-
+            match(';'); 
 
             }
 
@@ -191,11 +152,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:13:7: ( 'int' )
-            // fantastic4.g:13:9: 'int'
+            // fantastic4.g:11:7: ( ',' )
+            // fantastic4.g:11:9: ','
             {
-            match("int"); 
-
+            match(','); 
 
             }
 
@@ -212,10 +172,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:14:7: ( 'char' )
-            // fantastic4.g:14:9: 'char'
+            // fantastic4.g:12:7: ( 'void' )
+            // fantastic4.g:12:9: 'void'
             {
-            match("char"); 
+            match("void"); 
 
 
             }
@@ -233,10 +193,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:15:7: ( 'function' )
-            // fantastic4.g:15:9: 'function'
+            // fantastic4.g:13:7: ( 'bool' )
+            // fantastic4.g:13:9: 'bool'
             {
-            match("function"); 
+            match("bool"); 
 
 
             }
@@ -254,10 +214,11 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:16:7: ( '(' )
-            // fantastic4.g:16:9: '('
+            // fantastic4.g:14:7: ( 'int' )
+            // fantastic4.g:14:9: 'int'
             {
-            match('('); 
+            match("int"); 
+
 
             }
 
@@ -274,10 +235,11 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:17:7: ( ')' )
-            // fantastic4.g:17:9: ')'
+            // fantastic4.g:15:7: ( 'char' )
+            // fantastic4.g:15:9: 'char'
             {
-            match(')'); 
+            match("char"); 
+
 
             }
 
@@ -294,10 +256,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:18:7: ( 'ref' )
-            // fantastic4.g:18:9: 'ref'
+            // fantastic4.g:16:7: ( 'function' )
+            // fantastic4.g:16:9: 'function'
             {
-            match("ref"); 
+            match("function"); 
 
 
             }
@@ -315,11 +277,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:19:7: ( 'if' )
-            // fantastic4.g:19:9: 'if'
+            // fantastic4.g:17:7: ( '(' )
+            // fantastic4.g:17:9: '('
             {
-            match("if"); 
-
+            match('('); 
 
             }
 
@@ -336,11 +297,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:20:7: ( 'then' )
-            // fantastic4.g:20:9: 'then'
+            // fantastic4.g:18:7: ( ')' )
+            // fantastic4.g:18:9: ')'
             {
-            match("then"); 
-
+            match(')'); 
 
             }
 
@@ -357,10 +317,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:21:7: ( 'else' )
-            // fantastic4.g:21:9: 'else'
+            // fantastic4.g:19:7: ( 'ref' )
+            // fantastic4.g:19:9: 'ref'
             {
-            match("else"); 
+            match("ref"); 
 
 
             }
@@ -378,10 +338,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:22:7: ( 'while' )
-            // fantastic4.g:22:9: 'while'
+            // fantastic4.g:20:7: ( 'if' )
+            // fantastic4.g:20:9: 'if'
             {
-            match("while"); 
+            match("if"); 
 
 
             }
@@ -399,10 +359,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:23:7: ( 'do' )
-            // fantastic4.g:23:9: 'do'
+            // fantastic4.g:21:7: ( 'then' )
+            // fantastic4.g:21:9: 'then'
             {
-            match("do"); 
+            match("then"); 
 
 
             }
@@ -420,10 +380,11 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:24:7: ( '=' )
-            // fantastic4.g:24:9: '='
+            // fantastic4.g:22:7: ( 'else' )
+            // fantastic4.g:22:9: 'else'
             {
-            match('='); 
+            match("else"); 
+
 
             }
 
@@ -440,10 +401,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:25:7: ( 'return' )
-            // fantastic4.g:25:9: 'return'
+            // fantastic4.g:23:7: ( 'while' )
+            // fantastic4.g:23:9: 'while'
             {
-            match("return"); 
+            match("while"); 
 
 
             }
@@ -461,10 +422,11 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:26:7: ( '{' )
-            // fantastic4.g:26:9: '{'
+            // fantastic4.g:24:7: ( 'do' )
+            // fantastic4.g:24:9: 'do'
             {
-            match('{'); 
+            match("do"); 
+
 
             }
 
@@ -481,10 +443,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:27:7: ( '}' )
-            // fantastic4.g:27:9: '}'
+            // fantastic4.g:25:7: ( '=' )
+            // fantastic4.g:25:9: '='
             {
-            match('}'); 
+            match('='); 
 
             }
 
@@ -501,10 +463,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:28:7: ( 'read' )
-            // fantastic4.g:28:9: 'read'
+            // fantastic4.g:26:7: ( 'return' )
+            // fantastic4.g:26:9: 'return'
             {
-            match("read"); 
+            match("return"); 
 
 
             }
@@ -522,11 +484,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:29:7: ( 'write' )
-            // fantastic4.g:29:9: 'write'
+            // fantastic4.g:27:7: ( '{' )
+            // fantastic4.g:27:9: '{'
             {
-            match("write"); 
-
+            match('{'); 
 
             }
 
@@ -543,10 +504,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:30:7: ( ';' )
-            // fantastic4.g:30:9: ';'
+            // fantastic4.g:28:7: ( '}' )
+            // fantastic4.g:28:9: '}'
             {
-            match(';'); 
+            match('}'); 
 
             }
 
@@ -563,10 +524,11 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:31:7: ( '+' )
-            // fantastic4.g:31:9: '+'
+            // fantastic4.g:29:7: ( 'read' )
+            // fantastic4.g:29:9: 'read'
             {
-            match('+'); 
+            match("read"); 
+
 
             }
 
@@ -583,10 +545,11 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:32:7: ( '-' )
-            // fantastic4.g:32:9: '-'
+            // fantastic4.g:30:7: ( 'write' )
+            // fantastic4.g:30:9: 'write'
             {
-            match('-'); 
+            match("write"); 
+
 
             }
 
@@ -603,10 +566,11 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:33:7: ( '*' )
-            // fantastic4.g:33:9: '*'
+            // fantastic4.g:31:7: ( '&&' )
+            // fantastic4.g:31:9: '&&'
             {
-            match('*'); 
+            match("&&"); 
+
 
             }
 
@@ -623,10 +587,11 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:34:7: ( '/' )
-            // fantastic4.g:34:9: '/'
+            // fantastic4.g:32:7: ( '||' )
+            // fantastic4.g:32:9: '||'
             {
-            match('/'); 
+            match("||"); 
+
 
             }
 
@@ -643,10 +608,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:35:7: ( '<' )
-            // fantastic4.g:35:9: '<'
+            // fantastic4.g:33:7: ( '^' )
+            // fantastic4.g:33:9: '^'
             {
-            match('<'); 
+            match('^'); 
 
             }
 
@@ -663,11 +628,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:36:7: ( '<=' )
-            // fantastic4.g:36:9: '<='
+            // fantastic4.g:34:7: ( '+' )
+            // fantastic4.g:34:9: '+'
             {
-            match("<="); 
-
+            match('+'); 
 
             }
 
@@ -684,10 +648,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:37:7: ( '>' )
-            // fantastic4.g:37:9: '>'
+            // fantastic4.g:35:7: ( '-' )
+            // fantastic4.g:35:9: '-'
             {
-            match('>'); 
+            match('-'); 
 
             }
 
@@ -704,11 +668,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:38:7: ( '>=' )
-            // fantastic4.g:38:9: '>='
+            // fantastic4.g:36:7: ( '*' )
+            // fantastic4.g:36:9: '*'
             {
-            match(">="); 
-
+            match('*'); 
 
             }
 
@@ -725,11 +688,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:39:7: ( '==' )
-            // fantastic4.g:39:9: '=='
+            // fantastic4.g:37:7: ( '/' )
+            // fantastic4.g:37:9: '/'
             {
-            match("=="); 
-
+            match('/'); 
 
             }
 
@@ -746,11 +708,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:40:7: ( '!=' )
-            // fantastic4.g:40:9: '!='
+            // fantastic4.g:38:7: ( '>' )
+            // fantastic4.g:38:9: '>'
             {
-            match("!="); 
-
+            match('>'); 
 
             }
 
@@ -767,11 +728,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:41:7: ( 'and' )
-            // fantastic4.g:41:9: 'and'
+            // fantastic4.g:39:7: ( '<' )
+            // fantastic4.g:39:9: '<'
             {
-            match("and"); 
-
+            match('<'); 
 
             }
 
@@ -788,10 +748,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:42:7: ( 'or' )
-            // fantastic4.g:42:9: 'or'
+            // fantastic4.g:40:7: ( '>=' )
+            // fantastic4.g:40:9: '>='
             {
-            match("or"); 
+            match(">="); 
 
 
             }
@@ -809,6 +769,48 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
+            // fantastic4.g:41:7: ( '<=' )
+            // fantastic4.g:41:9: '<='
+            {
+            match("<="); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__44"
+
+    // $ANTLR start "T__45"
+    public final void mT__45() throws RecognitionException {
+        try {
+            int _type = T__45;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // fantastic4.g:42:7: ( '!=' )
+            // fantastic4.g:42:9: '!='
+            {
+            match("!="); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__45"
+
+    // $ANTLR start "T__46"
+    public final void mT__46() throws RecognitionException {
+        try {
+            int _type = T__46;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
             // fantastic4.g:43:7: ( 'not' )
             // fantastic4.g:43:9: 'not'
             {
@@ -823,15 +825,196 @@ public class fantastic4Lexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__44"
+    // $ANTLR end "T__46"
+
+    // $ANTLR start "T__47"
+    public final void mT__47() throws RecognitionException {
+        try {
+            int _type = T__47;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // fantastic4.g:44:7: ( '!' )
+            // fantastic4.g:44:9: '!'
+            {
+            match('!'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__47"
+
+    // $ANTLR start "CSTEBOOL"
+    public final void mCSTEBOOL() throws RecognitionException {
+        try {
+            int _type = CSTEBOOL;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // fantastic4.g:137:13: ( ( 'true' | 'false' ) )
+            // fantastic4.g:137:14: ( 'true' | 'false' )
+            {
+            // fantastic4.g:137:14: ( 'true' | 'false' )
+            int alt1=2;
+            int LA1_0 = input.LA(1);
+
+            if ( (LA1_0=='t') ) {
+                alt1=1;
+            }
+            else if ( (LA1_0=='f') ) {
+                alt1=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 1, 0, input);
+
+                throw nvae;
+            }
+            switch (alt1) {
+                case 1 :
+                    // fantastic4.g:137:15: 'true'
+                    {
+                    match("true"); 
+
+
+                    }
+                    break;
+                case 2 :
+                    // fantastic4.g:137:22: 'false'
+                    {
+                    match("false"); 
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "CSTEBOOL"
+
+    // $ANTLR start "CSTEINT"
+    public final void mCSTEINT() throws RecognitionException {
+        try {
+            int _type = CSTEINT;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // fantastic4.g:138:10: ( ( '0' .. '9' )+ )
+            // fantastic4.g:138:11: ( '0' .. '9' )+
+            {
+            // fantastic4.g:138:11: ( '0' .. '9' )+
+            int cnt2=0;
+            loop2:
+            do {
+                int alt2=2;
+                int LA2_0 = input.LA(1);
+
+                if ( ((LA2_0>='0' && LA2_0<='9')) ) {
+                    alt2=1;
+                }
+
+
+                switch (alt2) {
+            	case 1 :
+            	    // fantastic4.g:138:12: '0' .. '9'
+            	    {
+            	    matchRange('0','9'); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt2 >= 1 ) break loop2;
+                        EarlyExitException eee =
+                            new EarlyExitException(2, input);
+                        throw eee;
+                }
+                cnt2++;
+            } while (true);
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "CSTEINT"
+
+    // $ANTLR start "CSTESTRING"
+    public final void mCSTESTRING() throws RecognitionException {
+        try {
+            int _type = CSTESTRING;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // fantastic4.g:139:12: ( ( ( '\"' )* '\"' ) )
+            // fantastic4.g:139:13: ( ( '\"' )* '\"' )
+            {
+            // fantastic4.g:139:13: ( ( '\"' )* '\"' )
+            // fantastic4.g:139:14: ( '\"' )* '\"'
+            {
+            // fantastic4.g:139:14: ( '\"' )*
+            loop3:
+            do {
+                int alt3=2;
+                int LA3_0 = input.LA(1);
+
+                if ( (LA3_0=='\"') ) {
+                    int LA3_1 = input.LA(2);
+
+                    if ( (LA3_1=='\"') ) {
+                        alt3=1;
+                    }
+
+
+                }
+
+
+                switch (alt3) {
+            	case 1 :
+            	    // fantastic4.g:139:14: '\"'
+            	    {
+            	    match('\"'); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop3;
+                }
+            } while (true);
+
+            match('\"'); 
+
+            }
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "CSTESTRING"
 
     // $ANTLR start "IDF"
     public final void mIDF() throws RecognitionException {
         try {
             int _type = IDF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:104:9: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
-            // fantastic4.g:104:11: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+            // fantastic4.g:140:9: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
+            // fantastic4.g:140:11: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -842,18 +1025,18 @@ public class fantastic4Lexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // fantastic4.g:104:30: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
-            loop1:
+            // fantastic4.g:140:30: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+            loop4:
             do {
-                int alt1=2;
-                int LA1_0 = input.LA(1);
+                int alt4=2;
+                int LA4_0 = input.LA(1);
 
-                if ( ((LA1_0>='0' && LA1_0<='9')||(LA1_0>='A' && LA1_0<='Z')||(LA1_0>='a' && LA1_0<='z')) ) {
-                    alt1=1;
+                if ( ((LA4_0>='0' && LA4_0<='9')||(LA4_0>='A' && LA4_0<='Z')||(LA4_0>='a' && LA4_0<='z')) ) {
+                    alt4=1;
                 }
 
 
-                switch (alt1) {
+                switch (alt4) {
             	case 1 :
             	    // fantastic4.g:
             	    {
@@ -871,7 +1054,7 @@ public class fantastic4Lexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop1;
+            	    break loop4;
                 }
             } while (true);
 
@@ -886,200 +1069,27 @@ public class fantastic4Lexer extends Lexer {
     }
     // $ANTLR end "IDF"
 
-    // $ANTLR start "CSTE"
-    public final void mCSTE() throws RecognitionException {
-        try {
-            int _type = CSTE;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:105:9: ( ( 'true' | 'false' ) | ( ( '\"' )* '\"' ) | ( '0' .. '9' )+ )
-            int alt5=3;
-            switch ( input.LA(1) ) {
-            case 'f':
-            case 't':
-                {
-                alt5=1;
-                }
-                break;
-            case '\"':
-                {
-                alt5=2;
-                }
-                break;
-            case '0':
-            case '1':
-            case '2':
-            case '3':
-            case '4':
-            case '5':
-            case '6':
-            case '7':
-            case '8':
-            case '9':
-                {
-                alt5=3;
-                }
-                break;
-            default:
-                NoViableAltException nvae =
-                    new NoViableAltException("", 5, 0, input);
-
-                throw nvae;
-            }
-
-            switch (alt5) {
-                case 1 :
-                    // fantastic4.g:105:11: ( 'true' | 'false' )
-                    {
-                    // fantastic4.g:105:11: ( 'true' | 'false' )
-                    int alt2=2;
-                    int LA2_0 = input.LA(1);
-
-                    if ( (LA2_0=='t') ) {
-                        alt2=1;
-                    }
-                    else if ( (LA2_0=='f') ) {
-                        alt2=2;
-                    }
-                    else {
-                        NoViableAltException nvae =
-                            new NoViableAltException("", 2, 0, input);
-
-                        throw nvae;
-                    }
-                    switch (alt2) {
-                        case 1 :
-                            // fantastic4.g:105:12: 'true'
-                            {
-                            match("true"); 
-
-
-                            }
-                            break;
-                        case 2 :
-                            // fantastic4.g:105:19: 'false'
-                            {
-                            match("false"); 
-
-
-                            }
-                            break;
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // fantastic4.g:105:28: ( ( '\"' )* '\"' )
-                    {
-                    // fantastic4.g:105:28: ( ( '\"' )* '\"' )
-                    // fantastic4.g:105:29: ( '\"' )* '\"'
-                    {
-                    // fantastic4.g:105:29: ( '\"' )*
-                    loop3:
-                    do {
-                        int alt3=2;
-                        int LA3_0 = input.LA(1);
-
-                        if ( (LA3_0=='\"') ) {
-                            int LA3_1 = input.LA(2);
-
-                            if ( (LA3_1=='\"') ) {
-                                alt3=1;
-                            }
-
-
-                        }
-
-
-                        switch (alt3) {
-                    	case 1 :
-                    	    // fantastic4.g:105:29: '\"'
-                    	    {
-                    	    match('\"'); 
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop3;
-                        }
-                    } while (true);
-
-                    match('\"'); 
-
-                    }
-
-
-                    }
-                    break;
-                case 3 :
-                    // fantastic4.g:105:38: ( '0' .. '9' )+
-                    {
-                    // fantastic4.g:105:38: ( '0' .. '9' )+
-                    int cnt4=0;
-                    loop4:
-                    do {
-                        int alt4=2;
-                        int LA4_0 = input.LA(1);
-
-                        if ( ((LA4_0>='0' && LA4_0<='9')) ) {
-                            alt4=1;
-                        }
-
-
-                        switch (alt4) {
-                    	case 1 :
-                    	    // fantastic4.g:105:39: '0' .. '9'
-                    	    {
-                    	    matchRange('0','9'); 
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    if ( cnt4 >= 1 ) break loop4;
-                                EarlyExitException eee =
-                                    new EarlyExitException(4, input);
-                                throw eee;
-                        }
-                        cnt4++;
-                    } while (true);
-
-
-                    }
-                    break;
-
-            }
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "CSTE"
-
     // $ANTLR start "COMM"
     public final void mCOMM() throws RecognitionException {
         try {
             int _type = COMM;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:106:9: ( ( ( '/*' )* '*/' ) | ( ( '//' )* '\\n' ) )
-            int alt8=2;
+            // fantastic4.g:141:9: ( ( ( '/*' )* '*/' ) | ( ( '//' )* '\\n' ) )
+            int alt7=2;
             switch ( input.LA(1) ) {
             case '/':
                 {
-                int LA8_1 = input.LA(2);
+                int LA7_1 = input.LA(2);
 
-                if ( (LA8_1=='*') ) {
-                    alt8=1;
+                if ( (LA7_1=='*') ) {
+                    alt7=1;
                 }
-                else if ( (LA8_1=='/') ) {
-                    alt8=2;
+                else if ( (LA7_1=='/') ) {
+                    alt7=2;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 8, 1, input);
+                        new NoViableAltException("", 7, 1, input);
 
                     throw nvae;
                 }
@@ -1087,42 +1097,42 @@ public class fantastic4Lexer extends Lexer {
                 break;
             case '*':
                 {
-                alt8=1;
+                alt7=1;
                 }
                 break;
             case '\n':
                 {
-                alt8=2;
+                alt7=2;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 8, 0, input);
+                    new NoViableAltException("", 7, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt8) {
+            switch (alt7) {
                 case 1 :
-                    // fantastic4.g:106:11: ( ( '/*' )* '*/' )
+                    // fantastic4.g:141:11: ( ( '/*' )* '*/' )
                     {
-                    // fantastic4.g:106:11: ( ( '/*' )* '*/' )
-                    // fantastic4.g:106:12: ( '/*' )* '*/'
+                    // fantastic4.g:141:11: ( ( '/*' )* '*/' )
+                    // fantastic4.g:141:12: ( '/*' )* '*/'
                     {
-                    // fantastic4.g:106:12: ( '/*' )*
-                    loop6:
+                    // fantastic4.g:141:12: ( '/*' )*
+                    loop5:
                     do {
-                        int alt6=2;
-                        int LA6_0 = input.LA(1);
+                        int alt5=2;
+                        int LA5_0 = input.LA(1);
 
-                        if ( (LA6_0=='/') ) {
-                            alt6=1;
+                        if ( (LA5_0=='/') ) {
+                            alt5=1;
                         }
 
 
-                        switch (alt6) {
+                        switch (alt5) {
                     	case 1 :
-                    	    // fantastic4.g:106:12: '/*'
+                    	    // fantastic4.g:141:12: '/*'
                     	    {
                     	    match("/*"); 
 
@@ -1131,7 +1141,7 @@ public class fantastic4Lexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop6;
+                    	    break loop5;
                         }
                     } while (true);
 
@@ -1144,25 +1154,25 @@ public class fantastic4Lexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // fantastic4.g:106:23: ( ( '//' )* '\\n' )
+                    // fantastic4.g:141:23: ( ( '//' )* '\\n' )
                     {
-                    // fantastic4.g:106:23: ( ( '//' )* '\\n' )
-                    // fantastic4.g:106:24: ( '//' )* '\\n'
+                    // fantastic4.g:141:23: ( ( '//' )* '\\n' )
+                    // fantastic4.g:141:24: ( '//' )* '\\n'
                     {
-                    // fantastic4.g:106:24: ( '//' )*
-                    loop7:
+                    // fantastic4.g:141:24: ( '//' )*
+                    loop6:
                     do {
-                        int alt7=2;
-                        int LA7_0 = input.LA(1);
+                        int alt6=2;
+                        int LA6_0 = input.LA(1);
 
-                        if ( (LA7_0=='/') ) {
-                            alt7=1;
+                        if ( (LA6_0=='/') ) {
+                            alt6=1;
                         }
 
 
-                        switch (alt7) {
+                        switch (alt6) {
                     	case 1 :
-                    	    // fantastic4.g:106:24: '//'
+                    	    // fantastic4.g:141:24: '//'
                     	    {
                     	    match("//"); 
 
@@ -1171,7 +1181,7 @@ public class fantastic4Lexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop7;
+                    	    break loop6;
                         }
                     } while (true);
 
@@ -1198,22 +1208,22 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // fantastic4.g:107:9: ( ( ' ' | '\\t' | '\\n' )+ )
-            // fantastic4.g:107:11: ( ' ' | '\\t' | '\\n' )+
+            // fantastic4.g:142:9: ( ( ' ' | '\\t' | '\\n' )+ )
+            // fantastic4.g:142:11: ( ' ' | '\\t' | '\\n' )+
             {
-            // fantastic4.g:107:11: ( ' ' | '\\t' | '\\n' )+
-            int cnt9=0;
-            loop9:
+            // fantastic4.g:142:11: ( ' ' | '\\t' | '\\n' )+
+            int cnt8=0;
+            loop8:
             do {
-                int alt9=2;
-                int LA9_0 = input.LA(1);
+                int alt8=2;
+                int LA8_0 = input.LA(1);
 
-                if ( ((LA9_0>='\t' && LA9_0<='\n')||LA9_0==' ') ) {
-                    alt9=1;
+                if ( ((LA8_0>='\t' && LA8_0<='\n')||LA8_0==' ') ) {
+                    alt8=1;
                 }
 
 
-                switch (alt9) {
+                switch (alt8) {
             	case 1 :
             	    // fantastic4.g:
             	    {
@@ -1231,12 +1241,12 @@ public class fantastic4Lexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt9 >= 1 ) break loop9;
+            	    if ( cnt8 >= 1 ) break loop8;
                         EarlyExitException eee =
-                            new EarlyExitException(9, input);
+                            new EarlyExitException(8, input);
                         throw eee;
                 }
-                cnt9++;
+                cnt8++;
             } while (true);
 
             _channel=HIDDEN;
@@ -1252,292 +1262,313 @@ public class fantastic4Lexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // fantastic4.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | IDF | CSTE | COMM | WS )
-        int alt10=41;
-        alt10 = dfa10.predict(input);
-        switch (alt10) {
+        // fantastic4.g:1:8: ( T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | CSTEBOOL | CSTEINT | CSTESTRING | IDF | COMM | WS )
+        int alt9=44;
+        alt9 = dfa9.predict(input);
+        switch (alt9) {
             case 1 :
-                // fantastic4.g:1:10: T__8
-                {
-                mT__8(); 
-
-                }
-                break;
-            case 2 :
-                // fantastic4.g:1:15: T__9
-                {
-                mT__9(); 
-
-                }
-                break;
-            case 3 :
-                // fantastic4.g:1:20: T__10
+                // fantastic4.g:1:10: T__10
                 {
                 mT__10(); 
 
                 }
                 break;
-            case 4 :
-                // fantastic4.g:1:26: T__11
+            case 2 :
+                // fantastic4.g:1:16: T__11
                 {
                 mT__11(); 
 
                 }
                 break;
-            case 5 :
-                // fantastic4.g:1:32: T__12
+            case 3 :
+                // fantastic4.g:1:22: T__12
                 {
                 mT__12(); 
 
                 }
                 break;
-            case 6 :
-                // fantastic4.g:1:38: T__13
+            case 4 :
+                // fantastic4.g:1:28: T__13
                 {
                 mT__13(); 
 
                 }
                 break;
-            case 7 :
-                // fantastic4.g:1:44: T__14
+            case 5 :
+                // fantastic4.g:1:34: T__14
                 {
                 mT__14(); 
 
                 }
                 break;
-            case 8 :
-                // fantastic4.g:1:50: T__15
+            case 6 :
+                // fantastic4.g:1:40: T__15
                 {
                 mT__15(); 
 
                 }
                 break;
-            case 9 :
-                // fantastic4.g:1:56: T__16
+            case 7 :
+                // fantastic4.g:1:46: T__16
                 {
                 mT__16(); 
 
                 }
                 break;
-            case 10 :
-                // fantastic4.g:1:62: T__17
+            case 8 :
+                // fantastic4.g:1:52: T__17
                 {
                 mT__17(); 
 
                 }
                 break;
-            case 11 :
-                // fantastic4.g:1:68: T__18
+            case 9 :
+                // fantastic4.g:1:58: T__18
                 {
                 mT__18(); 
 
                 }
                 break;
-            case 12 :
-                // fantastic4.g:1:74: T__19
+            case 10 :
+                // fantastic4.g:1:64: T__19
                 {
                 mT__19(); 
 
                 }
                 break;
-            case 13 :
-                // fantastic4.g:1:80: T__20
+            case 11 :
+                // fantastic4.g:1:70: T__20
                 {
                 mT__20(); 
 
                 }
                 break;
-            case 14 :
-                // fantastic4.g:1:86: T__21
+            case 12 :
+                // fantastic4.g:1:76: T__21
                 {
                 mT__21(); 
 
                 }
                 break;
-            case 15 :
-                // fantastic4.g:1:92: T__22
+            case 13 :
+                // fantastic4.g:1:82: T__22
                 {
                 mT__22(); 
 
                 }
                 break;
-            case 16 :
-                // fantastic4.g:1:98: T__23
+            case 14 :
+                // fantastic4.g:1:88: T__23
                 {
                 mT__23(); 
 
                 }
                 break;
-            case 17 :
-                // fantastic4.g:1:104: T__24
+            case 15 :
+                // fantastic4.g:1:94: T__24
                 {
                 mT__24(); 
 
                 }
                 break;
-            case 18 :
-                // fantastic4.g:1:110: T__25
+            case 16 :
+                // fantastic4.g:1:100: T__25
                 {
                 mT__25(); 
 
                 }
                 break;
-            case 19 :
-                // fantastic4.g:1:116: T__26
+            case 17 :
+                // fantastic4.g:1:106: T__26
                 {
                 mT__26(); 
 
                 }
                 break;
-            case 20 :
-                // fantastic4.g:1:122: T__27
+            case 18 :
+                // fantastic4.g:1:112: T__27
                 {
                 mT__27(); 
 
                 }
                 break;
-            case 21 :
-                // fantastic4.g:1:128: T__28
+            case 19 :
+                // fantastic4.g:1:118: T__28
                 {
                 mT__28(); 
 
                 }
                 break;
-            case 22 :
-                // fantastic4.g:1:134: T__29
+            case 20 :
+                // fantastic4.g:1:124: T__29
                 {
                 mT__29(); 
 
                 }
                 break;
-            case 23 :
-                // fantastic4.g:1:140: T__30
+            case 21 :
+                // fantastic4.g:1:130: T__30
                 {
                 mT__30(); 
 
                 }
                 break;
-            case 24 :
-                // fantastic4.g:1:146: T__31
+            case 22 :
+                // fantastic4.g:1:136: T__31
                 {
                 mT__31(); 
 
                 }
                 break;
-            case 25 :
-                // fantastic4.g:1:152: T__32
+            case 23 :
+                // fantastic4.g:1:142: T__32
                 {
                 mT__32(); 
 
                 }
                 break;
-            case 26 :
-                // fantastic4.g:1:158: T__33
+            case 24 :
+                // fantastic4.g:1:148: T__33
                 {
                 mT__33(); 
 
                 }
                 break;
-            case 27 :
-                // fantastic4.g:1:164: T__34
+            case 25 :
+                // fantastic4.g:1:154: T__34
                 {
                 mT__34(); 
 
                 }
                 break;
-            case 28 :
-                // fantastic4.g:1:170: T__35
+            case 26 :
+                // fantastic4.g:1:160: T__35
                 {
                 mT__35(); 
 
                 }
                 break;
-            case 29 :
-                // fantastic4.g:1:176: T__36
+            case 27 :
+                // fantastic4.g:1:166: T__36
                 {
                 mT__36(); 
 
                 }
                 break;
-            case 30 :
-                // fantastic4.g:1:182: T__37
+            case 28 :
+                // fantastic4.g:1:172: T__37
                 {
                 mT__37(); 
 
                 }
                 break;
-            case 31 :
-                // fantastic4.g:1:188: T__38
+            case 29 :
+                // fantastic4.g:1:178: T__38
                 {
                 mT__38(); 
 
                 }
                 break;
-            case 32 :
-                // fantastic4.g:1:194: T__39
+            case 30 :
+                // fantastic4.g:1:184: T__39
                 {
                 mT__39(); 
 
                 }
                 break;
-            case 33 :
-                // fantastic4.g:1:200: T__40
+            case 31 :
+                // fantastic4.g:1:190: T__40
                 {
                 mT__40(); 
 
                 }
                 break;
-            case 34 :
-                // fantastic4.g:1:206: T__41
+            case 32 :
+                // fantastic4.g:1:196: T__41
                 {
                 mT__41(); 
 
                 }
                 break;
-            case 35 :
-                // fantastic4.g:1:212: T__42
+            case 33 :
+                // fantastic4.g:1:202: T__42
                 {
                 mT__42(); 
 
                 }
                 break;
-            case 36 :
-                // fantastic4.g:1:218: T__43
+            case 34 :
+                // fantastic4.g:1:208: T__43
                 {
                 mT__43(); 
 
                 }
                 break;
-            case 37 :
-                // fantastic4.g:1:224: T__44
+            case 35 :
+                // fantastic4.g:1:214: T__44
                 {
                 mT__44(); 
 
                 }
                 break;
+            case 36 :
+                // fantastic4.g:1:220: T__45
+                {
+                mT__45(); 
+
+                }
+                break;
+            case 37 :
+                // fantastic4.g:1:226: T__46
+                {
+                mT__46(); 
+
+                }
+                break;
             case 38 :
-                // fantastic4.g:1:230: IDF
+                // fantastic4.g:1:232: T__47
+                {
+                mT__47(); 
+
+                }
+                break;
+            case 39 :
+                // fantastic4.g:1:238: CSTEBOOL
+                {
+                mCSTEBOOL(); 
+
+                }
+                break;
+            case 40 :
+                // fantastic4.g:1:247: CSTEINT
+                {
+                mCSTEINT(); 
+
+                }
+                break;
+            case 41 :
+                // fantastic4.g:1:255: CSTESTRING
+                {
+                mCSTESTRING(); 
+
+                }
+                break;
+            case 42 :
+                // fantastic4.g:1:266: IDF
                 {
                 mIDF(); 
 
                 }
                 break;
-            case 39 :
-                // fantastic4.g:1:234: CSTE
-                {
-                mCSTE(); 
-
-                }
-                break;
-            case 40 :
-                // fantastic4.g:1:239: COMM
+            case 43 :
+                // fantastic4.g:1:270: COMM
                 {
                 mCOMM(); 
 
                 }
                 break;
-            case 41 :
-                // fantastic4.g:1:244: WS
+            case 44 :
+                // fantastic4.g:1:275: WS
                 {
                 mWS(); 
 
@@ -1549,70 +1580,70 @@ public class fantastic4Lexer extends Lexer {
     }
 
 
-    protected DFA10 dfa10 = new DFA10(this);
-    static final String DFA10_eotS =
-        "\1\uffff\2\36\2\uffff\4\36\2\uffff\5\36\1\63\5\uffff\1\65\1\66\1"+
-        "\70\1\72\1\uffff\3\36\2\uffff\1\64\1\uffff\5\36\1\103\11\36\1\117"+
-        "\11\uffff\1\36\1\121\2\36\1\124\2\36\1\127\1\uffff\3\36\1\133\7"+
-        "\36\1\uffff\1\143\1\uffff\1\144\1\36\1\uffff\1\146\1\147\1\uffff"+
-        "\1\150\2\36\1\uffff\1\36\1\154\1\155\1\uffff\1\156\2\36\2\uffff"+
-        "\1\36\3\uffff\1\36\1\uffff\1\36\3\uffff\1\164\1\165\2\36\1\170\2"+
-        "\uffff\1\171\1\36\2\uffff\1\173\1\uffff";
-    static final String DFA10_eofS =
-        "\174\uffff";
-    static final String DFA10_minS =
-        "\1\11\1\162\1\141\2\uffff\1\157\1\146\1\150\1\141\2\uffff\1\145"+
-        "\1\150\1\154\1\150\1\157\1\75\5\uffff\1\57\1\52\2\75\1\uffff\1\156"+
-        "\1\162\1\157\2\uffff\1\11\1\uffff\1\157\1\162\1\151\1\157\1\164"+
-        "\1\60\1\141\1\156\1\154\1\141\1\145\1\165\1\163\2\151\1\60\11\uffff"+
-        "\1\144\1\60\1\164\1\147\1\60\1\144\1\154\1\60\1\uffff\1\162\1\143"+
-        "\1\163\1\60\1\165\1\144\1\156\2\145\1\154\1\164\1\uffff\1\60\1\uffff"+
-        "\1\60\1\162\1\uffff\2\60\1\uffff\1\60\1\164\1\145\1\uffff\1\162"+
-        "\2\60\1\uffff\1\60\2\145\2\uffff\1\141\3\uffff\1\151\1\uffff\1\156"+
-        "\3\uffff\2\60\1\155\1\157\1\60\2\uffff\1\60\1\156\2\uffff\1\60\1"+
-        "\uffff";
-    static final String DFA10_maxS =
-        "\1\175\1\162\1\157\2\uffff\1\157\1\156\1\150\1\165\2\uffff\1\145"+
-        "\1\162\1\154\1\162\1\157\1\75\5\uffff\2\57\2\75\1\uffff\1\156\1"+
-        "\162\1\157\2\uffff\1\40\1\uffff\1\157\1\162\1\151\1\157\1\164\1"+
-        "\172\1\141\1\156\1\154\1\164\1\145\1\165\1\163\2\151\1\172\11\uffff"+
-        "\1\144\1\172\1\164\1\147\1\172\1\144\1\154\1\172\1\uffff\1\162\1"+
-        "\143\1\163\1\172\1\165\1\144\1\156\2\145\1\154\1\164\1\uffff\1\172"+
-        "\1\uffff\1\172\1\162\1\uffff\2\172\1\uffff\1\172\1\164\1\145\1\uffff"+
-        "\1\162\2\172\1\uffff\1\172\2\145\2\uffff\1\141\3\uffff\1\151\1\uffff"+
-        "\1\156\3\uffff\2\172\1\155\1\157\1\172\2\uffff\1\172\1\156\2\uffff"+
-        "\1\172\1\uffff";
-    static final String DFA10_acceptS =
-        "\3\uffff\1\3\1\4\4\uffff\1\12\1\13\6\uffff\1\24\1\25\1\30\1\31\1"+
-        "\32\4\uffff\1\42\3\uffff\1\46\1\47\1\uffff\1\51\20\uffff\1\41\1"+
-        "\22\1\50\1\33\1\34\1\36\1\35\1\40\1\37\10\uffff\1\15\13\uffff\1"+
-        "\21\1\uffff\1\44\2\uffff\1\2\2\uffff\1\7\3\uffff\1\14\3\uffff\1"+
-        "\46\3\uffff\1\43\1\45\1\uffff\1\5\1\6\1\10\1\uffff\1\46\1\uffff"+
-        "\1\26\1\16\1\17\5\uffff\1\20\1\27\2\uffff\1\23\1\1\1\uffff\1\11";
-    static final String DFA10_specialS =
-        "\174\uffff}>";
-    static final String[] DFA10_transitionS = {
-            "\1\41\1\40\25\uffff\1\41\1\32\1\37\5\uffff\1\11\1\12\1\26\1"+
-            "\24\1\4\1\25\1\uffff\1\27\12\37\1\3\1\23\1\30\1\20\1\31\2\uffff"+
-            "\32\36\6\uffff\1\33\1\5\1\7\1\17\1\15\1\10\2\36\1\6\4\36\1\35"+
-            "\1\34\1\1\1\36\1\13\1\36\1\14\1\36\1\2\1\16\3\36\1\21\1\uffff"+
-            "\1\22",
-            "\1\42",
-            "\1\43\15\uffff\1\44",
+    protected DFA9 dfa9 = new DFA9(this);
+    static final String DFA9_eotS =
+        "\1\uffff\2\41\3\uffff\4\41\2\uffff\5\41\10\uffff\1\65\1\66\1\70"+
+        "\1\72\1\74\1\41\3\uffff\1\64\1\uffff\5\41\1\103\11\41\1\117\11\uffff"+
+        "\2\41\1\122\2\41\1\125\1\uffff\3\41\1\131\7\41\1\uffff\1\141\1\41"+
+        "\1\uffff\1\143\1\144\1\uffff\1\145\2\41\1\uffff\1\41\1\151\1\152"+
+        "\1\153\1\154\2\41\1\uffff\1\41\3\uffff\1\41\1\153\1\41\4\uffff\1"+
+        "\162\1\163\2\41\1\166\2\uffff\1\167\1\41\2\uffff\1\171\1\uffff";
+    static final String DFA9_eofS =
+        "\172\uffff";
+    static final String DFA9_minS =
+        "\1\11\1\162\1\141\3\uffff\1\157\1\146\1\150\1\141\2\uffff\1\145"+
+        "\1\150\1\154\1\150\1\157\10\uffff\1\57\1\52\3\75\1\157\3\uffff\1"+
+        "\11\1\uffff\1\157\1\162\1\151\1\157\1\164\1\60\1\141\1\156\1\154"+
+        "\1\141\1\145\1\165\1\163\2\151\1\60\11\uffff\1\164\1\147\1\60\1"+
+        "\144\1\154\1\60\1\uffff\1\162\1\143\1\163\1\60\1\165\1\144\1\156"+
+        "\2\145\1\154\1\164\1\uffff\1\60\1\162\1\uffff\2\60\1\uffff\1\60"+
+        "\1\164\1\145\1\uffff\1\162\4\60\2\145\1\uffff\1\141\3\uffff\1\151"+
+        "\1\60\1\156\4\uffff\2\60\1\155\1\157\1\60\2\uffff\1\60\1\156\2\uffff"+
+        "\1\60\1\uffff";
+    static final String DFA9_maxS =
+        "\1\175\1\162\1\157\3\uffff\1\157\1\156\1\150\1\165\2\uffff\1\145"+
+        "\1\162\1\154\1\162\1\157\10\uffff\2\57\3\75\1\157\3\uffff\1\40\1"+
+        "\uffff\1\157\1\162\1\151\1\157\1\164\1\172\1\141\1\156\1\154\1\164"+
+        "\1\145\1\165\1\163\2\151\1\172\11\uffff\1\164\1\147\1\172\1\144"+
+        "\1\154\1\172\1\uffff\1\162\1\143\1\163\1\172\1\165\1\144\1\156\2"+
+        "\145\1\154\1\164\1\uffff\1\172\1\162\1\uffff\2\172\1\uffff\1\172"+
+        "\1\164\1\145\1\uffff\1\162\4\172\2\145\1\uffff\1\141\3\uffff\1\151"+
+        "\1\172\1\156\4\uffff\2\172\1\155\1\157\1\172\2\uffff\1\172\1\156"+
+        "\2\uffff\1\172\1\uffff";
+    static final String DFA9_acceptS =
+        "\3\uffff\1\3\1\4\1\5\4\uffff\1\13\1\14\5\uffff\1\23\1\25\1\26\1"+
+        "\31\1\32\1\33\1\34\1\35\6\uffff\1\50\1\51\1\52\1\uffff\1\54\20\uffff"+
+        "\1\53\1\36\1\37\1\42\1\40\1\43\1\41\1\44\1\46\6\uffff\1\16\13\uffff"+
+        "\1\22\2\uffff\1\2\2\uffff\1\10\3\uffff\1\15\7\uffff\1\45\1\uffff"+
+        "\1\6\1\7\1\11\3\uffff\1\27\1\17\1\47\1\20\5\uffff\1\21\1\30\2\uffff"+
+        "\1\24\1\1\1\uffff\1\12";
+    static final String DFA9_specialS =
+        "\172\uffff}>";
+    static final String[] DFA9_transitionS = {
+            "\1\43\1\42\25\uffff\1\43\1\35\1\40\3\uffff\1\24\1\uffff\1\12"+
+            "\1\13\1\31\1\27\1\5\1\30\1\uffff\1\32\12\37\1\3\1\4\1\34\1\21"+
+            "\1\33\2\uffff\32\41\3\uffff\1\26\2\uffff\1\41\1\6\1\10\1\20"+
+            "\1\16\1\11\2\41\1\7\4\41\1\36\1\41\1\1\1\41\1\14\1\41\1\15\1"+
+            "\41\1\2\1\17\3\41\1\22\1\25\1\23",
+            "\1\44",
+            "\1\45\15\uffff\1\46",
             "",
             "",
-            "\1\45",
-            "\1\47\7\uffff\1\46",
-            "\1\50",
-            "\1\52\23\uffff\1\51",
+            "",
+            "\1\47",
+            "\1\51\7\uffff\1\50",
+            "\1\52",
+            "\1\54\23\uffff\1\53",
             "",
             "",
-            "\1\53",
-            "\1\54\11\uffff\1\55",
-            "\1\56",
-            "\1\57\11\uffff\1\60",
-            "\1\61",
-            "\1\62",
+            "\1\55",
+            "\1\56\11\uffff\1\57",
+            "\1\60",
+            "\1\61\11\uffff\1\62",
+            "\1\63",
+            "",
+            "",
+            "",
             "",
             "",
             "",
@@ -1622,20 +1653,19 @@ public class fantastic4Lexer extends Lexer {
             "\1\64\4\uffff\1\64",
             "\1\67",
             "\1\71",
-            "",
             "\1\73",
-            "\1\74",
             "\1\75",
             "",
             "",
-            "\2\41\25\uffff\1\41",
+            "",
+            "\2\43\25\uffff\1\43",
             "",
             "\1\76",
             "\1\77",
             "\1\100",
             "\1\101",
             "\1\102",
-            "\12\36\7\uffff\32\36\6\uffff\32\36",
+            "\12\41\7\uffff\32\41\6\uffff\32\41",
             "\1\104",
             "\1\105",
             "\1\106",
@@ -1645,7 +1675,7 @@ public class fantastic4Lexer extends Lexer {
             "\1\114",
             "\1\115",
             "\1\116",
-            "\12\36\7\uffff\32\36\6\uffff\32\36",
+            "\12\41\7\uffff\32\41\6\uffff\32\41",
             "",
             "",
             "",
@@ -1656,103 +1686,99 @@ public class fantastic4Lexer extends Lexer {
             "",
             "",
             "\1\120",
-            "\12\36\7\uffff\32\36\6\uffff\32\36",
-            "\1\122",
+            "\1\121",
+            "\12\41\7\uffff\32\41\6\uffff\32\41",
             "\1\123",
-            "\12\36\7\uffff\32\36\6\uffff\32\36",
-            "\1\125",
-            "\1\126",
-            "\12\36\7\uffff\32\36\6\uffff\32\36",
+            "\1\124",
+            "\12\41\7\uffff\32\41\6\uffff\32\41",
             "",
+            "\1\126",
+            "\1\127",
             "\1\130",
-            "\1\131",
+            "\12\41\7\uffff\32\41\6\uffff\32\41",
             "\1\132",
-            "\12\36\7\uffff\32\36\6\uffff\32\36",
+            "\1\133",
             "\1\134",
             "\1\135",
             "\1\136",
             "\1\137",
             "\1\140",
-            "\1\141",
+            "",
+            "\12\41\7\uffff\32\41\6\uffff\32\41",
             "\1\142",
             "",
-            "\12\36\7\uffff\32\36\6\uffff\32\36",
+            "\12\41\7\uffff\32\41\6\uffff\32\41",
+            "\12\41\7\uffff\32\41\6\uffff\32\41",
             "",
-            "\12\36\7\uffff\32\36\6\uffff\32\36",
-            "\1\145",
+            "\12\41\7\uffff\32\41\6\uffff\32\41",
+            "\1\146",
+            "\1\147",
             "",
-            "\12\36\7\uffff\32\36\6\uffff\32\36",
-            "\12\36\7\uffff\32\36\6\uffff\32\36",
+            "\1\150",
+            "\12\41\7\uffff\32\41\6\uffff\32\41",
+            "\12\41\7\uffff\32\41\6\uffff\32\41",
+            "\12\41\7\uffff\32\41\6\uffff\32\41",
+            "\12\41\7\uffff\32\41\6\uffff\32\41",
+            "\1\155",
+            "\1\156",
             "",
-            "\12\36\7\uffff\32\36\6\uffff\32\36",
-            "\1\151",
-            "\1\152",
-            "",
-            "\1\153",
-            "\12\36\7\uffff\32\36\6\uffff\32\36",
-            "\12\36\7\uffff\32\36\6\uffff\32\36",
-            "",
-            "\12\36\7\uffff\32\36\6\uffff\32\36",
             "\1\157",
+            "",
+            "",
+            "",
             "\1\160",
-            "",
-            "",
+            "\12\41\7\uffff\32\41\6\uffff\32\41",
             "\1\161",
             "",
             "",
             "",
-            "\1\162",
             "",
-            "\1\163",
-            "",
-            "",
-            "",
-            "\12\36\7\uffff\32\36\6\uffff\32\36",
-            "\12\36\7\uffff\32\36\6\uffff\32\36",
-            "\1\166",
-            "\1\167",
-            "\12\36\7\uffff\32\36\6\uffff\32\36",
+            "\12\41\7\uffff\32\41\6\uffff\32\41",
+            "\12\41\7\uffff\32\41\6\uffff\32\41",
+            "\1\164",
+            "\1\165",
+            "\12\41\7\uffff\32\41\6\uffff\32\41",
             "",
             "",
-            "\12\36\7\uffff\32\36\6\uffff\32\36",
-            "\1\172",
+            "\12\41\7\uffff\32\41\6\uffff\32\41",
+            "\1\170",
             "",
             "",
-            "\12\36\7\uffff\32\36\6\uffff\32\36",
+            "\12\41\7\uffff\32\41\6\uffff\32\41",
             ""
     };
 
-    static final short[] DFA10_eot = DFA.unpackEncodedString(DFA10_eotS);
-    static final short[] DFA10_eof = DFA.unpackEncodedString(DFA10_eofS);
-    static final char[] DFA10_min = DFA.unpackEncodedStringToUnsignedChars(DFA10_minS);
-    static final char[] DFA10_max = DFA.unpackEncodedStringToUnsignedChars(DFA10_maxS);
-    static final short[] DFA10_accept = DFA.unpackEncodedString(DFA10_acceptS);
-    static final short[] DFA10_special = DFA.unpackEncodedString(DFA10_specialS);
-    static final short[][] DFA10_transition;
+    static final short[] DFA9_eot = DFA.unpackEncodedString(DFA9_eotS);
+    static final short[] DFA9_eof = DFA.unpackEncodedString(DFA9_eofS);
+    static final char[] DFA9_min = DFA.unpackEncodedStringToUnsignedChars(DFA9_minS);
+    static final char[] DFA9_max = DFA.unpackEncodedStringToUnsignedChars(DFA9_maxS);
+    static final short[] DFA9_accept = DFA.unpackEncodedString(DFA9_acceptS);
+    static final short[] DFA9_special = DFA.unpackEncodedString(DFA9_specialS);
+    static final short[][] DFA9_transition;
 
     static {
-        int numStates = DFA10_transitionS.length;
-        DFA10_transition = new short[numStates][];
+        int numStates = DFA9_transitionS.length;
+        DFA9_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA10_transition[i] = DFA.unpackEncodedString(DFA10_transitionS[i]);
+            DFA9_transition[i] = DFA.unpackEncodedString(DFA9_transitionS[i]);
         }
     }
 
-    class DFA10 extends DFA {
+    class DFA9 extends DFA {
 
-        public DFA10(BaseRecognizer recognizer) {
+        public DFA9(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 10;
-            this.eot = DFA10_eot;
-            this.eof = DFA10_eof;
-            this.min = DFA10_min;
-            this.max = DFA10_max;
-            this.accept = DFA10_accept;
-            this.special = DFA10_special;
-            this.transition = DFA10_transition;
+            this.decisionNumber = 9;
+            this.eot = DFA9_eot;
+            this.eof = DFA9_eof;
+            this.min = DFA9_min;
+            this.max = DFA9_max;
+            this.accept = DFA9_accept;
+            this.special = DFA9_special;
+            this.transition = DFA9_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | IDF | CSTE | COMM | WS );";
+            return "1:1: Tokens : ( T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | CSTEBOOL | CSTEINT | CSTESTRING | IDF | COMM | WS );";
         }
     }
  
