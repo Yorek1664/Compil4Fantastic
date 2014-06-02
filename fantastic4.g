@@ -3,22 +3,23 @@ grammar fantastic4;
 options
 {
     output=AST;
-    ASTLabelType=CommonTree;
     language=Java;
 }
+tokens{ 
+ARGUMENTS;ARGU;BLOCK;CALLFUNCTION;
+}
 
-
-prog        : 'program' IDF vardeclist? funcdeclist? instr -> ^('program' IDF)
+prog        : 'program' IDF vardeclist? funcdeclist? instr -> ^(IDF vardeclist? funcdeclist? instr)
             ;
 
 vardeclist  : varsuitdecl vardeclist? 
             ;
             
-varsuitdecl : 'var' idenlist ':' typename ';' -> 'var'
+varsuitdecl : 'var' idenlist ':' typename ';' -> ^('var' typename idenlist)
             ;
             
-idenlist    : IDF		-> ^(IDF ':')
-            | IDF ',' idenlist	-> ^(IDF ',')
+idenlist    : IDF		-> ^(IDF)
+            | IDF ',' idenlist	-> IDF idenlist
             ;
             
 typename    : 'void' -> 'void'
@@ -30,58 +31,59 @@ typename    : 'void' -> 'void'
 funcdeclist : funcdecl funcdeclist?
             ;
             
-funcdecl    : 'function' IDF '(' arglist ')' ':' typename vardeclist? instr -> ^('function' IDF '(' ')' ':')
+funcdecl    : 'function' IDF '(' arglist ')' ':' typename vardeclist? instr -> ^('function' typename ^(IDF vardeclist? instr ) arglist )
             ;
 
 arglist     :
-            | arg
-            | arg ',' arglist
+            | arg^
+            | arg ',' arglist -> ^(ARGUMENTS arg arglist)
             ;
 
-arg         : IDF ':' typename
-            | 'ref' IDF ':' typename
+arg         : IDF ':' typename -> ^(ARGU IDF typename)
+            | 'ref' IDF ':' typename -> ^('ref' IDF typename)
+                        ;
+
+instr       : 'if' expr 'then' instr 'else' instr ->  ^('if' expr ^(BLOCK instr) ^(BLOCK instr))
+            | 'while' expr 'do' instr -> ^('while' expr ^(BLOCK instr))
+            | IDF '=' expr ';' -> ^('=' IDF expr)
+            | 'return' returnable -> ^('return' returnable)
+            | IDF '(' exprlist ')' ->  ^(CALLFUNCTION IDF exprlist) 
+            | '{' sequence '}' ->  sequence?
+            | 'read' IDF ';' -> ^('read' IDF)
+            | 'write' writable ';' -> ^('write' writable)
             ;
 
-instr       : 'if' expr 'then' instr 'else' instr
-            | 'while' expr 'do' instr
-            | IDF '=' expr ';'
-            | 'return' returnable
-            | IDF '(' exprlist ')'
-            | '{' sequence '}'
-            | 'read' IDF ';'
-            | 'write' writable ';'
-            ;
-
-returnable	: expr ';'
+returnable	: expr ';' -> expr
 			;
 
-writable    : IDF
-            | cste
+writable    : IDF -> IDF
+            | cste -> cste
             ;
 
-sequence    : 
-            | instr  sequence
+sequence    : -> 
+            | instr  sequence -> ^(BLOCK instr sequence?)
             ;
             
-exprlist    : expr nextexpr
+exprlist    : expr nextexpr -> expr nextexpr
             ;
 
 nextexpr    :
-            | ',' expr
+            | ',' expr -> expr
             ;
 
-expr	: add
+expr	: add -> add
 	    ;
 	
-add : mult (addSubtractOp add)?
+add : mult (addSubtractOp add)? -> ^( '4+4' ^(addSubtractOp)? mult add?)
 	;	
  
-mult
-	: and (multiplyDivideOp  mult)? 
+
+mult 
+	: and (multiplyDivideOp  mult)? -> and (multiplyDivideOp  mult)?
 	;
 
 and
-	: comp ('&&'  and)?
+	: comp ('&&'  and)? 
 	;
  
 comp
@@ -99,38 +101,38 @@ negExpression: neg? expressionAtom
 	;
 	
  expressionAtom : 
-				|   cste
-				|   IDF
-				|  ( '(' add ')' )
-				|	IDF '(' exprlist ')'
+				|   cste -> cste
+				|   IDF -> IDF
+				|  ( '(' add ')' ) -> add
+				|	IDF '(' exprlist ')' -> ^(IDF exprlist)
 				;
  
  
 addSubtractOp 
-	: '+'
-	|   '-'
+	: '+' -> '+'
+	|   '-' -> '-'
 	;    
  
 multiplyDivideOp 
-	: '*' 
-	|   '/'
+	: '*' -> '*'
+	|   '/' -> '/'
 	;    
  
 comparatorOp 
-	: '>'
-	|  '<'
-	|  '>='
-	| '<='
-	| '!='
+	: '>' -> '>'
+	|  '<' -> '<'
+	|  '>=' -> '>='
+	| '<=' -> '<='
+	| '!=' -> '!='
 	;
 
-cste		: CSTEINT
-			| CSTEBOOL
-			| CSTESTRING
+cste		: CSTEINT -> CSTEINT
+			| CSTEBOOL -> CSTEBOOL
+			| CSTESTRING -> CSTESTRING
 			;
             
-neg        	: 'not'
-	|'!'
+neg        	: 'not' -> 'not'
+	|'!' -> '!'
             	;
 
 
