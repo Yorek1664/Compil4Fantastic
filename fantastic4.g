@@ -60,8 +60,8 @@ writable    : IDF -> IDF
             | cste -> cste
             ;
 
-sequence    : -> 
-            | instr  sequence -> ^(BLOCK instr sequence?)
+sequence    : 
+            | instr  sequence? -> ^(instr sequence?)
             ;
             
 exprlist    : expr nextexpr -> expr nextexpr
@@ -71,30 +71,31 @@ nextexpr    :
             | ',' expr -> expr
             ;
 
-expr	: add -> add
+expr	: 
+	| add -> add
 	    ;
 	
-add : mult (addSubtractOp add)? -> ^( '4+4' ^(addSubtractOp)? mult add?)
+add : mult (addSubtractOp^ add)? 
 	;	
  
 
 mult 
-	: and (multiplyDivideOp  mult)? -> and (multiplyDivideOp  mult)?
+	: and (multiplyDivideOp^  mult)? 
 	;
-
-and
-	: comp ('&&'  and)? 
+     
+and 
+	: comp ('&&'^  and)? 
 	;
  
 comp
-	: or (comparatorOp  comp)? 	
+	: or (comparatorOp^  comp)? 	  
 	;
  
-or 	: puis ('||'  or)? 
+or 	: puis ('||'^  or)? 
 	;
  
 puis	
-	:  negExpression ('^' puis)?
+	:  negExpression ('^'^ puis)?
 	;
  
 negExpression: neg? expressionAtom
@@ -107,7 +108,6 @@ negExpression: neg? expressionAtom
 				|	IDF '(' exprlist ')' -> ^(IDF exprlist)
 				;
  
- 
 addSubtractOp 
 	: '+' -> '+'
 	|   '-' -> '-'
@@ -117,6 +117,7 @@ multiplyDivideOp
 	: '*' -> '*'
 	|   '/' -> '/'
 	;    
+
  
 comparatorOp 
 	: '>' -> '>'
@@ -135,7 +136,7 @@ neg        	: 'not' -> 'not'
 	|'!' -> '!'
             	;
 
-
+ 
 CSTEBOOL    :('true'|'false')								;
 CSTEINT		:('0'..'9')+            						;
 CSTESTRING	:('"'*'"')										;
