@@ -125,7 +125,7 @@ comparatorOp
 
 cste		: CSTEINT -> CSTEINT
 			| CSTEBOOL -> CSTEBOOL
-			| CSTESTRING ->  CSTESTRING '"'
+			| CSTESTRING -> CSTESTRING
 			;
             
 neg        	: 'not' -> 'not'
@@ -134,7 +134,7 @@ neg        	: 'not' -> 'not'
 
 CSTEBOOL    :('true'|'false')								;
 CSTEINT		:('0'..'9')+            						;
-CSTESTRING	:( '"' * '"' )									;
+CSTESTRING	:('"') (~('"')*) ('"')								;
 IDF     : ('a'..'z'|'A'..'Z')('a'..'z'|'A'..'Z'|'0'..'9')*  ;
 COMM    : ('/*'*'*/')|('//'*'\n') {$channel=HIDDEN;}        ;
-WS      : (' '|'\t'|'\n')+ {$channel=HIDDEN;}               ;
+WS      : (' '|'\t'|'\n'|'\r')+ {$channel=HIDDEN;}               ;
