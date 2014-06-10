@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g 2014-06-10 19:32:59
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g 2014-06-10 21:14:29
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -1250,17 +1250,17 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:140:9: ( ( ' ' | '\\t' | '\\n' )+ )
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:140:11: ( ' ' | '\\t' | '\\n' )+
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:140:9: ( ( ' ' | '\\t' | '\\n' | '\\r' )+ )
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:140:11: ( ' ' | '\\t' | '\\n' | '\\r' )+
             {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:140:11: ( ' ' | '\\t' | '\\n' )+
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:140:11: ( ' ' | '\\t' | '\\n' | '\\r' )+
             int cnt8=0;
             loop8:
             do {
                 int alt8=2;
                 int LA8_0 = input.LA(1);
 
-                if ( ((LA8_0>='\t' && LA8_0<='\n')||LA8_0==' ') ) {
+                if ( ((LA8_0>='\t' && LA8_0<='\n')||LA8_0=='\r'||LA8_0==' ') ) {
                     alt8=1;
                 }
 
@@ -1269,7 +1269,7 @@ public class fantastic4Lexer extends Lexer {
             	case 1 :
             	    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:
             	    {
-            	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)==' ' ) {
+            	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
             	        input.consume();
 
             	    }
@@ -1670,11 +1670,11 @@ public class fantastic4Lexer extends Lexer {
     static final String DFA9_specialS =
         "\174\uffff}>";
     static final String[] DFA9_transitionS = {
-            "\1\43\1\42\25\uffff\1\43\1\35\1\40\3\uffff\1\24\1\uffff\1\12"+
-            "\1\13\1\31\1\27\1\5\1\30\1\uffff\1\32\12\37\1\3\1\4\1\34\1\21"+
-            "\1\33\2\uffff\32\41\3\uffff\1\26\2\uffff\1\41\1\6\1\10\1\20"+
-            "\1\16\1\11\2\41\1\7\4\41\1\36\1\41\1\1\1\41\1\14\1\41\1\15\1"+
-            "\41\1\2\1\17\3\41\1\22\1\25\1\23",
+            "\1\43\1\42\2\uffff\1\43\22\uffff\1\43\1\35\1\40\3\uffff\1\24"+
+            "\1\uffff\1\12\1\13\1\31\1\27\1\5\1\30\1\uffff\1\32\12\37\1\3"+
+            "\1\4\1\34\1\21\1\33\2\uffff\32\41\3\uffff\1\26\2\uffff\1\41"+
+            "\1\6\1\10\1\20\1\16\1\11\2\41\1\7\4\41\1\36\1\41\1\1\1\41\1"+
+            "\14\1\41\1\15\1\41\1\2\1\17\3\41\1\22\1\25\1\23",
             "\1\44",
             "\1\45\15\uffff\1\46",
             "",
@@ -1708,7 +1708,7 @@ public class fantastic4Lexer extends Lexer {
             "",
             "",
             "",
-            "\2\43\25\uffff\1\43",
+            "\2\43\2\uffff\1\43\22\uffff\1\43",
             "",
             "\1\77",
             "\1\100",

@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 fantastic4.g 2014-06-10 19:48:44
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 fantastic4.g 2014-06-10 21:15:21
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -200,7 +200,7 @@ public class fantastic4Parser extends Parser {
 
 
             // AST REWRITE
-            // elements: instr, vardeclist, IDF, funcdeclist
+            // elements: funcdeclist, vardeclist, instr, IDF
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -574,7 +574,7 @@ public class fantastic4Parser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: idenlist, IDF
+                    // elements: IDF, idenlist
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1001,7 +1001,7 @@ public class fantastic4Parser extends Parser {
 
 
             // AST REWRITE
-            // elements: instr, 24, IDF, typename, vardeclist, arglist
+            // elements: instr, IDF, arglist, 24, typename, vardeclist
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1132,7 +1132,7 @@ public class fantastic4Parser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: arglist, arg
+                    // elements: arg, arglist
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1248,7 +1248,7 @@ public class fantastic4Parser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: typename, IDF
+                    // elements: IDF, typename
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1297,7 +1297,7 @@ public class fantastic4Parser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: typename, IDF, 27
+                    // elements: typename, 27, IDF
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1351,7 +1351,7 @@ public class fantastic4Parser extends Parser {
     };
 
     // $ANTLR start "instr"
-    // fantastic4.g:45:1: instr : ( 'if' expr 'then' instr ( 'else' instr )? 'fi' -> ^( 'if' expr ^( 'then' instr ) ( ^( 'else' instr ) )? ) | 'while' expr 'do' instr -> ^( 'while' expr ^( BLOCK instr ) ) | IDF '=' expr ';' -> ^( '=' IDF expr ) | 'return' returnable -> ^( 'return' returnable ) | IDF '(' exprlist ')' ';' -> ^( CALLFUNCTION IDF exprlist ) | '{' sequence '}' -> ( sequence )? | 'read' IDF ';' -> ^( 'read' IDF ) | 'write' writable ';' -> ^( 'write' writable ) );
+    // fantastic4.g:45:1: instr : ( 'if' expr 'then' instr ( 'else' instr )? 'fi' -> ^( 'if' expr ^( 'then' instr ) ( ^( 'else' instr ) )? ) | 'while' expr 'do' instr -> ^( 'while' expr ^( BLOCK instr ) ) | IDF '=' expr ';' -> ^( '=' IDF expr ) | 'return' returnable -> ^( 'return' returnable ) | IDF '(' exprlist ')' ';' -> ^( CALLFUNCTION IDF exprlist ) | '{' ( sequence )? '}' -> ( sequence )? | 'read' IDF ';' -> ^( 'read' IDF ) | 'write' writable ';' -> ^( 'write' writable ) );
     public final fantastic4Parser.instr_return instr() throws RecognitionException {
         fantastic4Parser.instr_return retval = new fantastic4Parser.instr_return();
         retval.start = input.LT(1);
@@ -1444,10 +1444,10 @@ public class fantastic4Parser extends Parser {
         RewriteRuleSubtreeStream stream_returnable=new RewriteRuleSubtreeStream(adaptor,"rule returnable");
         RewriteRuleSubtreeStream stream_instr=new RewriteRuleSubtreeStream(adaptor,"rule instr");
         try {
-            // fantastic4.g:45:13: ( 'if' expr 'then' instr ( 'else' instr )? 'fi' -> ^( 'if' expr ^( 'then' instr ) ( ^( 'else' instr ) )? ) | 'while' expr 'do' instr -> ^( 'while' expr ^( BLOCK instr ) ) | IDF '=' expr ';' -> ^( '=' IDF expr ) | 'return' returnable -> ^( 'return' returnable ) | IDF '(' exprlist ')' ';' -> ^( CALLFUNCTION IDF exprlist ) | '{' sequence '}' -> ( sequence )? | 'read' IDF ';' -> ^( 'read' IDF ) | 'write' writable ';' -> ^( 'write' writable ) )
-            int alt13=8;
-            alt13 = dfa13.predict(input);
-            switch (alt13) {
+            // fantastic4.g:45:13: ( 'if' expr 'then' instr ( 'else' instr )? 'fi' -> ^( 'if' expr ^( 'then' instr ) ( ^( 'else' instr ) )? ) | 'while' expr 'do' instr -> ^( 'while' expr ^( BLOCK instr ) ) | IDF '=' expr ';' -> ^( '=' IDF expr ) | 'return' returnable -> ^( 'return' returnable ) | IDF '(' exprlist ')' ';' -> ^( CALLFUNCTION IDF exprlist ) | '{' ( sequence )? '}' -> ( sequence )? | 'read' IDF ';' -> ^( 'read' IDF ) | 'write' writable ';' -> ^( 'write' writable ) )
+            int alt14=8;
+            alt14 = dfa14.predict(input);
+            switch (alt14) {
                 case 1 :
                     // fantastic4.g:45:15: 'if' expr 'then' instr ( 'else' instr )? 'fi'
                     {
@@ -1501,7 +1501,7 @@ public class fantastic4Parser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: instr, 28, 30, 29, expr, instr
+                    // elements: 30, expr, instr, 29, 28, instr
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1576,7 +1576,7 @@ public class fantastic4Parser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: 32, instr, expr
+                    // elements: expr, instr, 32
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1633,7 +1633,7 @@ public class fantastic4Parser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: IDF, 34, expr
+                    // elements: expr, IDF, 34
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1676,7 +1676,7 @@ public class fantastic4Parser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: 35, returnable
+                    // elements: returnable, 35
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1727,7 +1727,7 @@ public class fantastic4Parser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: exprlist, IDF
+                    // elements: IDF, exprlist
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1756,18 +1756,35 @@ public class fantastic4Parser extends Parser {
                     }
                     break;
                 case 6 :
-                    // fantastic4.g:50:15: '{' sequence '}'
+                    // fantastic4.g:50:15: '{' ( sequence )? '}'
                     {
                     char_literal65=(Token)match(input,36,FOLLOW_36_in_instr803);  
                     stream_36.add(char_literal65);
 
-                    pushFollow(FOLLOW_sequence_in_instr805);
-                    sequence66=sequence();
+                    // fantastic4.g:50:19: ( sequence )?
+                    int alt13=2;
+                    int LA13_0 = input.LA(1);
 
-                    state._fsp--;
+                    if ( (LA13_0==IDF||LA13_0==28||LA13_0==32||(LA13_0>=35 && LA13_0<=36)||(LA13_0>=38 && LA13_0<=39)) ) {
+                        alt13=1;
+                    }
+                    switch (alt13) {
+                        case 1 :
+                            // fantastic4.g:50:19: sequence
+                            {
+                            pushFollow(FOLLOW_sequence_in_instr805);
+                            sequence66=sequence();
 
-                    stream_sequence.add(sequence66.getTree());
-                    char_literal67=(Token)match(input,37,FOLLOW_37_in_instr807);  
+                            state._fsp--;
+
+                            stream_sequence.add(sequence66.getTree());
+
+                            }
+                            break;
+
+                    }
+
+                    char_literal67=(Token)match(input,37,FOLLOW_37_in_instr808);  
                     stream_37.add(char_literal67);
 
 
@@ -1783,9 +1800,9 @@ public class fantastic4Parser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 50:32: -> ( sequence )?
+                    // 50:33: -> ( sequence )?
                     {
-                        // fantastic4.g:50:36: ( sequence )?
+                        // fantastic4.g:50:37: ( sequence )?
                         if ( stream_sequence.hasNext() ) {
                             adaptor.addChild(root_0, stream_sequence.nextTree());
 
@@ -1800,19 +1817,19 @@ public class fantastic4Parser extends Parser {
                 case 7 :
                     // fantastic4.g:51:15: 'read' IDF ';'
                     {
-                    string_literal68=(Token)match(input,38,FOLLOW_38_in_instr829);  
+                    string_literal68=(Token)match(input,38,FOLLOW_38_in_instr830);  
                     stream_38.add(string_literal68);
 
-                    IDF69=(Token)match(input,IDF,FOLLOW_IDF_in_instr831);  
+                    IDF69=(Token)match(input,IDF,FOLLOW_IDF_in_instr832);  
                     stream_IDF.add(IDF69);
 
-                    char_literal70=(Token)match(input,18,FOLLOW_18_in_instr833);  
+                    char_literal70=(Token)match(input,18,FOLLOW_18_in_instr834);  
                     stream_18.add(char_literal70);
 
 
 
                     // AST REWRITE
-                    // elements: 38, IDF
+                    // elements: IDF, 38
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1842,22 +1859,22 @@ public class fantastic4Parser extends Parser {
                 case 8 :
                     // fantastic4.g:52:15: 'write' writable ';'
                     {
-                    string_literal71=(Token)match(input,39,FOLLOW_39_in_instr857);  
+                    string_literal71=(Token)match(input,39,FOLLOW_39_in_instr858);  
                     stream_39.add(string_literal71);
 
-                    pushFollow(FOLLOW_writable_in_instr859);
+                    pushFollow(FOLLOW_writable_in_instr860);
                     writable72=writable();
 
                     state._fsp--;
 
                     stream_writable.add(writable72.getTree());
-                    char_literal73=(Token)match(input,18,FOLLOW_18_in_instr861);  
+                    char_literal73=(Token)match(input,18,FOLLOW_18_in_instr862);  
                     stream_18.add(char_literal73);
 
 
 
                     // AST REWRITE
-                    // elements: writable, 39
+                    // elements: 39, writable
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1928,13 +1945,13 @@ public class fantastic4Parser extends Parser {
             // fantastic4.g:55:12: ( expr ';' -> expr )
             // fantastic4.g:55:14: expr ';'
             {
-            pushFollow(FOLLOW_expr_in_returnable890);
+            pushFollow(FOLLOW_expr_in_returnable891);
             expr74=expr();
 
             state._fsp--;
 
             stream_expr.add(expr74.getTree());
-            char_literal75=(Token)match(input,18,FOLLOW_18_in_returnable892);  
+            char_literal75=(Token)match(input,18,FOLLOW_18_in_returnable893);  
             stream_18.add(char_literal75);
 
 
@@ -1999,26 +2016,26 @@ public class fantastic4Parser extends Parser {
         RewriteRuleSubtreeStream stream_cste=new RewriteRuleSubtreeStream(adaptor,"rule cste");
         try {
             // fantastic4.g:59:13: ( IDF -> IDF | cste -> cste )
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA14_0==IDF) ) {
-                alt14=1;
+            if ( (LA15_0==IDF) ) {
+                alt15=1;
             }
-            else if ( ((LA14_0>=CSTEINT && LA14_0<=CSTESTRING)) ) {
-                alt14=2;
+            else if ( ((LA15_0>=CSTEINT && LA15_0<=CSTESTRING)) ) {
+                alt15=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 14, 0, input);
+                    new NoViableAltException("", 15, 0, input);
 
                 throw nvae;
             }
-            switch (alt14) {
+            switch (alt15) {
                 case 1 :
                     // fantastic4.g:59:15: IDF
                     {
-                    IDF76=(Token)match(input,IDF,FOLLOW_IDF_in_writable912);  
+                    IDF76=(Token)match(input,IDF,FOLLOW_IDF_in_writable913);  
                     stream_IDF.add(IDF76);
 
 
@@ -2046,7 +2063,7 @@ public class fantastic4Parser extends Parser {
                 case 2 :
                     // fantastic4.g:60:15: cste
                     {
-                    pushFollow(FOLLOW_cste_in_writable932);
+                    pushFollow(FOLLOW_cste_in_writable933);
                     cste77=cste();
 
                     state._fsp--;
@@ -2118,24 +2135,24 @@ public class fantastic4Parser extends Parser {
             // fantastic4.g:63:13: ( instr ( sequence )? -> instr ( sequence )? )
             // fantastic4.g:63:16: instr ( sequence )?
             {
-            pushFollow(FOLLOW_instr_in_sequence961);
+            pushFollow(FOLLOW_instr_in_sequence962);
             instr78=instr();
 
             state._fsp--;
 
             stream_instr.add(instr78.getTree());
             // fantastic4.g:63:23: ( sequence )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA15_0==IDF||LA15_0==28||LA15_0==32||(LA15_0>=35 && LA15_0<=36)||(LA15_0>=38 && LA15_0<=39)) ) {
-                alt15=1;
+            if ( (LA16_0==IDF||LA16_0==28||LA16_0==32||(LA16_0>=35 && LA16_0<=36)||(LA16_0>=38 && LA16_0<=39)) ) {
+                alt16=1;
             }
-            switch (alt15) {
+            switch (alt16) {
                 case 1 :
                     // fantastic4.g:63:23: sequence
                     {
-                    pushFollow(FOLLOW_sequence_in_sequence964);
+                    pushFollow(FOLLOW_sequence_in_sequence965);
                     sequence79=sequence();
 
                     state._fsp--;
@@ -2217,24 +2234,24 @@ public class fantastic4Parser extends Parser {
             // fantastic4.g:66:13: ( expr ( nextexpr )? -> expr ( nextexpr )? )
             // fantastic4.g:66:15: expr ( nextexpr )?
             {
-            pushFollow(FOLLOW_expr_in_exprlist1008);
+            pushFollow(FOLLOW_expr_in_exprlist1009);
             expr80=expr();
 
             state._fsp--;
 
             stream_expr.add(expr80.getTree());
             // fantastic4.g:66:20: ( nextexpr )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA16_0==19) ) {
-                alt16=1;
+            if ( (LA17_0==19) ) {
+                alt17=1;
             }
-            switch (alt16) {
+            switch (alt17) {
                 case 1 :
                     // fantastic4.g:66:20: nextexpr
                     {
-                    pushFollow(FOLLOW_nextexpr_in_exprlist1010);
+                    pushFollow(FOLLOW_nextexpr_in_exprlist1011);
                     nextexpr81=nextexpr();
 
                     state._fsp--;
@@ -2249,7 +2266,7 @@ public class fantastic4Parser extends Parser {
 
 
             // AST REWRITE
-            // elements: expr, nextexpr
+            // elements: nextexpr, expr
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2316,10 +2333,10 @@ public class fantastic4Parser extends Parser {
             // fantastic4.g:69:13: ( ',' exprlist -> exprlist )
             // fantastic4.g:69:14: ',' exprlist
             {
-            char_literal82=(Token)match(input,19,FOLLOW_19_in_nextexpr1041);  
+            char_literal82=(Token)match(input,19,FOLLOW_19_in_nextexpr1042);  
             stream_19.add(char_literal82);
 
-            pushFollow(FOLLOW_exprlist_in_nextexpr1043);
+            pushFollow(FOLLOW_exprlist_in_nextexpr1044);
             exprlist83=exprlist();
 
             state._fsp--;
@@ -2386,7 +2403,7 @@ public class fantastic4Parser extends Parser {
             // fantastic4.g:72:6: ( add -> add )
             // fantastic4.g:72:9: add
             {
-            pushFollow(FOLLOW_add_in_expr1069);
+            pushFollow(FOLLOW_add_in_expr1070);
             add84=add();
 
             state._fsp--;
@@ -2459,30 +2476,30 @@ public class fantastic4Parser extends Parser {
             {
             root_0 = (Object)adaptor.nil();
 
-            pushFollow(FOLLOW_mult_in_add1088);
+            pushFollow(FOLLOW_mult_in_add1089);
             mult85=mult();
 
             state._fsp--;
 
             adaptor.addChild(root_0, mult85.getTree());
             // fantastic4.g:75:12: ( addSubtractOp add )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( ((LA17_0>=43 && LA17_0<=44)) ) {
-                alt17=1;
+            if ( ((LA18_0>=43 && LA18_0<=44)) ) {
+                alt18=1;
             }
-            switch (alt17) {
+            switch (alt18) {
                 case 1 :
                     // fantastic4.g:75:13: addSubtractOp add
                     {
-                    pushFollow(FOLLOW_addSubtractOp_in_add1091);
+                    pushFollow(FOLLOW_addSubtractOp_in_add1092);
                     addSubtractOp86=addSubtractOp();
 
                     state._fsp--;
 
                     root_0 = (Object)adaptor.becomeRoot(addSubtractOp86.getTree(), root_0);
-                    pushFollow(FOLLOW_add_in_add1094);
+                    pushFollow(FOLLOW_add_in_add1095);
                     add87=add();
 
                     state._fsp--;
@@ -2542,30 +2559,30 @@ public class fantastic4Parser extends Parser {
             {
             root_0 = (Object)adaptor.nil();
 
-            pushFollow(FOLLOW_and_in_mult1112);
+            pushFollow(FOLLOW_and_in_mult1113);
             and88=and();
 
             state._fsp--;
 
             adaptor.addChild(root_0, and88.getTree());
             // fantastic4.g:80:8: ( multiplyDivideOp mult )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( ((LA18_0>=45 && LA18_0<=46)) ) {
-                alt18=1;
+            if ( ((LA19_0>=45 && LA19_0<=46)) ) {
+                alt19=1;
             }
-            switch (alt18) {
+            switch (alt19) {
                 case 1 :
                     // fantastic4.g:80:9: multiplyDivideOp mult
                     {
-                    pushFollow(FOLLOW_multiplyDivideOp_in_mult1115);
+                    pushFollow(FOLLOW_multiplyDivideOp_in_mult1116);
                     multiplyDivideOp89=multiplyDivideOp();
 
                     state._fsp--;
 
                     root_0 = (Object)adaptor.becomeRoot(multiplyDivideOp89.getTree(), root_0);
-                    pushFollow(FOLLOW_mult_in_mult1119);
+                    pushFollow(FOLLOW_mult_in_mult1120);
                     mult90=mult();
 
                     state._fsp--;
@@ -2625,28 +2642,28 @@ public class fantastic4Parser extends Parser {
             {
             root_0 = (Object)adaptor.nil();
 
-            pushFollow(FOLLOW_comp_in_and1139);
+            pushFollow(FOLLOW_comp_in_and1140);
             comp91=comp();
 
             state._fsp--;
 
             adaptor.addChild(root_0, comp91.getTree());
             // fantastic4.g:84:9: ( '&&' and )?
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA19_0==40) ) {
-                alt19=1;
+            if ( (LA20_0==40) ) {
+                alt20=1;
             }
-            switch (alt19) {
+            switch (alt20) {
                 case 1 :
                     // fantastic4.g:84:10: '&&' and
                     {
-                    string_literal92=(Token)match(input,40,FOLLOW_40_in_and1142); 
+                    string_literal92=(Token)match(input,40,FOLLOW_40_in_and1143); 
                     string_literal92_tree = (Object)adaptor.create(string_literal92);
                     root_0 = (Object)adaptor.becomeRoot(string_literal92_tree, root_0);
 
-                    pushFollow(FOLLOW_and_in_and1146);
+                    pushFollow(FOLLOW_and_in_and1147);
                     and93=and();
 
                     state._fsp--;
@@ -2706,30 +2723,30 @@ public class fantastic4Parser extends Parser {
             {
             root_0 = (Object)adaptor.nil();
 
-            pushFollow(FOLLOW_or_in_comp1161);
+            pushFollow(FOLLOW_or_in_comp1162);
             or94=or();
 
             state._fsp--;
 
             adaptor.addChild(root_0, or94.getTree());
             // fantastic4.g:88:7: ( comparatorOp comp )?
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            int alt21=2;
+            int LA21_0 = input.LA(1);
 
-            if ( ((LA20_0>=47 && LA20_0<=51)) ) {
-                alt20=1;
+            if ( ((LA21_0>=47 && LA21_0<=51)) ) {
+                alt21=1;
             }
-            switch (alt20) {
+            switch (alt21) {
                 case 1 :
                     // fantastic4.g:88:8: comparatorOp comp
                     {
-                    pushFollow(FOLLOW_comparatorOp_in_comp1164);
+                    pushFollow(FOLLOW_comparatorOp_in_comp1165);
                     comparatorOp95=comparatorOp();
 
                     state._fsp--;
 
                     root_0 = (Object)adaptor.becomeRoot(comparatorOp95.getTree(), root_0);
-                    pushFollow(FOLLOW_comp_in_comp1168);
+                    pushFollow(FOLLOW_comp_in_comp1169);
                     comp96=comp();
 
                     state._fsp--;
@@ -2789,28 +2806,28 @@ public class fantastic4Parser extends Parser {
             {
             root_0 = (Object)adaptor.nil();
 
-            pushFollow(FOLLOW_puis_in_or1186);
+            pushFollow(FOLLOW_puis_in_or1187);
             puis97=puis();
 
             state._fsp--;
 
             adaptor.addChild(root_0, puis97.getTree());
             // fantastic4.g:91:12: ( '||' or )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( (LA21_0==41) ) {
-                alt21=1;
+            if ( (LA22_0==41) ) {
+                alt22=1;
             }
-            switch (alt21) {
+            switch (alt22) {
                 case 1 :
                     // fantastic4.g:91:13: '||' or
                     {
-                    string_literal98=(Token)match(input,41,FOLLOW_41_in_or1189); 
+                    string_literal98=(Token)match(input,41,FOLLOW_41_in_or1190); 
                     string_literal98_tree = (Object)adaptor.create(string_literal98);
                     root_0 = (Object)adaptor.becomeRoot(string_literal98_tree, root_0);
 
-                    pushFollow(FOLLOW_or_in_or1193);
+                    pushFollow(FOLLOW_or_in_or1194);
                     or99=or();
 
                     state._fsp--;
@@ -2870,28 +2887,28 @@ public class fantastic4Parser extends Parser {
             {
             root_0 = (Object)adaptor.nil();
 
-            pushFollow(FOLLOW_negExpression_in_puis1210);
+            pushFollow(FOLLOW_negExpression_in_puis1211);
             negExpression100=negExpression();
 
             state._fsp--;
 
             adaptor.addChild(root_0, negExpression100.getTree());
             // fantastic4.g:95:19: ( '^' puis )?
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            int alt23=2;
+            int LA23_0 = input.LA(1);
 
-            if ( (LA22_0==42) ) {
-                alt22=1;
+            if ( (LA23_0==42) ) {
+                alt23=1;
             }
-            switch (alt22) {
+            switch (alt23) {
                 case 1 :
                     // fantastic4.g:95:20: '^' puis
                     {
-                    char_literal101=(Token)match(input,42,FOLLOW_42_in_puis1213); 
+                    char_literal101=(Token)match(input,42,FOLLOW_42_in_puis1214); 
                     char_literal101_tree = (Object)adaptor.create(char_literal101);
                     root_0 = (Object)adaptor.becomeRoot(char_literal101_tree, root_0);
 
-                    pushFollow(FOLLOW_puis_in_puis1216);
+                    pushFollow(FOLLOW_puis_in_puis1217);
                     puis102=puis();
 
                     state._fsp--;
@@ -2950,17 +2967,17 @@ public class fantastic4Parser extends Parser {
             root_0 = (Object)adaptor.nil();
 
             // fantastic4.g:98:16: ( neg )?
-            int alt23=2;
-            int LA23_0 = input.LA(1);
+            int alt24=2;
+            int LA24_0 = input.LA(1);
 
-            if ( ((LA23_0>=52 && LA23_0<=53)) ) {
-                alt23=1;
+            if ( ((LA24_0>=52 && LA24_0<=53)) ) {
+                alt24=1;
             }
-            switch (alt23) {
+            switch (alt24) {
                 case 1 :
                     // fantastic4.g:98:16: neg
                     {
-                    pushFollow(FOLLOW_neg_in_negExpression1228);
+                    pushFollow(FOLLOW_neg_in_negExpression1229);
                     neg103=neg();
 
                     state._fsp--;
@@ -2972,7 +2989,7 @@ public class fantastic4Parser extends Parser {
 
             }
 
-            pushFollow(FOLLOW_expressionAtom_in_negExpression1231);
+            pushFollow(FOLLOW_expressionAtom_in_negExpression1232);
             expressionAtom104=expressionAtom();
 
             state._fsp--;
@@ -3039,7 +3056,7 @@ public class fantastic4Parser extends Parser {
         RewriteRuleSubtreeStream stream_add=new RewriteRuleSubtreeStream(adaptor,"rule add");
         try {
             // fantastic4.g:101:17: ( -> EPSILON | cste -> cste | IDF -> IDF | ( '(' add ')' ) -> add | IDF '(' exprlist ')' -> ^( IDF exprlist ) )
-            int alt24=5;
+            int alt25=5;
             switch ( input.LA(1) ) {
             case 18:
             case 19:
@@ -3059,29 +3076,29 @@ public class fantastic4Parser extends Parser {
             case 50:
             case 51:
                 {
-                alt24=1;
+                alt25=1;
                 }
                 break;
             case CSTEINT:
             case CSTEBOOL:
             case CSTESTRING:
                 {
-                alt24=2;
+                alt25=2;
                 }
                 break;
             case IDF:
                 {
-                int LA24_3 = input.LA(2);
+                int LA25_3 = input.LA(2);
 
-                if ( (LA24_3==25) ) {
-                    alt24=5;
+                if ( (LA25_3==25) ) {
+                    alt25=5;
                 }
-                else if ( ((LA24_3>=18 && LA24_3<=19)||LA24_3==26||LA24_3==29||LA24_3==33||(LA24_3>=40 && LA24_3<=51)) ) {
-                    alt24=3;
+                else if ( ((LA25_3>=18 && LA25_3<=19)||LA25_3==26||LA25_3==29||LA25_3==33||(LA25_3>=40 && LA25_3<=51)) ) {
+                    alt25=3;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 24, 3, input);
+                        new NoViableAltException("", 25, 3, input);
 
                     throw nvae;
                 }
@@ -3089,17 +3106,17 @@ public class fantastic4Parser extends Parser {
                 break;
             case 25:
                 {
-                alt24=4;
+                alt25=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 24, 0, input);
+                    new NoViableAltException("", 25, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt24) {
+            switch (alt25) {
                 case 1 :
                     // fantastic4.g:101:19: 
                     {
@@ -3127,7 +3144,7 @@ public class fantastic4Parser extends Parser {
                 case 2 :
                     // fantastic4.g:102:9: cste
                     {
-                    pushFollow(FOLLOW_cste_in_expressionAtom1255);
+                    pushFollow(FOLLOW_cste_in_expressionAtom1256);
                     cste105=cste();
 
                     state._fsp--;
@@ -3158,7 +3175,7 @@ public class fantastic4Parser extends Parser {
                 case 3 :
                     // fantastic4.g:103:9: IDF
                     {
-                    IDF106=(Token)match(input,IDF,FOLLOW_IDF_in_expressionAtom1269);  
+                    IDF106=(Token)match(input,IDF,FOLLOW_IDF_in_expressionAtom1270);  
                     stream_IDF.add(IDF106);
 
 
@@ -3189,16 +3206,16 @@ public class fantastic4Parser extends Parser {
                     // fantastic4.g:104:8: ( '(' add ')' )
                     // fantastic4.g:104:10: '(' add ')'
                     {
-                    char_literal107=(Token)match(input,25,FOLLOW_25_in_expressionAtom1284);  
+                    char_literal107=(Token)match(input,25,FOLLOW_25_in_expressionAtom1285);  
                     stream_25.add(char_literal107);
 
-                    pushFollow(FOLLOW_add_in_expressionAtom1286);
+                    pushFollow(FOLLOW_add_in_expressionAtom1287);
                     add108=add();
 
                     state._fsp--;
 
                     stream_add.add(add108.getTree());
-                    char_literal109=(Token)match(input,26,FOLLOW_26_in_expressionAtom1288);  
+                    char_literal109=(Token)match(input,26,FOLLOW_26_in_expressionAtom1289);  
                     stream_26.add(char_literal109);
 
 
@@ -3229,19 +3246,19 @@ public class fantastic4Parser extends Parser {
                 case 5 :
                     // fantastic4.g:105:7: IDF '(' exprlist ')'
                     {
-                    IDF110=(Token)match(input,IDF,FOLLOW_IDF_in_expressionAtom1302);  
+                    IDF110=(Token)match(input,IDF,FOLLOW_IDF_in_expressionAtom1303);  
                     stream_IDF.add(IDF110);
 
-                    char_literal111=(Token)match(input,25,FOLLOW_25_in_expressionAtom1304);  
+                    char_literal111=(Token)match(input,25,FOLLOW_25_in_expressionAtom1305);  
                     stream_25.add(char_literal111);
 
-                    pushFollow(FOLLOW_exprlist_in_expressionAtom1306);
+                    pushFollow(FOLLOW_exprlist_in_expressionAtom1307);
                     exprlist112=exprlist();
 
                     state._fsp--;
 
                     stream_exprlist.add(exprlist112.getTree());
-                    char_literal113=(Token)match(input,26,FOLLOW_26_in_expressionAtom1308);  
+                    char_literal113=(Token)match(input,26,FOLLOW_26_in_expressionAtom1309);  
                     stream_26.add(char_literal113);
 
 
@@ -3317,26 +3334,26 @@ public class fantastic4Parser extends Parser {
 
         try {
             // fantastic4.g:108:2: ( '+' -> '+' | '-' -> '-' )
-            int alt25=2;
-            int LA25_0 = input.LA(1);
+            int alt26=2;
+            int LA26_0 = input.LA(1);
 
-            if ( (LA25_0==43) ) {
-                alt25=1;
+            if ( (LA26_0==43) ) {
+                alt26=1;
             }
-            else if ( (LA25_0==44) ) {
-                alt25=2;
+            else if ( (LA26_0==44) ) {
+                alt26=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 25, 0, input);
+                    new NoViableAltException("", 26, 0, input);
 
                 throw nvae;
             }
-            switch (alt25) {
+            switch (alt26) {
                 case 1 :
                     // fantastic4.g:108:4: '+'
                     {
-                    char_literal114=(Token)match(input,43,FOLLOW_43_in_addSubtractOp1330);  
+                    char_literal114=(Token)match(input,43,FOLLOW_43_in_addSubtractOp1331);  
                     stream_43.add(char_literal114);
 
 
@@ -3364,7 +3381,7 @@ public class fantastic4Parser extends Parser {
                 case 2 :
                     // fantastic4.g:109:6: '-'
                     {
-                    char_literal115=(Token)match(input,44,FOLLOW_44_in_addSubtractOp1341);  
+                    char_literal115=(Token)match(input,44,FOLLOW_44_in_addSubtractOp1342);  
                     stream_44.add(char_literal115);
 
 
@@ -3432,26 +3449,26 @@ public class fantastic4Parser extends Parser {
 
         try {
             // fantastic4.g:113:2: ( '*' -> '*' | '/' -> '/' )
-            int alt26=2;
-            int LA26_0 = input.LA(1);
+            int alt27=2;
+            int LA27_0 = input.LA(1);
 
-            if ( (LA26_0==45) ) {
-                alt26=1;
+            if ( (LA27_0==45) ) {
+                alt27=1;
             }
-            else if ( (LA26_0==46) ) {
-                alt26=2;
+            else if ( (LA27_0==46) ) {
+                alt27=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 26, 0, input);
+                    new NoViableAltException("", 27, 0, input);
 
                 throw nvae;
             }
-            switch (alt26) {
+            switch (alt27) {
                 case 1 :
                     // fantastic4.g:113:4: '*'
                     {
-                    char_literal116=(Token)match(input,45,FOLLOW_45_in_multiplyDivideOp1362);  
+                    char_literal116=(Token)match(input,45,FOLLOW_45_in_multiplyDivideOp1363);  
                     stream_45.add(char_literal116);
 
 
@@ -3479,7 +3496,7 @@ public class fantastic4Parser extends Parser {
                 case 2 :
                     // fantastic4.g:114:6: '/'
                     {
-                    char_literal117=(Token)match(input,46,FOLLOW_46_in_multiplyDivideOp1373);  
+                    char_literal117=(Token)match(input,46,FOLLOW_46_in_multiplyDivideOp1374);  
                     stream_46.add(char_literal117);
 
 
@@ -3556,45 +3573,45 @@ public class fantastic4Parser extends Parser {
 
         try {
             // fantastic4.g:119:2: ( '>' -> '>' | '<' -> '<' | '>=' -> '>=' | '<=' -> '<=' | '!=' -> '!=' )
-            int alt27=5;
+            int alt28=5;
             switch ( input.LA(1) ) {
             case 47:
                 {
-                alt27=1;
+                alt28=1;
                 }
                 break;
             case 48:
                 {
-                alt27=2;
+                alt28=2;
                 }
                 break;
             case 49:
                 {
-                alt27=3;
+                alt28=3;
                 }
                 break;
             case 50:
                 {
-                alt27=4;
+                alt28=4;
                 }
                 break;
             case 51:
                 {
-                alt27=5;
+                alt28=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 27, 0, input);
+                    new NoViableAltException("", 28, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt27) {
+            switch (alt28) {
                 case 1 :
                     // fantastic4.g:119:4: '>'
                     {
-                    char_literal118=(Token)match(input,47,FOLLOW_47_in_comparatorOp1395);  
+                    char_literal118=(Token)match(input,47,FOLLOW_47_in_comparatorOp1396);  
                     stream_47.add(char_literal118);
 
 
@@ -3622,7 +3639,7 @@ public class fantastic4Parser extends Parser {
                 case 2 :
                     // fantastic4.g:120:5: '<'
                     {
-                    char_literal119=(Token)match(input,48,FOLLOW_48_in_comparatorOp1405);  
+                    char_literal119=(Token)match(input,48,FOLLOW_48_in_comparatorOp1406);  
                     stream_48.add(char_literal119);
 
 
@@ -3650,7 +3667,7 @@ public class fantastic4Parser extends Parser {
                 case 3 :
                     // fantastic4.g:121:5: '>='
                     {
-                    string_literal120=(Token)match(input,49,FOLLOW_49_in_comparatorOp1415);  
+                    string_literal120=(Token)match(input,49,FOLLOW_49_in_comparatorOp1416);  
                     stream_49.add(string_literal120);
 
 
@@ -3678,7 +3695,7 @@ public class fantastic4Parser extends Parser {
                 case 4 :
                     // fantastic4.g:122:4: '<='
                     {
-                    string_literal121=(Token)match(input,50,FOLLOW_50_in_comparatorOp1424);  
+                    string_literal121=(Token)match(input,50,FOLLOW_50_in_comparatorOp1425);  
                     stream_50.add(string_literal121);
 
 
@@ -3706,7 +3723,7 @@ public class fantastic4Parser extends Parser {
                 case 5 :
                     // fantastic4.g:123:4: '!='
                     {
-                    string_literal122=(Token)match(input,51,FOLLOW_51_in_comparatorOp1433);  
+                    string_literal122=(Token)match(input,51,FOLLOW_51_in_comparatorOp1434);  
                     stream_51.add(string_literal122);
 
 
@@ -3777,35 +3794,35 @@ public class fantastic4Parser extends Parser {
 
         try {
             // fantastic4.g:126:7: ( CSTEINT -> CSTEINT | CSTEBOOL -> CSTEBOOL | CSTESTRING -> CSTESTRING )
-            int alt28=3;
+            int alt29=3;
             switch ( input.LA(1) ) {
             case CSTEINT:
                 {
-                alt28=1;
+                alt29=1;
                 }
                 break;
             case CSTEBOOL:
                 {
-                alt28=2;
+                alt29=2;
                 }
                 break;
             case CSTESTRING:
                 {
-                alt28=3;
+                alt29=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 28, 0, input);
+                    new NoViableAltException("", 29, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt28) {
+            switch (alt29) {
                 case 1 :
                     // fantastic4.g:126:9: CSTEINT
                     {
-                    CSTEINT123=(Token)match(input,CSTEINT,FOLLOW_CSTEINT_in_cste1448);  
+                    CSTEINT123=(Token)match(input,CSTEINT,FOLLOW_CSTEINT_in_cste1449);  
                     stream_CSTEINT.add(CSTEINT123);
 
 
@@ -3833,7 +3850,7 @@ public class fantastic4Parser extends Parser {
                 case 2 :
                     // fantastic4.g:127:6: CSTEBOOL
                     {
-                    CSTEBOOL124=(Token)match(input,CSTEBOOL,FOLLOW_CSTEBOOL_in_cste1459);  
+                    CSTEBOOL124=(Token)match(input,CSTEBOOL,FOLLOW_CSTEBOOL_in_cste1460);  
                     stream_CSTEBOOL.add(CSTEBOOL124);
 
 
@@ -3861,7 +3878,7 @@ public class fantastic4Parser extends Parser {
                 case 3 :
                     // fantastic4.g:128:6: CSTESTRING
                     {
-                    CSTESTRING125=(Token)match(input,CSTESTRING,FOLLOW_CSTESTRING_in_cste1470);  
+                    CSTESTRING125=(Token)match(input,CSTESTRING,FOLLOW_CSTESTRING_in_cste1471);  
                     stream_CSTESTRING.add(CSTESTRING125);
 
 
@@ -3929,26 +3946,26 @@ public class fantastic4Parser extends Parser {
 
         try {
             // fantastic4.g:131:13: ( 'not' -> 'not' | '!' -> '!' )
-            int alt29=2;
-            int LA29_0 = input.LA(1);
+            int alt30=2;
+            int LA30_0 = input.LA(1);
 
-            if ( (LA29_0==52) ) {
-                alt29=1;
+            if ( (LA30_0==52) ) {
+                alt30=1;
             }
-            else if ( (LA29_0==53) ) {
-                alt29=2;
+            else if ( (LA30_0==53) ) {
+                alt30=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 29, 0, input);
+                    new NoViableAltException("", 30, 0, input);
 
                 throw nvae;
             }
-            switch (alt29) {
+            switch (alt30) {
                 case 1 :
                     // fantastic4.g:131:15: 'not'
                     {
-                    string_literal126=(Token)match(input,52,FOLLOW_52_in_neg1506);  
+                    string_literal126=(Token)match(input,52,FOLLOW_52_in_neg1507);  
                     stream_52.add(string_literal126);
 
 
@@ -3976,7 +3993,7 @@ public class fantastic4Parser extends Parser {
                 case 2 :
                     // fantastic4.g:132:3: '!'
                     {
-                    char_literal127=(Token)match(input,53,FOLLOW_53_in_neg1514);  
+                    char_literal127=(Token)match(input,53,FOLLOW_53_in_neg1515);  
                     stream_53.add(char_literal127);
 
 
@@ -4025,7 +4042,7 @@ public class fantastic4Parser extends Parser {
 
 
     protected DFA10 dfa10 = new DFA10(this);
-    protected DFA13 dfa13 = new DFA13(this);
+    protected DFA14 dfa14 = new DFA14(this);
     static final String DFA10_eotS =
         "\20\uffff";
     static final String DFA10_eofS =
@@ -4090,19 +4107,19 @@ public class fantastic4Parser extends Parser {
             return "37:1: arglist : ( arg | arg ',' arglist -> ^( ARGUMENTS arg arglist ) );";
         }
     }
-    static final String DFA13_eotS =
+    static final String DFA14_eotS =
         "\12\uffff";
-    static final String DFA13_eofS =
+    static final String DFA14_eofS =
         "\12\uffff";
-    static final String DFA13_minS =
+    static final String DFA14_minS =
         "\1\11\2\uffff\1\31\6\uffff";
-    static final String DFA13_maxS =
+    static final String DFA14_maxS =
         "\1\47\2\uffff\1\42\6\uffff";
-    static final String DFA13_acceptS =
+    static final String DFA14_acceptS =
         "\1\uffff\1\1\1\2\1\uffff\1\4\1\6\1\7\1\10\1\3\1\5";
-    static final String DFA13_specialS =
+    static final String DFA14_specialS =
         "\12\uffff}>";
-    static final String[] DFA13_transitionS = {
+    static final String[] DFA14_transitionS = {
             "\1\3\22\uffff\1\1\3\uffff\1\2\2\uffff\1\4\1\5\1\uffff\1\6\1"+
             "\7",
             "",
@@ -4116,37 +4133,37 @@ public class fantastic4Parser extends Parser {
             ""
     };
 
-    static final short[] DFA13_eot = DFA.unpackEncodedString(DFA13_eotS);
-    static final short[] DFA13_eof = DFA.unpackEncodedString(DFA13_eofS);
-    static final char[] DFA13_min = DFA.unpackEncodedStringToUnsignedChars(DFA13_minS);
-    static final char[] DFA13_max = DFA.unpackEncodedStringToUnsignedChars(DFA13_maxS);
-    static final short[] DFA13_accept = DFA.unpackEncodedString(DFA13_acceptS);
-    static final short[] DFA13_special = DFA.unpackEncodedString(DFA13_specialS);
-    static final short[][] DFA13_transition;
+    static final short[] DFA14_eot = DFA.unpackEncodedString(DFA14_eotS);
+    static final short[] DFA14_eof = DFA.unpackEncodedString(DFA14_eofS);
+    static final char[] DFA14_min = DFA.unpackEncodedStringToUnsignedChars(DFA14_minS);
+    static final char[] DFA14_max = DFA.unpackEncodedStringToUnsignedChars(DFA14_maxS);
+    static final short[] DFA14_accept = DFA.unpackEncodedString(DFA14_acceptS);
+    static final short[] DFA14_special = DFA.unpackEncodedString(DFA14_specialS);
+    static final short[][] DFA14_transition;
 
     static {
-        int numStates = DFA13_transitionS.length;
-        DFA13_transition = new short[numStates][];
+        int numStates = DFA14_transitionS.length;
+        DFA14_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA13_transition[i] = DFA.unpackEncodedString(DFA13_transitionS[i]);
+            DFA14_transition[i] = DFA.unpackEncodedString(DFA14_transitionS[i]);
         }
     }
 
-    class DFA13 extends DFA {
+    class DFA14 extends DFA {
 
-        public DFA13(BaseRecognizer recognizer) {
+        public DFA14(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 13;
-            this.eot = DFA13_eot;
-            this.eof = DFA13_eof;
-            this.min = DFA13_min;
-            this.max = DFA13_max;
-            this.accept = DFA13_accept;
-            this.special = DFA13_special;
-            this.transition = DFA13_transition;
+            this.decisionNumber = 14;
+            this.eot = DFA14_eot;
+            this.eof = DFA14_eof;
+            this.min = DFA14_min;
+            this.max = DFA14_max;
+            this.accept = DFA14_accept;
+            this.special = DFA14_special;
+            this.transition = DFA14_transition;
         }
         public String getDescription() {
-            return "45:1: instr : ( 'if' expr 'then' instr ( 'else' instr )? 'fi' -> ^( 'if' expr ^( 'then' instr ) ( ^( 'else' instr ) )? ) | 'while' expr 'do' instr -> ^( 'while' expr ^( BLOCK instr ) ) | IDF '=' expr ';' -> ^( '=' IDF expr ) | 'return' returnable -> ^( 'return' returnable ) | IDF '(' exprlist ')' ';' -> ^( CALLFUNCTION IDF exprlist ) | '{' sequence '}' -> ( sequence )? | 'read' IDF ';' -> ^( 'read' IDF ) | 'write' writable ';' -> ^( 'write' writable ) );";
+            return "45:1: instr : ( 'if' expr 'then' instr ( 'else' instr )? 'fi' -> ^( 'if' expr ^( 'then' instr ) ( ^( 'else' instr ) )? ) | 'while' expr 'do' instr -> ^( 'while' expr ^( BLOCK instr ) ) | IDF '=' expr ';' -> ^( '=' IDF expr ) | 'return' returnable -> ^( 'return' returnable ) | IDF '(' exprlist ')' ';' -> ^( CALLFUNCTION IDF exprlist ) | '{' ( sequence )? '}' -> ( sequence )? | 'read' IDF ';' -> ^( 'read' IDF ) | 'write' writable ';' -> ^( 'write' writable ) );";
         }
     }
  
@@ -4215,68 +4232,68 @@ public class fantastic4Parser extends Parser {
     public static final BitSet FOLLOW_exprlist_in_instr771 = new BitSet(new long[]{0x0000000004000000L});
     public static final BitSet FOLLOW_26_in_instr773 = new BitSet(new long[]{0x0000000000040000L});
     public static final BitSet FOLLOW_18_in_instr775 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_instr803 = new BitSet(new long[]{0x000000D910000200L});
+    public static final BitSet FOLLOW_36_in_instr803 = new BitSet(new long[]{0x000000F910000200L});
     public static final BitSet FOLLOW_sequence_in_instr805 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_instr807 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_instr829 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_IDF_in_instr831 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_instr833 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_instr857 = new BitSet(new long[]{0x0000000000001E00L});
-    public static final BitSet FOLLOW_writable_in_instr859 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_instr861 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expr_in_returnable890 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_returnable892 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDF_in_writable912 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_cste_in_writable932 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_instr_in_sequence961 = new BitSet(new long[]{0x000000D910000202L});
-    public static final BitSet FOLLOW_sequence_in_sequence964 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expr_in_exprlist1008 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_nextexpr_in_exprlist1010 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_nextexpr1041 = new BitSet(new long[]{0x0030000002001E00L});
-    public static final BitSet FOLLOW_exprlist_in_nextexpr1043 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_add_in_expr1069 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_mult_in_add1088 = new BitSet(new long[]{0x0000180000000002L});
-    public static final BitSet FOLLOW_addSubtractOp_in_add1091 = new BitSet(new long[]{0x0030000002001E00L});
-    public static final BitSet FOLLOW_add_in_add1094 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_and_in_mult1112 = new BitSet(new long[]{0x0000600000000002L});
-    public static final BitSet FOLLOW_multiplyDivideOp_in_mult1115 = new BitSet(new long[]{0x0030000002001E00L});
-    public static final BitSet FOLLOW_mult_in_mult1119 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_comp_in_and1139 = new BitSet(new long[]{0x0000010000000002L});
-    public static final BitSet FOLLOW_40_in_and1142 = new BitSet(new long[]{0x0030000002001E00L});
-    public static final BitSet FOLLOW_and_in_and1146 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_or_in_comp1161 = new BitSet(new long[]{0x000F800000000002L});
-    public static final BitSet FOLLOW_comparatorOp_in_comp1164 = new BitSet(new long[]{0x0030000002001E00L});
-    public static final BitSet FOLLOW_comp_in_comp1168 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_puis_in_or1186 = new BitSet(new long[]{0x0000020000000002L});
-    public static final BitSet FOLLOW_41_in_or1189 = new BitSet(new long[]{0x0030000002001E00L});
-    public static final BitSet FOLLOW_or_in_or1193 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_negExpression_in_puis1210 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_42_in_puis1213 = new BitSet(new long[]{0x0030000002001E00L});
-    public static final BitSet FOLLOW_puis_in_puis1216 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_neg_in_negExpression1228 = new BitSet(new long[]{0x0000000002001E00L});
-    public static final BitSet FOLLOW_expressionAtom_in_negExpression1231 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_cste_in_expressionAtom1255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDF_in_expressionAtom1269 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_expressionAtom1284 = new BitSet(new long[]{0x0030000002001E00L});
-    public static final BitSet FOLLOW_add_in_expressionAtom1286 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_expressionAtom1288 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDF_in_expressionAtom1302 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_expressionAtom1304 = new BitSet(new long[]{0x0030000002001E00L});
-    public static final BitSet FOLLOW_exprlist_in_expressionAtom1306 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_expressionAtom1308 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_addSubtractOp1330 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_addSubtractOp1341 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_multiplyDivideOp1362 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_multiplyDivideOp1373 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_comparatorOp1395 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_comparatorOp1405 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_comparatorOp1415 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_comparatorOp1424 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_comparatorOp1433 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CSTEINT_in_cste1448 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CSTEBOOL_in_cste1459 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CSTESTRING_in_cste1470 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_neg1506 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_neg1514 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_instr808 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_instr830 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_IDF_in_instr832 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_instr834 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_instr858 = new BitSet(new long[]{0x0000000000001E00L});
+    public static final BitSet FOLLOW_writable_in_instr860 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_instr862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expr_in_returnable891 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_returnable893 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDF_in_writable913 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_cste_in_writable933 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_instr_in_sequence962 = new BitSet(new long[]{0x000000D910000202L});
+    public static final BitSet FOLLOW_sequence_in_sequence965 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expr_in_exprlist1009 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_nextexpr_in_exprlist1011 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_nextexpr1042 = new BitSet(new long[]{0x0030000002001E00L});
+    public static final BitSet FOLLOW_exprlist_in_nextexpr1044 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_add_in_expr1070 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_mult_in_add1089 = new BitSet(new long[]{0x0000180000000002L});
+    public static final BitSet FOLLOW_addSubtractOp_in_add1092 = new BitSet(new long[]{0x0030000002001E00L});
+    public static final BitSet FOLLOW_add_in_add1095 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_and_in_mult1113 = new BitSet(new long[]{0x0000600000000002L});
+    public static final BitSet FOLLOW_multiplyDivideOp_in_mult1116 = new BitSet(new long[]{0x0030000002001E00L});
+    public static final BitSet FOLLOW_mult_in_mult1120 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_comp_in_and1140 = new BitSet(new long[]{0x0000010000000002L});
+    public static final BitSet FOLLOW_40_in_and1143 = new BitSet(new long[]{0x0030000002001E00L});
+    public static final BitSet FOLLOW_and_in_and1147 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_or_in_comp1162 = new BitSet(new long[]{0x000F800000000002L});
+    public static final BitSet FOLLOW_comparatorOp_in_comp1165 = new BitSet(new long[]{0x0030000002001E00L});
+    public static final BitSet FOLLOW_comp_in_comp1169 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_puis_in_or1187 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_41_in_or1190 = new BitSet(new long[]{0x0030000002001E00L});
+    public static final BitSet FOLLOW_or_in_or1194 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_negExpression_in_puis1211 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_42_in_puis1214 = new BitSet(new long[]{0x0030000002001E00L});
+    public static final BitSet FOLLOW_puis_in_puis1217 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_neg_in_negExpression1229 = new BitSet(new long[]{0x0000000002001E00L});
+    public static final BitSet FOLLOW_expressionAtom_in_negExpression1232 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_cste_in_expressionAtom1256 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDF_in_expressionAtom1270 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_expressionAtom1285 = new BitSet(new long[]{0x0030000002001E00L});
+    public static final BitSet FOLLOW_add_in_expressionAtom1287 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_26_in_expressionAtom1289 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDF_in_expressionAtom1303 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_expressionAtom1305 = new BitSet(new long[]{0x0030000002001E00L});
+    public static final BitSet FOLLOW_exprlist_in_expressionAtom1307 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_26_in_expressionAtom1309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_addSubtractOp1331 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_addSubtractOp1342 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_multiplyDivideOp1363 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_multiplyDivideOp1374 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_comparatorOp1396 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_comparatorOp1406 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_comparatorOp1416 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_50_in_comparatorOp1425 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_comparatorOp1434 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CSTEINT_in_cste1449 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CSTEBOOL_in_cste1460 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CSTESTRING_in_cste1471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_neg1507 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_53_in_neg1515 = new BitSet(new long[]{0x0000000000000002L});
 
 }

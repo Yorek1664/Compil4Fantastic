@@ -47,7 +47,7 @@ instr       : 'if' expr 'then' instr ('else'  instr)? 'fi' ->  ^('if' expr ^('th
             | IDF '=' expr ';'  -> ^('=' IDF expr)
             | 'return' returnable -> ^('return' returnable)
             | IDF '(' exprlist ')' ';' ->  ^(CALLFUNCTION IDF exprlist) 
-            | '{' sequence '}' ->  sequence?
+            | '{' sequence? '}' ->  sequence?
             | 'read' IDF ';' -> ^('read' IDF)
             | 'write' writable ';' -> ^('write' writable)
             ;
