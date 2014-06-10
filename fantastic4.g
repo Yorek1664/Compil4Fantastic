@@ -6,7 +6,7 @@ options
     language=Java;
 }
 tokens{ 
-ARGUMENTS;ARGU;BLOCK;CALLFUNCTION;
+ARGUMENTS;ARGU;BLOCK;CALLFUNCTION;EPSILON;
 }
 
 prog        : 'program' IDF vardeclist? funcdeclist? instr? -> ^(IDF vardeclist? funcdeclist? instr?)
@@ -66,7 +66,7 @@ sequence    :  instr  sequence? -> instr sequence?
 exprlist    : expr nextexpr? -> expr nextexpr?
             ;
 
-nextexpr    :',' expr -> expr
+nextexpr    :',' exprlist -> exprlist
             ;
 
 expr	:  add -> add
@@ -98,13 +98,12 @@ puis
 negExpression: neg? expressionAtom
 	;
 	
- expressionAtom : 
+ expressionAtom :	-> EPSILON
 				|   cste -> cste
 				|   IDF -> IDF
 				|  ( '(' add ')' ) -> add
 				|	IDF '(' exprlist ')' -> ^(IDF exprlist)
 				;
- 
 addSubtractOp 
 	: '+' -> '+'
 	|   '-' -> '-'
@@ -126,17 +125,16 @@ comparatorOp
 
 cste		: CSTEINT -> CSTEINT
 			| CSTEBOOL -> CSTEBOOL
-			| CSTESTRING -> CSTESTRING
+			| CSTESTRING ->  CSTESTRING '"'
 			;
             
 neg        	: 'not' -> 'not'
 	|'!' -> '!'
             	;
 
- 
 CSTEBOOL    :('true'|'false')								;
 CSTEINT		:('0'..'9')+            						;
-CSTESTRING	:('"'*'"')										;
+CSTESTRING	:( '"' * '"' )									;
 IDF     : ('a'..'z'|'A'..'Z')('a'..'z'|'A'..'Z'|'0'..'9')*  ;
 COMM    : ('/*'*'*/')|('//'*'\n') {$channel=HIDDEN;}        ;
 WS      : (' '|'\t'|'\n')+ {$channel=HIDDEN;}               ;

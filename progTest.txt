@@ -118,5 +118,6 @@ program test14
 				mathieu = not mathieu ;
 				write mathieu ;}			
 		fi
-		
+		f1( (8+6) , 45*7 ,  zizi(), f1() );
+		toto = "franck" ;
 	}
