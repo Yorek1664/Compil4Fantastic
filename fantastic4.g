@@ -9,10 +9,10 @@ tokens{
 ARGUMENTS;ARGU;BLOCK;CALLFUNCTION;
 }
 
-prog        : 'program' IDF vardeclist? funcdeclist? instr -> ^(IDF vardeclist? funcdeclist? instr)
+prog        : 'program' IDF vardeclist? funcdeclist? instr? -> ^(IDF vardeclist? funcdeclist? instr?)
             ;
 
-vardeclist  : varsuitdecl vardeclist? 
+vardeclist  : varsuitdecl vardeclist? ->  ^(vardeclist)?
             ;
             
 varsuitdecl : 'var' idenlist ':' typename ';' -> ^('var' typename idenlist)
@@ -31,11 +31,10 @@ typename    : 'void' -> 'void'
 funcdeclist : funcdecl funcdeclist?
             ;
             
-funcdecl    : 'function' IDF '(' arglist ')' ':' typename vardeclist? instr -> ^('function' typename ^(IDF vardeclist? instr ) arglist )
+funcdecl    : 'function' IDF '(' arglist? ')' ':' typename vardeclist? instr -> ^('function' typename ^(IDF vardeclist? instr ) arglist? )
             ;
 
-arglist     :
-            | arg^
+arglist     : arg^
             | arg ',' arglist -> ^(ARGUMENTS arg arglist)
             ;
 
@@ -43,11 +42,11 @@ arg         : IDF ':' typename -> ^(ARGU IDF typename)
             | 'ref' IDF ':' typename -> ^('ref' IDF typename)
                         ;
 
-instr       : 'if' expr 'then' instr 'else' instr ->  ^('if' expr ^(BLOCK instr) ^(BLOCK instr))
+instr       : 'if' expr 'then' instr ('else'  instr)? 'fi' ->  ^('if' expr ^('then' instr) ^('else' instr)?)
             | 'while' expr 'do' instr -> ^('while' expr ^(BLOCK instr))
-            | IDF '=' expr ';' -> ^('=' IDF expr)
+            | IDF '=' expr ';'  -> ^('=' IDF expr)
             | 'return' returnable -> ^('return' returnable)
-            | IDF '(' exprlist ')' ->  ^(CALLFUNCTION IDF exprlist) 
+            | IDF '(' exprlist ')' ';' ->  ^(CALLFUNCTION IDF exprlist) 
             | '{' sequence '}' ->  sequence?
             | 'read' IDF ';' -> ^('read' IDF)
             | 'write' writable ';' -> ^('write' writable)
@@ -56,23 +55,21 @@ instr       : 'if' expr 'then' instr 'else' instr ->  ^('if' expr ^(BLOCK instr)
 returnable	: expr ';' -> expr
 			;
 
+
 writable    : IDF -> IDF
             | cste -> cste
             ;
 
-sequence    : 
-            | instr  sequence? -> ^(instr sequence?)
+sequence    :  instr  sequence? -> instr sequence?
             ;
             
-exprlist    : expr nextexpr -> expr nextexpr
+exprlist    : expr nextexpr? -> expr nextexpr?
             ;
 
-nextexpr    :
-            | ',' expr -> expr
+nextexpr    :',' expr -> expr
             ;
 
-expr	: 
-	| add -> add
+expr	:  add -> add
 	    ;
 	
 add : mult (addSubtractOp^ add)? 
