@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g 2014-05-20 17:04:14
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g 2014-05-29 16:07:54
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -811,10 +811,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:43:7: ( '==' )
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:43:9: '=='
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:43:7: ( 'not' )
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:43:9: 'not'
             {
-            match("=="); 
+            match("not"); 
 
 
             }
@@ -832,11 +832,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:44:7: ( 'not' )
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:44:9: 'not'
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:44:7: ( '!' )
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:44:9: '!'
             {
-            match("not"); 
-
+            match('!'); 
 
             }
 
@@ -853,10 +852,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = CSTEBOOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:148:13: ( ( 'true' | 'false' ) )
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:148:14: ( 'true' | 'false' )
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:135:13: ( ( 'true' | 'false' ) )
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:135:14: ( 'true' | 'false' )
             {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:148:14: ( 'true' | 'false' )
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:135:14: ( 'true' | 'false' )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -874,7 +873,7 @@ public class fantastic4Lexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:148:15: 'true'
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:135:15: 'true'
                     {
                     match("true"); 
 
@@ -882,7 +881,7 @@ public class fantastic4Lexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:148:22: 'false'
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:135:22: 'false'
                     {
                     match("false"); 
 
@@ -908,10 +907,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = CSTEINT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:149:10: ( ( '0' .. '9' )+ )
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:149:11: ( '0' .. '9' )+
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:136:10: ( ( '0' .. '9' )+ )
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:136:11: ( '0' .. '9' )+
             {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:149:11: ( '0' .. '9' )+
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:136:11: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -925,7 +924,7 @@ public class fantastic4Lexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:149:12: '0' .. '9'
+            	    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:136:12: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -957,13 +956,13 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = CSTESTRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:150:12: ( ( ( '\"' )* '\"' ) )
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:150:13: ( ( '\"' )* '\"' )
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:137:12: ( ( ( '\"' )* '\"' ) )
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:137:13: ( ( '\"' )* '\"' )
             {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:150:13: ( ( '\"' )* '\"' )
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:150:14: ( '\"' )* '\"'
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:137:13: ( ( '\"' )* '\"' )
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:137:14: ( '\"' )* '\"'
             {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:150:14: ( '\"' )*
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:137:14: ( '\"' )*
             loop3:
             do {
                 int alt3=2;
@@ -982,7 +981,7 @@ public class fantastic4Lexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:150:14: '\"'
+            	    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:137:14: '\"'
             	    {
             	    match('\"'); 
 
@@ -1014,8 +1013,8 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = IDF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:151:9: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:151:11: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:138:9: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:138:11: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -1026,7 +1025,7 @@ public class fantastic4Lexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:151:30: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:138:30: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
             loop4:
             do {
                 int alt4=2;
@@ -1075,7 +1074,7 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = COMM;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:152:9: ( ( ( '/*' )* '*/' ) | ( ( '//' )* '\\n' ) )
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:139:9: ( ( ( '/*' )* '*/' ) | ( ( '//' )* '\\n' ) )
             int alt7=2;
             switch ( input.LA(1) ) {
             case '/':
@@ -1115,12 +1114,12 @@ public class fantastic4Lexer extends Lexer {
 
             switch (alt7) {
                 case 1 :
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:152:11: ( ( '/*' )* '*/' )
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:139:11: ( ( '/*' )* '*/' )
                     {
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:152:11: ( ( '/*' )* '*/' )
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:152:12: ( '/*' )* '*/'
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:139:11: ( ( '/*' )* '*/' )
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:139:12: ( '/*' )* '*/'
                     {
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:152:12: ( '/*' )*
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:139:12: ( '/*' )*
                     loop5:
                     do {
                         int alt5=2;
@@ -1133,7 +1132,7 @@ public class fantastic4Lexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:152:12: '/*'
+                    	    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:139:12: '/*'
                     	    {
                     	    match("/*"); 
 
@@ -1155,12 +1154,12 @@ public class fantastic4Lexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:152:23: ( ( '//' )* '\\n' )
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:139:23: ( ( '//' )* '\\n' )
                     {
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:152:23: ( ( '//' )* '\\n' )
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:152:24: ( '//' )* '\\n'
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:139:23: ( ( '//' )* '\\n' )
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:139:24: ( '//' )* '\\n'
                     {
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:152:24: ( '//' )*
+                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:139:24: ( '//' )*
                     loop6:
                     do {
                         int alt6=2;
@@ -1173,7 +1172,7 @@ public class fantastic4Lexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:152:24: '//'
+                    	    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:139:24: '//'
                     	    {
                     	    match("//"); 
 
@@ -1209,10 +1208,10 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:153:9: ( ( ' ' | '\\t' | '\\n' )+ )
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:153:11: ( ' ' | '\\t' | '\\n' )+
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:140:9: ( ( ' ' | '\\t' | '\\n' )+ )
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:140:11: ( ' ' | '\\t' | '\\n' )+
             {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:153:11: ( ' ' | '\\t' | '\\n' )+
+            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:140:11: ( ' ' | '\\t' | '\\n' )+
             int cnt8=0;
             loop8:
             do {
@@ -1583,42 +1582,41 @@ public class fantastic4Lexer extends Lexer {
 
     protected DFA9 dfa9 = new DFA9(this);
     static final String DFA9_eotS =
-        "\1\uffff\2\41\3\uffff\4\41\2\uffff\5\41\1\65\7\uffff\1\67\1\70\1"+
-        "\72\1\74\1\uffff\1\41\3\uffff\1\66\1\uffff\5\41\1\103\11\41\1\117"+
-        "\11\uffff\2\41\1\122\2\41\1\125\1\uffff\3\41\1\131\7\41\1\uffff"+
-        "\1\141\1\41\1\uffff\1\143\1\144\1\uffff\1\145\2\41\1\uffff\1\41"+
-        "\1\151\1\152\1\153\1\154\2\41\1\uffff\1\41\3\uffff\1\41\1\153\1"+
-        "\41\4\uffff\1\162\1\163\2\41\1\166\2\uffff\1\167\1\41\2\uffff\1"+
-        "\171\1\uffff";
+        "\1\uffff\2\41\3\uffff\4\41\2\uffff\5\41\10\uffff\1\65\1\66\1\70"+
+        "\1\72\1\74\1\41\3\uffff\1\64\1\uffff\5\41\1\103\11\41\1\117\11\uffff"+
+        "\2\41\1\122\2\41\1\125\1\uffff\3\41\1\131\7\41\1\uffff\1\141\1\41"+
+        "\1\uffff\1\143\1\144\1\uffff\1\145\2\41\1\uffff\1\41\1\151\1\152"+
+        "\1\153\1\154\2\41\1\uffff\1\41\3\uffff\1\41\1\153\1\41\4\uffff\1"+
+        "\162\1\163\2\41\1\166\2\uffff\1\167\1\41\2\uffff\1\171\1\uffff";
     static final String DFA9_eofS =
         "\172\uffff";
     static final String DFA9_minS =
         "\1\11\1\162\1\141\3\uffff\1\157\1\146\1\150\1\141\2\uffff\1\145"+
-        "\1\150\1\154\1\150\1\157\1\75\7\uffff\1\57\1\52\2\75\1\uffff\1\157"+
-        "\3\uffff\1\11\1\uffff\1\157\1\162\1\151\1\157\1\164\1\60\1\141\1"+
-        "\156\1\154\1\141\1\145\1\165\1\163\2\151\1\60\11\uffff\1\164\1\147"+
-        "\1\60\1\144\1\154\1\60\1\uffff\1\162\1\143\1\163\1\60\1\165\1\144"+
-        "\1\156\2\145\1\154\1\164\1\uffff\1\60\1\162\1\uffff\2\60\1\uffff"+
-        "\1\60\1\164\1\145\1\uffff\1\162\4\60\2\145\1\uffff\1\141\3\uffff"+
-        "\1\151\1\60\1\156\4\uffff\2\60\1\155\1\157\1\60\2\uffff\1\60\1\156"+
-        "\2\uffff\1\60\1\uffff";
+        "\1\150\1\154\1\150\1\157\10\uffff\1\57\1\52\3\75\1\157\3\uffff\1"+
+        "\11\1\uffff\1\157\1\162\1\151\1\157\1\164\1\60\1\141\1\156\1\154"+
+        "\1\141\1\145\1\165\1\163\2\151\1\60\11\uffff\1\164\1\147\1\60\1"+
+        "\144\1\154\1\60\1\uffff\1\162\1\143\1\163\1\60\1\165\1\144\1\156"+
+        "\2\145\1\154\1\164\1\uffff\1\60\1\162\1\uffff\2\60\1\uffff\1\60"+
+        "\1\164\1\145\1\uffff\1\162\4\60\2\145\1\uffff\1\141\3\uffff\1\151"+
+        "\1\60\1\156\4\uffff\2\60\1\155\1\157\1\60\2\uffff\1\60\1\156\2\uffff"+
+        "\1\60\1\uffff";
     static final String DFA9_maxS =
         "\1\175\1\162\1\157\3\uffff\1\157\1\156\1\150\1\165\2\uffff\1\145"+
-        "\1\162\1\154\1\162\1\157\1\75\7\uffff\2\57\2\75\1\uffff\1\157\3"+
-        "\uffff\1\40\1\uffff\1\157\1\162\1\151\1\157\1\164\1\172\1\141\1"+
-        "\156\1\154\1\164\1\145\1\165\1\163\2\151\1\172\11\uffff\1\164\1"+
-        "\147\1\172\1\144\1\154\1\172\1\uffff\1\162\1\143\1\163\1\172\1\165"+
-        "\1\144\1\156\2\145\1\154\1\164\1\uffff\1\172\1\162\1\uffff\2\172"+
-        "\1\uffff\1\172\1\164\1\145\1\uffff\1\162\4\172\2\145\1\uffff\1\141"+
-        "\3\uffff\1\151\1\172\1\156\4\uffff\2\172\1\155\1\157\1\172\2\uffff"+
-        "\1\172\1\156\2\uffff\1\172\1\uffff";
+        "\1\162\1\154\1\162\1\157\10\uffff\2\57\3\75\1\157\3\uffff\1\40\1"+
+        "\uffff\1\157\1\162\1\151\1\157\1\164\1\172\1\141\1\156\1\154\1\164"+
+        "\1\145\1\165\1\163\2\151\1\172\11\uffff\1\164\1\147\1\172\1\144"+
+        "\1\154\1\172\1\uffff\1\162\1\143\1\163\1\172\1\165\1\144\1\156\2"+
+        "\145\1\154\1\164\1\uffff\1\172\1\162\1\uffff\2\172\1\uffff\1\172"+
+        "\1\164\1\145\1\uffff\1\162\4\172\2\145\1\uffff\1\141\3\uffff\1\151"+
+        "\1\172\1\156\4\uffff\2\172\1\155\1\157\1\172\2\uffff\1\172\1\156"+
+        "\2\uffff\1\172\1\uffff";
     static final String DFA9_acceptS =
-        "\3\uffff\1\3\1\4\1\5\4\uffff\1\13\1\14\6\uffff\1\25\1\26\1\31\1"+
-        "\32\1\33\1\34\1\35\4\uffff\1\44\1\uffff\1\50\1\51\1\52\1\uffff\1"+
-        "\54\20\uffff\1\45\1\23\1\53\1\36\1\37\1\42\1\40\1\43\1\41\6\uffff"+
-        "\1\16\13\uffff\1\22\2\uffff\1\2\2\uffff\1\10\3\uffff\1\15\7\uffff"+
-        "\1\46\1\uffff\1\6\1\7\1\11\3\uffff\1\27\1\17\1\47\1\20\5\uffff\1"+
-        "\21\1\30\2\uffff\1\24\1\1\1\uffff\1\12";
+        "\3\uffff\1\3\1\4\1\5\4\uffff\1\13\1\14\5\uffff\1\23\1\25\1\26\1"+
+        "\31\1\32\1\33\1\34\1\35\6\uffff\1\50\1\51\1\52\1\uffff\1\54\20\uffff"+
+        "\1\53\1\36\1\37\1\42\1\40\1\43\1\41\1\44\1\46\6\uffff\1\16\13\uffff"+
+        "\1\22\2\uffff\1\2\2\uffff\1\10\3\uffff\1\15\7\uffff\1\45\1\uffff"+
+        "\1\6\1\7\1\11\3\uffff\1\27\1\17\1\47\1\20\5\uffff\1\21\1\30\2\uffff"+
+        "\1\24\1\1\1\uffff\1\12";
     static final String DFA9_specialS =
         "\172\uffff}>";
     static final String[] DFA9_transitionS = {
@@ -1643,19 +1641,19 @@ public class fantastic4Lexer extends Lexer {
             "\1\60",
             "\1\61\11\uffff\1\62",
             "\1\63",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\64",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\66",
-            "\1\66\4\uffff\1\66",
+            "\1\64\4\uffff\1\64",
+            "\1\67",
             "\1\71",
             "\1\73",
-            "",
             "\1\75",
             "",
             "",

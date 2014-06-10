@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-int toto()
+int toto(int i)
 {
-	return 1;	
+	int i;
+	return 1;
 }
 
 int main()
 {
-	int toto = 2;
-	printf("%d\n", (toto()+toto));
+	printf("%d\n");
 }
