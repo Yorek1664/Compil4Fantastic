@@ -87,7 +87,6 @@ program test14
 			write y ;
 			write 14 ;
 			x = 12 ;
-			return ;
 		}
 	function f2 ( ) : int
 		var x, y, z : int ;
@@ -97,8 +96,9 @@ program test14
 			z = ( ( 15 * y ) * x ) / 2 ;
 			return z ;
 		}
+
 	{
-		hugo = f2 ( ) ;
+		hugo = f2( ) ;
 		bortchtch = ( ( 1 * 2 ) / ( ( 1 + 6 ) * 5 ) ) * 4 ;
 		mathieu = true ;
 		while hugo < 1000 do
@@ -109,8 +109,14 @@ program test14
 			}
 		if mathieu != true && hugo > 1000 
 		then	
-			read hugo ;
+			{ read hugo ;
+				mathieu = not mathieu ;
+				write mathieu ;}			
 		else
-			write false ;
+
+			{ read hugo ;
+				mathieu = not mathieu ;
+				write mathieu ;}			
+		fi
 		
 	}

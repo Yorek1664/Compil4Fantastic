@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // $ANTLR 3.3 Nov 30, 2010 12:50:56 fantastic4.g 2014-05-29 16:00:56
+=======
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 fantastic4.g 2014-05-29 15:55:21
+>>>>>>> 210565a566c324f68400d4147afe34ebcc6f87d5
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -852,10 +856,17 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = CSTEBOOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
             // fantastic4.g:135:13: ( ( 'true' | 'false' ) )
             // fantastic4.g:135:14: ( 'true' | 'false' )
             {
             // fantastic4.g:135:14: ( 'true' | 'false' )
+=======
+            // fantastic4.g:137:13: ( ( 'true' | 'false' ) )
+            // fantastic4.g:137:14: ( 'true' | 'false' )
+            {
+            // fantastic4.g:137:14: ( 'true' | 'false' )
+>>>>>>> 210565a566c324f68400d4147afe34ebcc6f87d5
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -873,7 +884,11 @@ public class fantastic4Lexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
+<<<<<<< HEAD
                     // fantastic4.g:135:15: 'true'
+=======
+                    // fantastic4.g:137:15: 'true'
+>>>>>>> 210565a566c324f68400d4147afe34ebcc6f87d5
                     {
                     match("true"); 
 
@@ -881,7 +896,11 @@ public class fantastic4Lexer extends Lexer {
                     }
                     break;
                 case 2 :
+<<<<<<< HEAD
                     // fantastic4.g:135:22: 'false'
+=======
+                    // fantastic4.g:137:22: 'false'
+>>>>>>> 210565a566c324f68400d4147afe34ebcc6f87d5
                     {
                     match("false"); 
 
@@ -907,10 +926,17 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = CSTEINT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
             // fantastic4.g:136:10: ( ( '0' .. '9' )+ )
             // fantastic4.g:136:11: ( '0' .. '9' )+
             {
             // fantastic4.g:136:11: ( '0' .. '9' )+
+=======
+            // fantastic4.g:138:10: ( ( '0' .. '9' )+ )
+            // fantastic4.g:138:11: ( '0' .. '9' )+
+            {
+            // fantastic4.g:138:11: ( '0' .. '9' )+
+>>>>>>> 210565a566c324f68400d4147afe34ebcc6f87d5
             int cnt2=0;
             loop2:
             do {
@@ -924,7 +950,11 @@ public class fantastic4Lexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
+<<<<<<< HEAD
             	    // fantastic4.g:136:12: '0' .. '9'
+=======
+            	    // fantastic4.g:138:12: '0' .. '9'
+>>>>>>> 210565a566c324f68400d4147afe34ebcc6f87d5
             	    {
             	    matchRange('0','9'); 
 
@@ -956,6 +986,7 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = CSTESTRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
             // fantastic4.g:137:12: ( ( ( '\"' )* '\"' ) )
             // fantastic4.g:137:13: ( ( '\"' )* '\"' )
             {
@@ -963,6 +994,15 @@ public class fantastic4Lexer extends Lexer {
             // fantastic4.g:137:14: ( '\"' )* '\"'
             {
             // fantastic4.g:137:14: ( '\"' )*
+=======
+            // fantastic4.g:139:12: ( ( ( '\"' )* '\"' ) )
+            // fantastic4.g:139:13: ( ( '\"' )* '\"' )
+            {
+            // fantastic4.g:139:13: ( ( '\"' )* '\"' )
+            // fantastic4.g:139:14: ( '\"' )* '\"'
+            {
+            // fantastic4.g:139:14: ( '\"' )*
+>>>>>>> 210565a566c324f68400d4147afe34ebcc6f87d5
             loop3:
             do {
                 int alt3=2;
@@ -981,7 +1021,11 @@ public class fantastic4Lexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
+<<<<<<< HEAD
             	    // fantastic4.g:137:14: '\"'
+=======
+            	    // fantastic4.g:139:14: '\"'
+>>>>>>> 210565a566c324f68400d4147afe34ebcc6f87d5
             	    {
             	    match('\"'); 
 
@@ -1013,8 +1057,13 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = IDF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
             // fantastic4.g:138:9: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
             // fantastic4.g:138:11: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+=======
+            // fantastic4.g:140:9: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
+            // fantastic4.g:140:11: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+>>>>>>> 210565a566c324f68400d4147afe34ebcc6f87d5
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -1025,7 +1074,11 @@ public class fantastic4Lexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
+<<<<<<< HEAD
             // fantastic4.g:138:30: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+=======
+            // fantastic4.g:140:30: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+>>>>>>> 210565a566c324f68400d4147afe34ebcc6f87d5
             loop4:
             do {
                 int alt4=2;
@@ -1074,7 +1127,11 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = COMM;
             int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
             // fantastic4.g:139:9: ( ( ( '/*' )* '*/' ) | ( ( '//' )* '\\n' ) )
+=======
+            // fantastic4.g:141:9: ( ( ( '/*' )* '*/' ) | ( ( '//' )* '\\n' ) )
+>>>>>>> 210565a566c324f68400d4147afe34ebcc6f87d5
             int alt7=2;
             switch ( input.LA(1) ) {
             case '/':
@@ -1114,12 +1171,21 @@ public class fantastic4Lexer extends Lexer {
 
             switch (alt7) {
                 case 1 :
+<<<<<<< HEAD
                     // fantastic4.g:139:11: ( ( '/*' )* '*/' )
                     {
                     // fantastic4.g:139:11: ( ( '/*' )* '*/' )
                     // fantastic4.g:139:12: ( '/*' )* '*/'
                     {
                     // fantastic4.g:139:12: ( '/*' )*
+=======
+                    // fantastic4.g:141:11: ( ( '/*' )* '*/' )
+                    {
+                    // fantastic4.g:141:11: ( ( '/*' )* '*/' )
+                    // fantastic4.g:141:12: ( '/*' )* '*/'
+                    {
+                    // fantastic4.g:141:12: ( '/*' )*
+>>>>>>> 210565a566c324f68400d4147afe34ebcc6f87d5
                     loop5:
                     do {
                         int alt5=2;
@@ -1132,7 +1198,11 @@ public class fantastic4Lexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
+<<<<<<< HEAD
                     	    // fantastic4.g:139:12: '/*'
+=======
+                    	    // fantastic4.g:141:12: '/*'
+>>>>>>> 210565a566c324f68400d4147afe34ebcc6f87d5
                     	    {
                     	    match("/*"); 
 
@@ -1154,12 +1224,21 @@ public class fantastic4Lexer extends Lexer {
                     }
                     break;
                 case 2 :
+<<<<<<< HEAD
                     // fantastic4.g:139:23: ( ( '//' )* '\\n' )
                     {
                     // fantastic4.g:139:23: ( ( '//' )* '\\n' )
                     // fantastic4.g:139:24: ( '//' )* '\\n'
                     {
                     // fantastic4.g:139:24: ( '//' )*
+=======
+                    // fantastic4.g:141:23: ( ( '//' )* '\\n' )
+                    {
+                    // fantastic4.g:141:23: ( ( '//' )* '\\n' )
+                    // fantastic4.g:141:24: ( '//' )* '\\n'
+                    {
+                    // fantastic4.g:141:24: ( '//' )*
+>>>>>>> 210565a566c324f68400d4147afe34ebcc6f87d5
                     loop6:
                     do {
                         int alt6=2;
@@ -1172,7 +1251,11 @@ public class fantastic4Lexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
+<<<<<<< HEAD
                     	    // fantastic4.g:139:24: '//'
+=======
+                    	    // fantastic4.g:141:24: '//'
+>>>>>>> 210565a566c324f68400d4147afe34ebcc6f87d5
                     	    {
                     	    match("//"); 
 
@@ -1208,10 +1291,17 @@ public class fantastic4Lexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
+<<<<<<< HEAD
             // fantastic4.g:140:9: ( ( ' ' | '\\t' | '\\n' )+ )
             // fantastic4.g:140:11: ( ' ' | '\\t' | '\\n' )+
             {
             // fantastic4.g:140:11: ( ' ' | '\\t' | '\\n' )+
+=======
+            // fantastic4.g:142:9: ( ( ' ' | '\\t' | '\\n' )+ )
+            // fantastic4.g:142:11: ( ' ' | '\\t' | '\\n' )+
+            {
+            // fantastic4.g:142:11: ( ' ' | '\\t' | '\\n' )+
+>>>>>>> 210565a566c324f68400d4147afe34ebcc6f87d5
             int cnt8=0;
             loop8:
             do {

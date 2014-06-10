@@ -2,136 +2,138 @@ grammar fantastic4;
 
 options
 {
+    output=AST;
     language=Java;
 }
+tokens{ 
+ARGUMENTS;ARGU;BLOCK;CALLFUNCTION;
+}
 
-
-prog        : 'program' IDF vardeclist? funcdeclist? instr
+prog        : 'program' IDF vardeclist? funcdeclist? instr? -> ^(IDF vardeclist? funcdeclist? instr?)
             ;
 
-vardeclist  : varsuitdecl vardeclist?
+vardeclist  : varsuitdecl vardeclist? ->  ^(vardeclist)?
             ;
             
-varsuitdecl : 'var' idenlist ':' typename ';'
+varsuitdecl : 'var' idenlist ':' typename ';' -> ^('var' typename idenlist)
             ;
             
-idenlist    : IDF
-            | IDF ',' idenlist
+idenlist    : IDF		-> ^(IDF)
+            | IDF ',' idenlist	-> IDF idenlist
             ;
             
-typename    : 'void'
-            | 'bool'
-            | 'int'
-            | 'char'
+typename    : 'void' -> 'void'
+            | 'bool' -> 'bool'
+            | 'int'  -> 'int'
+            | 'char' -> 'char'
             ;
             
 funcdeclist : funcdecl funcdeclist?
             ;
             
-funcdecl    : 'function' IDF '(' arglist ')' ':' typename vardeclist? instr
+funcdecl    : 'function' IDF '(' arglist? ')' ':' typename vardeclist? instr -> ^('function' typename ^(IDF vardeclist? instr ) arglist? )
             ;
 
-arglist     :
-            | arg
-            | arg ',' arglist
+arglist     : arg^
+            | arg ',' arglist -> ^(ARGUMENTS arg arglist)
             ;
 
-arg         : IDF ':' typename
-            | 'ref' IDF ':' typename
+arg         : IDF ':' typename -> ^(ARGU IDF typename)
+            | 'ref' IDF ':' typename -> ^('ref' IDF typename)
+                        ;
+
+instr       : 'if' expr 'then' instr ('else'  instr)? 'fi' ->  ^('if' expr ^('then' instr) ^('else' instr)?)
+            | 'while' expr 'do' instr -> ^('while' expr ^(BLOCK instr))
+            | IDF '=' expr ';'  -> ^('=' IDF expr)
+            | 'return' returnable -> ^('return' returnable)
+            | IDF '(' exprlist ')' ';' ->  ^(CALLFUNCTION IDF exprlist) 
+            | '{' sequence '}' ->  sequence?
+            | 'read' IDF ';' -> ^('read' IDF)
+            | 'write' writable ';' -> ^('write' writable)
             ;
 
-instr       : 'if' expr 'then' instr 'else' instr
-            | 'while' expr 'do' instr
-            | IDF '=' expr ';'
-            | 'return' returnable
-            | IDF '(' exprlist ')'
-            | '{' sequence '}'
-            | 'read' IDF ';'
-            | 'write' writable ';'
-            ;
-
-returnable	: expr ';'
+returnable	: expr ';' -> expr
 			;
 
-writable    : IDF
-            | cste
+
+writable    : IDF -> IDF
+            | cste -> cste
             ;
 
-sequence    : 
-            | instr  sequence
+sequence    :  instr  sequence? -> instr sequence?
             ;
             
-exprlist    : expr nextexpr
+exprlist    : expr nextexpr? -> expr nextexpr?
             ;
 
-nextexpr    :
-            | ',' expr
+nextexpr    :',' expr -> expr
             ;
 
-expr	: add
+expr	:  add -> add
 	    ;
 	
-add : mult (addSubtractOp add)?
+add : mult (addSubtractOp^ add)? 
 	;	
  
-mult
-	: and (multiplyDivideOp  mult)? 
-	;
 
-and
-	: comp ('&&'  and)?
+mult 
+	: and (multiplyDivideOp^  mult)? 
+	;
+     
+and 
+	: comp ('&&'^  and)? 
 	;
  
 comp
-	: or (comparatorOp  comp)? 	
+	: or (comparatorOp^  comp)? 	  
 	;
  
-or 	: puis ('||'  or)? 
+or 	: puis ('||'^  or)? 
 	;
  
 puis	
-	:  negExpression ('^' puis)?
+	:  negExpression ('^'^ puis)?
 	;
  
 negExpression: neg? expressionAtom
 	;
 	
  expressionAtom : 
-				|   cste
-				|   IDF
-				|  ( '(' add ')' )
-				|	IDF '(' exprlist ')'
+				|   cste -> cste
+				|   IDF -> IDF
+				|  ( '(' add ')' ) -> add
+				|	IDF '(' exprlist ')' -> ^(IDF exprlist)
 				;
  
- 
 addSubtractOp 
-	: '+'
-	|   '-'
+	: '+' -> '+'
+	|   '-' -> '-'
 	;    
  
 multiplyDivideOp 
-	: '*' 
-	|   '/'
+	: '*' -> '*'
+	|   '/' -> '/'
 	;    
+
  
 comparatorOp 
-	: '>'
-	|  '<'
-	|  '>='
-	| '<='
-	| '!='
+	: '>' -> '>'
+	|  '<' -> '<'
+	|  '>=' -> '>='
+	| '<=' -> '<='
+	| '!=' -> '!='
 	;
 
-cste		: CSTEINT
-			| CSTEBOOL
-			| CSTESTRING
+cste		: CSTEINT -> CSTEINT
+			| CSTEBOOL -> CSTEBOOL
+			| CSTESTRING -> CSTESTRING
 			;
             
-neg        	: 'not'
-	|'!'
+neg        	: 'not' -> 'not'
+	|'!' -> '!'
             	;
 
-
+ 
 CSTEBOOL    :('true'|'false')								;
 CSTEINT		:('0'..'9')+            						;
 CSTESTRING	:('"'*'"')										;
