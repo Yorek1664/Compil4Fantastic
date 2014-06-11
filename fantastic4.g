@@ -15,7 +15,7 @@ prog        : 'program' IDF vardeclist? funcdeclist? instr? -> ^(IDF vardeclist?
 vardeclist  : varsuitdecl vardeclist? ->  varsuitdecl vardeclist?
             ;
             
-varsuitdecl : 'var' idenlist ':' typename ';' -> ^('var' typename idenlist)
+varsuitdecl : 'var' idenlist ':' typename ';' -> ^(typename idenlist)
             ;
             
 idenlist    : IDF		-> ^(IDF)

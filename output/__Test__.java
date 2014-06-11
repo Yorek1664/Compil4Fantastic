@@ -6,7 +6,7 @@ import org.antlr.runtime.debug.DebugEventSocketProxy;
 public class __Test__ {
 
     public static void main(String args[]) throws Exception {
-        fantastic4Lexer lex = new fantastic4Lexer(new ANTLRFileStream("C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\output\\__Test___input.txt", "UTF8"));
+        fantastic4Lexer lex = new fantastic4Lexer(new ANTLRFileStream("/Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/output/__Test___input.txt", "UTF8"));
         CommonTokenStream tokens = new CommonTokenStream(lex);
 
         fantastic4Parser g = new fantastic4Parser(tokens, 49100, null);
