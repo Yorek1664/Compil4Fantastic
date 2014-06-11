@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 fantastic4.g 2014-06-10 21:15:21
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 fantastic4.g 2014-06-11 12:10:55
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -200,7 +200,7 @@ public class fantastic4Parser extends Parser {
 
 
             // AST REWRITE
-            // elements: funcdeclist, vardeclist, instr, IDF
+            // elements: instr, vardeclist, funcdeclist, IDF
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -268,7 +268,7 @@ public class fantastic4Parser extends Parser {
     };
 
     // $ANTLR start "vardeclist"
-    // fantastic4.g:15:1: vardeclist : varsuitdecl ( vardeclist )? -> ( ^( vardeclist ) )? ;
+    // fantastic4.g:15:1: vardeclist : varsuitdecl ( vardeclist )? -> varsuitdecl ( vardeclist )? ;
     public final fantastic4Parser.vardeclist_return vardeclist() throws RecognitionException {
         fantastic4Parser.vardeclist_return retval = new fantastic4Parser.vardeclist_return();
         retval.start = input.LT(1);
@@ -283,7 +283,7 @@ public class fantastic4Parser extends Parser {
         RewriteRuleSubtreeStream stream_vardeclist=new RewriteRuleSubtreeStream(adaptor,"rule vardeclist");
         RewriteRuleSubtreeStream stream_varsuitdecl=new RewriteRuleSubtreeStream(adaptor,"rule varsuitdecl");
         try {
-            // fantastic4.g:15:13: ( varsuitdecl ( vardeclist )? -> ( ^( vardeclist ) )? )
+            // fantastic4.g:15:13: ( varsuitdecl ( vardeclist )? -> varsuitdecl ( vardeclist )? )
             // fantastic4.g:15:15: varsuitdecl ( vardeclist )?
             {
             pushFollow(FOLLOW_varsuitdecl_in_vardeclist104);
@@ -318,7 +318,7 @@ public class fantastic4Parser extends Parser {
 
 
             // AST REWRITE
-            // elements: vardeclist
+            // elements: varsuitdecl, vardeclist
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -328,17 +328,12 @@ public class fantastic4Parser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 15:39: -> ( ^( vardeclist ) )?
+            // 15:39: -> varsuitdecl ( vardeclist )?
             {
-                // fantastic4.g:15:43: ( ^( vardeclist ) )?
+                adaptor.addChild(root_0, stream_varsuitdecl.nextTree());
+                // fantastic4.g:15:55: ( vardeclist )?
                 if ( stream_vardeclist.hasNext() ) {
-                    // fantastic4.g:15:43: ^( vardeclist )
-                    {
-                    Object root_1 = (Object)adaptor.nil();
-                    root_1 = (Object)adaptor.becomeRoot(stream_vardeclist.nextNode(), root_1);
-
-                    adaptor.addChild(root_0, root_1);
-                    }
+                    adaptor.addChild(root_0, stream_vardeclist.nextTree());
 
                 }
                 stream_vardeclist.reset();
@@ -423,7 +418,7 @@ public class fantastic4Parser extends Parser {
 
 
             // AST REWRITE
-            // elements: idenlist, 16, typename
+            // elements: typename, 16, idenlist
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -574,7 +569,7 @@ public class fantastic4Parser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: IDF, idenlist
+                    // elements: idenlist, IDF
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1001,7 +996,7 @@ public class fantastic4Parser extends Parser {
 
 
             // AST REWRITE
-            // elements: instr, IDF, arglist, 24, typename, vardeclist
+            // elements: arglist, vardeclist, typename, 24, IDF, instr
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1132,7 +1127,7 @@ public class fantastic4Parser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: arg, arglist
+                    // elements: arglist, arg
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1248,7 +1243,7 @@ public class fantastic4Parser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: IDF, typename
+                    // elements: typename, IDF
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1297,7 +1292,7 @@ public class fantastic4Parser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: typename, 27, IDF
+                    // elements: 27, IDF, typename
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1501,7 +1496,7 @@ public class fantastic4Parser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: 30, expr, instr, 29, 28, instr
+                    // elements: instr, 30, 29, expr, instr, 28
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1529,7 +1524,7 @@ public class fantastic4Parser extends Parser {
                         adaptor.addChild(root_1, root_2);
                         }
                         // fantastic4.g:45:92: ( ^( 'else' instr ) )?
-                        if ( stream_30.hasNext()||stream_instr.hasNext() ) {
+                        if ( stream_instr.hasNext()||stream_30.hasNext() ) {
                             // fantastic4.g:45:92: ^( 'else' instr )
                             {
                             Object root_2 = (Object)adaptor.nil();
@@ -1541,8 +1536,8 @@ public class fantastic4Parser extends Parser {
                             }
 
                         }
-                        stream_30.reset();
                         stream_instr.reset();
+                        stream_30.reset();
 
                         adaptor.addChild(root_0, root_1);
                         }
@@ -1633,7 +1628,7 @@ public class fantastic4Parser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: expr, IDF, 34
+                    // elements: 34, IDF, expr
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1676,7 +1671,7 @@ public class fantastic4Parser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: returnable, 35
+                    // elements: 35, returnable
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1727,7 +1722,7 @@ public class fantastic4Parser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: IDF, exprlist
+                    // elements: exprlist, IDF
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1829,7 +1824,7 @@ public class fantastic4Parser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: IDF, 38
+                    // elements: 38, IDF
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2167,7 +2162,7 @@ public class fantastic4Parser extends Parser {
 
 
             // AST REWRITE
-            // elements: instr, sequence
+            // elements: sequence, instr
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2266,7 +2261,7 @@ public class fantastic4Parser extends Parser {
 
 
             // AST REWRITE
-            // elements: nextexpr, expr
+            // elements: expr, nextexpr
             // token labels: 
             // rule labels: retval
             // token list labels: 
