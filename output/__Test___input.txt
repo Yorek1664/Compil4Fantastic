@@ -1,4 +1,44 @@
 program test14
 	var bortchtch, hugo : int ;
 	var mathieu : bool ;
-	{}
+	function f1 ( cadric : bool, rebaudo : int ) : void
+		var x, y, z : int ;
+		{
+			read x ;
+			write y ;
+			write 14 ;
+			x = 12 ;
+		}
+	function f2 ( ) : int
+		var x, y, z : int ;
+		{	
+			x = 12 ;
+			y = 15 ;
+			z = ( ( 15 * y ) * x ) / 2 ;
+			return z ;
+		}
+
+	{
+		hugo = f2( ) ;
+		bortchtch = ( ( 1 * 2 ) / ( ( 1 + 6 ) * 5 ) ) * 4 ;
+		mathieu = true ;
+		while hugo < 1000 do
+			{
+				write hugo ;
+				mathieu = not mathieu ;
+				write mathieu ;
+			}
+		if mathieu != true && hugo > 1000 
+		then	
+			{ read hugo ;
+				mathieu = not mathieu ;
+				write mathieu ;}			
+		else
+
+			{ read hugo ;
+				mathieu = not mathieu ;
+				write mathieu ;}			
+		fi
+		f1( (8+6) , 45*7 ,  zizi(), f1() );
+		toto = "franck" ;
+	}

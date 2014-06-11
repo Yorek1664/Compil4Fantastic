@@ -12,7 +12,7 @@ ARGUMENTS;ARGU;BLOCK;CALLFUNCTION;EPSILON;
 prog        : 'program' IDF vardeclist? funcdeclist? instr? -> ^(IDF vardeclist? funcdeclist? instr?)
             ;
 
-vardeclist  : varsuitdecl vardeclist? ->  ^(vardeclist)?
+vardeclist  : varsuitdecl vardeclist? ->  varsuitdecl vardeclist?
             ;
             
 varsuitdecl : 'var' idenlist ':' typename ';' -> ^('var' typename idenlist)

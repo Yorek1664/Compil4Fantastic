@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g 2014-06-10 21:14:29
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g 2014-06-11 09:03:07
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -14,67 +14,67 @@ public class fantastic4Parser extends DebugParser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ARGUMENTS", "ARGU", "BLOCK", "CALLFUNCTION", "EPSILON", "IDF", "CSTEINT", "CSTEBOOL", "CSTESTRING", "COMM", "WS", "'program'", "'var'", "':'", "';'", "','", "'void'", "'bool'", "'int'", "'char'", "'function'", "'('", "')'", "'ref'", "'if'", "'then'", "'else'", "'fi'", "'while'", "'do'", "'='", "'return'", "'{'", "'}'", "'read'", "'write'", "'&&'", "'||'", "'^'", "'+'", "'-'", "'*'", "'/'", "'>'", "'<'", "'>='", "'<='", "'!='", "'not'", "'!'"
     };
-    public static final int T__29=29;
-    public static final int T__28=28;
-    public static final int IDF=9;
-    public static final int CALLFUNCTION=7;
-    public static final int T__27=27;
-    public static final int CSTESTRING=12;
-    public static final int T__26=26;
-    public static final int T__25=25;
-    public static final int T__24=24;
-    public static final int T__23=23;
-    public static final int T__22=22;
-    public static final int T__21=21;
-    public static final int T__20=20;
-    public static final int CSTEBOOL=11;
-    public static final int EOF=-1;
-    public static final int T__19=19;
-    public static final int T__16=16;
-    public static final int T__51=51;
-    public static final int T__15=15;
-    public static final int T__52=52;
-    public static final int T__18=18;
-    public static final int T__53=53;
-    public static final int T__17=17;
-    public static final int ARGU=5;
     public static final int T__50=50;
-    public static final int T__42=42;
-    public static final int T__43=43;
-    public static final int T__40=40;
-    public static final int T__41=41;
-    public static final int CSTEINT=10;
-    public static final int T__46=46;
-    public static final int T__47=47;
-    public static final int ARGUMENTS=4;
-    public static final int T__44=44;
-    public static final int T__45=45;
-    public static final int T__48=48;
-    public static final int T__49=49;
-    public static final int COMM=13;
+    public static final int IDF=9;
     public static final int EPSILON=8;
-    public static final int T__30=30;
-    public static final int T__31=31;
-    public static final int T__32=32;
-    public static final int WS=14;
+    public static final int T__19=19;
+    public static final int COMM=13;
+    public static final int T__15=15;
+    public static final int T__16=16;
+    public static final int CALLFUNCTION=7;
+    public static final int T__17=17;
+    public static final int T__18=18;
+    public static final int T__51=51;
+    public static final int T__52=52;
+    public static final int CSTEBOOL=11;
+    public static final int T__53=53;
+    public static final int BLOCK=6;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int T__29=29;
+    public static final int T__22=22;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
+    public static final int T__20=20;
+    public static final int T__21=21;
+    public static final int ARGU=5;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int T__39=39;
     public static final int T__33=33;
     public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
-    public static final int T__37=37;
-    public static final int T__38=38;
-    public static final int T__39=39;
-    public static final int BLOCK=6;
+    public static final int WS=14;
+    public static final int EOF=-1;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
+    public static final int CSTEINT=10;
+    public static final int ARGUMENTS=4;
+    public static final int CSTESTRING=12;
+    public static final int T__48=48;
+    public static final int T__49=49;
+    public static final int T__44=44;
+    public static final int T__45=45;
+    public static final int T__46=46;
+    public static final int T__47=47;
+    public static final int T__40=40;
+    public static final int T__41=41;
+    public static final int T__42=42;
+    public static final int T__43=43;
 
     // delegates
     // delegators
 
     public static final String[] ruleNames = new String[] {
-        "invalidRule", "comparatorOp", "neg", "prog", "add", "exprlist", 
-        "nextexpr", "returnable", "writable", "varsuitdecl", "funcdeclist", 
-        "comp", "expressionAtom", "addSubtractOp", "or", "multiplyDivideOp", 
-        "funcdecl", "arglist", "arg", "and", "instr", "negExpression", "idenlist", 
-        "cste", "expr", "sequence", "typename", "puis", "mult", "vardeclist"
+        "invalidRule", "comp", "multiplyDivideOp", "comparatorOp", "arg", 
+        "nextexpr", "writable", "puis", "or", "negExpression", "and", "mult", 
+        "sequence", "vardeclist", "returnable", "prog", "idenlist", "funcdeclist", 
+        "cste", "neg", "expressionAtom", "funcdecl", "instr", "typename", 
+        "exprlist", "expr", "addSubtractOp", "arglist", "varsuitdecl", "add"
     };
      
         public int ruleLevel = 0;
@@ -124,7 +124,7 @@ public class fantastic4Parser extends DebugParser {
 
 
     public String[] getTokenNames() { return fantastic4Parser.tokenNames; }
-    public String getGrammarFileName() { return "/Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g"; }
+    public String getGrammarFileName() { return "C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g"; }
 
 
     public static class prog_return extends ParserRuleReturnScope {
@@ -133,7 +133,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "prog"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:12:1: prog : 'program' IDF ( vardeclist )? ( funcdeclist )? ( instr )? -> ^( IDF ( vardeclist )? ( funcdeclist )? ( instr )? ) ;
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:12:1: prog : 'program' IDF ( vardeclist )? ( funcdeclist )? ( instr )? -> ^( IDF ( vardeclist )? ( funcdeclist )? ( instr )? ) ;
     public final fantastic4Parser.prog_return prog() throws RecognitionException {
         fantastic4Parser.prog_return retval = new fantastic4Parser.prog_return();
         retval.start = input.LT(1);
@@ -151,8 +151,8 @@ public class fantastic4Parser extends DebugParser {
 
         Object string_literal1_tree=null;
         Object IDF2_tree=null;
-        RewriteRuleTokenStream stream_IDF=new RewriteRuleTokenStream(adaptor,"token IDF");
         RewriteRuleTokenStream stream_15=new RewriteRuleTokenStream(adaptor,"token 15");
+        RewriteRuleTokenStream stream_IDF=new RewriteRuleTokenStream(adaptor,"token IDF");
         RewriteRuleSubtreeStream stream_vardeclist=new RewriteRuleSubtreeStream(adaptor,"rule vardeclist");
         RewriteRuleSubtreeStream stream_funcdeclist=new RewriteRuleSubtreeStream(adaptor,"rule funcdeclist");
         RewriteRuleSubtreeStream stream_instr=new RewriteRuleSubtreeStream(adaptor,"rule instr");
@@ -162,10 +162,10 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(12, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:12:13: ( 'program' IDF ( vardeclist )? ( funcdeclist )? ( instr )? -> ^( IDF ( vardeclist )? ( funcdeclist )? ( instr )? ) )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:12:13: ( 'program' IDF ( vardeclist )? ( funcdeclist )? ( instr )? -> ^( IDF ( vardeclist )? ( funcdeclist )? ( instr )? ) )
             dbg.enterAlt(1);
 
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:12:15: 'program' IDF ( vardeclist )? ( funcdeclist )? ( instr )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:12:15: 'program' IDF ( vardeclist )? ( funcdeclist )? ( instr )?
             {
             dbg.location(12,15);
             string_literal1=(Token)match(input,15,FOLLOW_15_in_prog56);  
@@ -176,7 +176,7 @@ public class fantastic4Parser extends DebugParser {
             stream_IDF.add(IDF2);
 
             dbg.location(12,29);
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:12:29: ( vardeclist )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:12:29: ( vardeclist )?
             int alt1=2;
             try { dbg.enterSubRule(1);
             try { dbg.enterDecision(1);
@@ -192,7 +192,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:12:29: vardeclist
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:12:29: vardeclist
                     {
                     dbg.location(12,29);
                     pushFollow(FOLLOW_vardeclist_in_prog60);
@@ -209,7 +209,7 @@ public class fantastic4Parser extends DebugParser {
             } finally {dbg.exitSubRule(1);}
 
             dbg.location(12,41);
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:12:41: ( funcdeclist )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:12:41: ( funcdeclist )?
             int alt2=2;
             try { dbg.enterSubRule(2);
             try { dbg.enterDecision(2);
@@ -225,7 +225,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:12:41: funcdeclist
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:12:41: funcdeclist
                     {
                     dbg.location(12,41);
                     pushFollow(FOLLOW_funcdeclist_in_prog63);
@@ -242,7 +242,7 @@ public class fantastic4Parser extends DebugParser {
             } finally {dbg.exitSubRule(2);}
 
             dbg.location(12,54);
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:12:54: ( instr )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:12:54: ( instr )?
             int alt3=2;
             try { dbg.enterSubRule(3);
             try { dbg.enterDecision(3);
@@ -258,7 +258,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:12:54: instr
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:12:54: instr
                     {
                     dbg.location(12,54);
                     pushFollow(FOLLOW_instr_in_prog66);
@@ -277,7 +277,7 @@ public class fantastic4Parser extends DebugParser {
 
 
             // AST REWRITE
-            // elements: funcdeclist, vardeclist, IDF, instr
+            // elements: vardeclist, instr, funcdeclist, IDF
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -290,14 +290,14 @@ public class fantastic4Parser extends DebugParser {
             // 12:61: -> ^( IDF ( vardeclist )? ( funcdeclist )? ( instr )? )
             {
                 dbg.location(12,64);
-                // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:12:64: ^( IDF ( vardeclist )? ( funcdeclist )? ( instr )? )
+                // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:12:64: ^( IDF ( vardeclist )? ( funcdeclist )? ( instr )? )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 dbg.location(12,66);
                 root_1 = (Object)adaptor.becomeRoot(stream_IDF.nextNode(), root_1);
 
                 dbg.location(12,70);
-                // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:12:70: ( vardeclist )?
+                // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:12:70: ( vardeclist )?
                 if ( stream_vardeclist.hasNext() ) {
                     dbg.location(12,70);
                     adaptor.addChild(root_1, stream_vardeclist.nextTree());
@@ -305,7 +305,7 @@ public class fantastic4Parser extends DebugParser {
                 }
                 stream_vardeclist.reset();
                 dbg.location(12,82);
-                // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:12:82: ( funcdeclist )?
+                // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:12:82: ( funcdeclist )?
                 if ( stream_funcdeclist.hasNext() ) {
                     dbg.location(12,82);
                     adaptor.addChild(root_1, stream_funcdeclist.nextTree());
@@ -313,7 +313,7 @@ public class fantastic4Parser extends DebugParser {
                 }
                 stream_funcdeclist.reset();
                 dbg.location(12,95);
-                // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:12:95: ( instr )?
+                // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:12:95: ( instr )?
                 if ( stream_instr.hasNext() ) {
                     dbg.location(12,95);
                     adaptor.addChild(root_1, stream_instr.nextTree());
@@ -362,7 +362,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "vardeclist"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:15:1: vardeclist : varsuitdecl ( vardeclist )? -> ( ^( vardeclist ) )? ;
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:15:1: vardeclist : varsuitdecl ( vardeclist )? -> varsuitdecl ( vardeclist )? ;
     public final fantastic4Parser.vardeclist_return vardeclist() throws RecognitionException {
         fantastic4Parser.vardeclist_return retval = new fantastic4Parser.vardeclist_return();
         retval.start = input.LT(1);
@@ -382,10 +382,10 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(15, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:15:13: ( varsuitdecl ( vardeclist )? -> ( ^( vardeclist ) )? )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:15:13: ( varsuitdecl ( vardeclist )? -> varsuitdecl ( vardeclist )? )
             dbg.enterAlt(1);
 
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:15:15: varsuitdecl ( vardeclist )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:15:15: varsuitdecl ( vardeclist )?
             {
             dbg.location(15,15);
             pushFollow(FOLLOW_varsuitdecl_in_vardeclist104);
@@ -395,7 +395,7 @@ public class fantastic4Parser extends DebugParser {
 
             stream_varsuitdecl.add(varsuitdecl6.getTree());
             dbg.location(15,27);
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:15:27: ( vardeclist )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:15:27: ( vardeclist )?
             int alt4=2;
             try { dbg.enterSubRule(4);
             try { dbg.enterDecision(4);
@@ -411,7 +411,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:15:27: vardeclist
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:15:27: vardeclist
                     {
                     dbg.location(15,27);
                     pushFollow(FOLLOW_vardeclist_in_vardeclist106);
@@ -430,7 +430,7 @@ public class fantastic4Parser extends DebugParser {
 
 
             // AST REWRITE
-            // elements: vardeclist
+            // elements: varsuitdecl, vardeclist
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -440,20 +440,15 @@ public class fantastic4Parser extends DebugParser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 15:39: -> ( ^( vardeclist ) )?
+            // 15:39: -> varsuitdecl ( vardeclist )?
             {
                 dbg.location(15,43);
-                // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:15:43: ( ^( vardeclist ) )?
+                adaptor.addChild(root_0, stream_varsuitdecl.nextTree());
+                dbg.location(15,55);
+                // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:15:55: ( vardeclist )?
                 if ( stream_vardeclist.hasNext() ) {
-                    dbg.location(15,43);
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:15:43: ^( vardeclist )
-                    {
-                    Object root_1 = (Object)adaptor.nil();
-                    dbg.location(15,45);
-                    root_1 = (Object)adaptor.becomeRoot(stream_vardeclist.nextNode(), root_1);
-
-                    adaptor.addChild(root_0, root_1);
-                    }
+                    dbg.location(15,55);
+                    adaptor.addChild(root_0, stream_vardeclist.nextTree());
 
                 }
                 stream_vardeclist.reset();
@@ -496,7 +491,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "varsuitdecl"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:18:1: varsuitdecl : 'var' idenlist ':' typename ';' -> ^( 'var' typename idenlist ) ;
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:18:1: varsuitdecl : 'var' idenlist ':' typename ';' -> ^( 'var' typename idenlist ) ;
     public final fantastic4Parser.varsuitdecl_return varsuitdecl() throws RecognitionException {
         fantastic4Parser.varsuitdecl_return retval = new fantastic4Parser.varsuitdecl_return();
         retval.start = input.LT(1);
@@ -514,9 +509,9 @@ public class fantastic4Parser extends DebugParser {
         Object string_literal8_tree=null;
         Object char_literal10_tree=null;
         Object char_literal12_tree=null;
+        RewriteRuleTokenStream stream_16=new RewriteRuleTokenStream(adaptor,"token 16");
         RewriteRuleTokenStream stream_17=new RewriteRuleTokenStream(adaptor,"token 17");
         RewriteRuleTokenStream stream_18=new RewriteRuleTokenStream(adaptor,"token 18");
-        RewriteRuleTokenStream stream_16=new RewriteRuleTokenStream(adaptor,"token 16");
         RewriteRuleSubtreeStream stream_idenlist=new RewriteRuleSubtreeStream(adaptor,"rule idenlist");
         RewriteRuleSubtreeStream stream_typename=new RewriteRuleSubtreeStream(adaptor,"rule typename");
         try { dbg.enterRule(getGrammarFileName(), "varsuitdecl");
@@ -525,10 +520,10 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(18, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:18:13: ( 'var' idenlist ':' typename ';' -> ^( 'var' typename idenlist ) )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:18:13: ( 'var' idenlist ':' typename ';' -> ^( 'var' typename idenlist ) )
             dbg.enterAlt(1);
 
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:18:15: 'var' idenlist ':' typename ';'
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:18:15: 'var' idenlist ':' typename ';'
             {
             dbg.location(18,15);
             string_literal8=(Token)match(input,16,FOLLOW_16_in_varsuitdecl148);  
@@ -559,7 +554,7 @@ public class fantastic4Parser extends DebugParser {
 
 
             // AST REWRITE
-            // elements: typename, 16, idenlist
+            // elements: idenlist, typename, 16
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -572,7 +567,7 @@ public class fantastic4Parser extends DebugParser {
             // 18:47: -> ^( 'var' typename idenlist )
             {
                 dbg.location(18,50);
-                // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:18:50: ^( 'var' typename idenlist )
+                // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:18:50: ^( 'var' typename idenlist )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 dbg.location(18,52);
@@ -624,7 +619,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "idenlist"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:21:1: idenlist : ( IDF -> ^( IDF ) | IDF ',' idenlist -> IDF idenlist );
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:21:1: idenlist : ( IDF -> ^( IDF ) | IDF ',' idenlist -> IDF idenlist );
     public final fantastic4Parser.idenlist_return idenlist() throws RecognitionException {
         fantastic4Parser.idenlist_return retval = new fantastic4Parser.idenlist_return();
         retval.start = input.LT(1);
@@ -649,7 +644,7 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(21, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:21:13: ( IDF -> ^( IDF ) | IDF ',' idenlist -> IDF idenlist )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:21:13: ( IDF -> ^( IDF ) | IDF ',' idenlist -> IDF idenlist )
             int alt5=2;
             try { dbg.enterDecision(5);
 
@@ -685,7 +680,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:21:15: IDF
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:21:15: IDF
                     {
                     dbg.location(21,15);
                     IDF13=(Token)match(input,IDF,FOLLOW_IDF_in_idenlist202);  
@@ -707,7 +702,7 @@ public class fantastic4Parser extends DebugParser {
                     // 21:20: -> ^( IDF )
                     {
                         dbg.location(21,23);
-                        // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:21:23: ^( IDF )
+                        // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:21:23: ^( IDF )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(21,25);
@@ -724,7 +719,7 @@ public class fantastic4Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:22:15: IDF ',' idenlist
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:22:15: IDF ',' idenlist
                     {
                     dbg.location(22,15);
                     IDF14=(Token)match(input,IDF,FOLLOW_IDF_in_idenlist225);  
@@ -801,7 +796,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "typename"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:25:1: typename : ( 'void' -> 'void' | 'bool' -> 'bool' | 'int' -> 'int' | 'char' -> 'char' );
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:25:1: typename : ( 'void' -> 'void' | 'bool' -> 'bool' | 'int' -> 'int' | 'char' -> 'char' );
     public final fantastic4Parser.typename_return typename() throws RecognitionException {
         fantastic4Parser.typename_return retval = new fantastic4Parser.typename_return();
         retval.start = input.LT(1);
@@ -817,10 +812,10 @@ public class fantastic4Parser extends DebugParser {
         Object string_literal18_tree=null;
         Object string_literal19_tree=null;
         Object string_literal20_tree=null;
-        RewriteRuleTokenStream stream_21=new RewriteRuleTokenStream(adaptor,"token 21");
-        RewriteRuleTokenStream stream_20=new RewriteRuleTokenStream(adaptor,"token 20");
         RewriteRuleTokenStream stream_22=new RewriteRuleTokenStream(adaptor,"token 22");
         RewriteRuleTokenStream stream_23=new RewriteRuleTokenStream(adaptor,"token 23");
+        RewriteRuleTokenStream stream_20=new RewriteRuleTokenStream(adaptor,"token 20");
+        RewriteRuleTokenStream stream_21=new RewriteRuleTokenStream(adaptor,"token 21");
 
         try { dbg.enterRule(getGrammarFileName(), "typename");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -828,7 +823,7 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(25, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:25:13: ( 'void' -> 'void' | 'bool' -> 'bool' | 'int' -> 'int' | 'char' -> 'char' )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:25:13: ( 'void' -> 'void' | 'bool' -> 'bool' | 'int' -> 'int' | 'char' -> 'char' )
             int alt6=4;
             try { dbg.enterDecision(6);
 
@@ -867,7 +862,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:25:15: 'void'
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:25:15: 'void'
                     {
                     dbg.location(25,15);
                     string_literal17=(Token)match(input,20,FOLLOW_20_in_typename271);  
@@ -899,7 +894,7 @@ public class fantastic4Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:26:15: 'bool'
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:26:15: 'bool'
                     {
                     dbg.location(26,15);
                     string_literal18=(Token)match(input,21,FOLLOW_21_in_typename291);  
@@ -931,7 +926,7 @@ public class fantastic4Parser extends DebugParser {
                 case 3 :
                     dbg.enterAlt(3);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:27:15: 'int'
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:27:15: 'int'
                     {
                     dbg.location(27,15);
                     string_literal19=(Token)match(input,22,FOLLOW_22_in_typename311);  
@@ -963,7 +958,7 @@ public class fantastic4Parser extends DebugParser {
                 case 4 :
                     dbg.enterAlt(4);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:28:15: 'char'
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:28:15: 'char'
                     {
                     dbg.location(28,15);
                     string_literal20=(Token)match(input,23,FOLLOW_23_in_typename332);  
@@ -1027,7 +1022,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "funcdeclist"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:31:1: funcdeclist : funcdecl ( funcdeclist )? ;
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:31:1: funcdeclist : funcdecl ( funcdeclist )? ;
     public final fantastic4Parser.funcdeclist_return funcdeclist() throws RecognitionException {
         fantastic4Parser.funcdeclist_return retval = new fantastic4Parser.funcdeclist_return();
         retval.start = input.LT(1);
@@ -1046,10 +1041,10 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(31, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:31:13: ( funcdecl ( funcdeclist )? )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:31:13: ( funcdecl ( funcdeclist )? )
             dbg.enterAlt(1);
 
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:31:15: funcdecl ( funcdeclist )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:31:15: funcdecl ( funcdeclist )?
             {
             root_0 = (Object)adaptor.nil();
 
@@ -1061,7 +1056,7 @@ public class fantastic4Parser extends DebugParser {
 
             adaptor.addChild(root_0, funcdecl21.getTree());
             dbg.location(31,24);
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:31:24: ( funcdeclist )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:31:24: ( funcdeclist )?
             int alt7=2;
             try { dbg.enterSubRule(7);
             try { dbg.enterDecision(7);
@@ -1077,7 +1072,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:31:24: funcdeclist
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:31:24: funcdeclist
                     {
                     dbg.location(31,24);
                     pushFollow(FOLLOW_funcdeclist_in_funcdeclist371);
@@ -1129,7 +1124,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "funcdecl"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:34:1: funcdecl : 'function' IDF '(' ( arglist )? ')' ':' typename ( vardeclist )? instr -> ^( 'function' typename ^( IDF ( vardeclist )? instr ) ( arglist )? ) ;
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:34:1: funcdecl : 'function' IDF '(' ( arglist )? ')' ':' typename ( vardeclist )? instr -> ^( 'function' typename ^( IDF ( vardeclist )? instr ) ( arglist )? ) ;
     public final fantastic4Parser.funcdecl_return funcdecl() throws RecognitionException {
         fantastic4Parser.funcdecl_return retval = new fantastic4Parser.funcdecl_return();
         retval.start = input.LT(1);
@@ -1155,25 +1150,25 @@ public class fantastic4Parser extends DebugParser {
         Object char_literal25_tree=null;
         Object char_literal27_tree=null;
         Object char_literal28_tree=null;
-        RewriteRuleTokenStream stream_IDF=new RewriteRuleTokenStream(adaptor,"token IDF");
-        RewriteRuleTokenStream stream_17=new RewriteRuleTokenStream(adaptor,"token 17");
         RewriteRuleTokenStream stream_24=new RewriteRuleTokenStream(adaptor,"token 24");
         RewriteRuleTokenStream stream_25=new RewriteRuleTokenStream(adaptor,"token 25");
         RewriteRuleTokenStream stream_26=new RewriteRuleTokenStream(adaptor,"token 26");
-        RewriteRuleSubtreeStream stream_arglist=new RewriteRuleSubtreeStream(adaptor,"rule arglist");
-        RewriteRuleSubtreeStream stream_typename=new RewriteRuleSubtreeStream(adaptor,"rule typename");
+        RewriteRuleTokenStream stream_17=new RewriteRuleTokenStream(adaptor,"token 17");
+        RewriteRuleTokenStream stream_IDF=new RewriteRuleTokenStream(adaptor,"token IDF");
         RewriteRuleSubtreeStream stream_vardeclist=new RewriteRuleSubtreeStream(adaptor,"rule vardeclist");
+        RewriteRuleSubtreeStream stream_arglist=new RewriteRuleSubtreeStream(adaptor,"rule arglist");
         RewriteRuleSubtreeStream stream_instr=new RewriteRuleSubtreeStream(adaptor,"rule instr");
+        RewriteRuleSubtreeStream stream_typename=new RewriteRuleSubtreeStream(adaptor,"rule typename");
         try { dbg.enterRule(getGrammarFileName(), "funcdecl");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
         dbg.location(34, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:34:13: ( 'function' IDF '(' ( arglist )? ')' ':' typename ( vardeclist )? instr -> ^( 'function' typename ^( IDF ( vardeclist )? instr ) ( arglist )? ) )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:34:13: ( 'function' IDF '(' ( arglist )? ')' ':' typename ( vardeclist )? instr -> ^( 'function' typename ^( IDF ( vardeclist )? instr ) ( arglist )? ) )
             dbg.enterAlt(1);
 
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:34:15: 'function' IDF '(' ( arglist )? ')' ':' typename ( vardeclist )? instr
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:34:15: 'function' IDF '(' ( arglist )? ')' ':' typename ( vardeclist )? instr
             {
             dbg.location(34,15);
             string_literal23=(Token)match(input,24,FOLLOW_24_in_funcdecl408);  
@@ -1188,7 +1183,7 @@ public class fantastic4Parser extends DebugParser {
             stream_25.add(char_literal25);
 
             dbg.location(34,34);
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:34:34: ( arglist )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:34:34: ( arglist )?
             int alt8=2;
             try { dbg.enterSubRule(8);
             try { dbg.enterDecision(8);
@@ -1204,7 +1199,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:34:34: arglist
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:34:34: arglist
                     {
                     dbg.location(34,34);
                     pushFollow(FOLLOW_arglist_in_funcdecl414);
@@ -1236,7 +1231,7 @@ public class fantastic4Parser extends DebugParser {
 
             stream_typename.add(typename29.getTree());
             dbg.location(34,60);
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:34:60: ( vardeclist )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:34:60: ( vardeclist )?
             int alt9=2;
             try { dbg.enterSubRule(9);
             try { dbg.enterDecision(9);
@@ -1252,7 +1247,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:34:60: vardeclist
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:34:60: vardeclist
                     {
                     dbg.location(34,60);
                     pushFollow(FOLLOW_vardeclist_in_funcdecl423);
@@ -1278,7 +1273,7 @@ public class fantastic4Parser extends DebugParser {
 
 
             // AST REWRITE
-            // elements: arglist, 24, vardeclist, instr, IDF, typename
+            // elements: typename, arglist, instr, 24, vardeclist, IDF
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1291,7 +1286,7 @@ public class fantastic4Parser extends DebugParser {
             // 34:78: -> ^( 'function' typename ^( IDF ( vardeclist )? instr ) ( arglist )? )
             {
                 dbg.location(34,81);
-                // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:34:81: ^( 'function' typename ^( IDF ( vardeclist )? instr ) ( arglist )? )
+                // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:34:81: ^( 'function' typename ^( IDF ( vardeclist )? instr ) ( arglist )? )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 dbg.location(34,83);
@@ -1300,14 +1295,14 @@ public class fantastic4Parser extends DebugParser {
                 dbg.location(34,94);
                 adaptor.addChild(root_1, stream_typename.nextTree());
                 dbg.location(34,103);
-                // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:34:103: ^( IDF ( vardeclist )? instr )
+                // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:34:103: ^( IDF ( vardeclist )? instr )
                 {
                 Object root_2 = (Object)adaptor.nil();
                 dbg.location(34,105);
                 root_2 = (Object)adaptor.becomeRoot(stream_IDF.nextNode(), root_2);
 
                 dbg.location(34,109);
-                // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:34:109: ( vardeclist )?
+                // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:34:109: ( vardeclist )?
                 if ( stream_vardeclist.hasNext() ) {
                     dbg.location(34,109);
                     adaptor.addChild(root_2, stream_vardeclist.nextTree());
@@ -1320,7 +1315,7 @@ public class fantastic4Parser extends DebugParser {
                 adaptor.addChild(root_1, root_2);
                 }
                 dbg.location(34,129);
-                // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:34:129: ( arglist )?
+                // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:34:129: ( arglist )?
                 if ( stream_arglist.hasNext() ) {
                     dbg.location(34,129);
                     adaptor.addChild(root_1, stream_arglist.nextTree());
@@ -1369,7 +1364,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "arglist"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:37:1: arglist : ( arg | arg ',' arglist -> ^( ARGUMENTS arg arglist ) );
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:37:1: arglist : ( arg | arg ',' arglist -> ^( ARGUMENTS arg arglist ) );
     public final fantastic4Parser.arglist_return arglist() throws RecognitionException {
         fantastic4Parser.arglist_return retval = new fantastic4Parser.arglist_return();
         retval.start = input.LT(1);
@@ -1386,15 +1381,15 @@ public class fantastic4Parser extends DebugParser {
 
         Object char_literal34_tree=null;
         RewriteRuleTokenStream stream_19=new RewriteRuleTokenStream(adaptor,"token 19");
-        RewriteRuleSubtreeStream stream_arglist=new RewriteRuleSubtreeStream(adaptor,"rule arglist");
         RewriteRuleSubtreeStream stream_arg=new RewriteRuleSubtreeStream(adaptor,"rule arg");
+        RewriteRuleSubtreeStream stream_arglist=new RewriteRuleSubtreeStream(adaptor,"rule arglist");
         try { dbg.enterRule(getGrammarFileName(), "arglist");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
         dbg.location(37, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:37:13: ( arg | arg ',' arglist -> ^( ARGUMENTS arg arglist ) )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:37:13: ( arg | arg ',' arglist -> ^( ARGUMENTS arg arglist ) )
             int alt10=2;
             try { dbg.enterDecision(10);
 
@@ -1412,7 +1407,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:37:15: arg
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:37:15: arg
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1429,7 +1424,7 @@ public class fantastic4Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:38:15: arg ',' arglist
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:38:15: arg ',' arglist
                     {
                     dbg.location(38,15);
                     pushFollow(FOLLOW_arg_in_arglist490);
@@ -1465,7 +1460,7 @@ public class fantastic4Parser extends DebugParser {
                     // 38:31: -> ^( ARGUMENTS arg arglist )
                     {
                         dbg.location(38,34);
-                        // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:38:34: ^( ARGUMENTS arg arglist )
+                        // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:38:34: ^( ARGUMENTS arg arglist )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(38,36);
@@ -1519,7 +1514,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "arg"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:41:1: arg : ( IDF ':' typename -> ^( ARGU IDF typename ) | 'ref' IDF ':' typename -> ^( 'ref' IDF typename ) );
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:41:1: arg : ( IDF ':' typename -> ^( ARGU IDF typename ) | 'ref' IDF ':' typename -> ^( 'ref' IDF typename ) );
     public final fantastic4Parser.arg_return arg() throws RecognitionException {
         fantastic4Parser.arg_return retval = new fantastic4Parser.arg_return();
         retval.start = input.LT(1);
@@ -1541,9 +1536,9 @@ public class fantastic4Parser extends DebugParser {
         Object string_literal39_tree=null;
         Object IDF40_tree=null;
         Object char_literal41_tree=null;
-        RewriteRuleTokenStream stream_IDF=new RewriteRuleTokenStream(adaptor,"token IDF");
-        RewriteRuleTokenStream stream_17=new RewriteRuleTokenStream(adaptor,"token 17");
         RewriteRuleTokenStream stream_27=new RewriteRuleTokenStream(adaptor,"token 27");
+        RewriteRuleTokenStream stream_17=new RewriteRuleTokenStream(adaptor,"token 17");
+        RewriteRuleTokenStream stream_IDF=new RewriteRuleTokenStream(adaptor,"token IDF");
         RewriteRuleSubtreeStream stream_typename=new RewriteRuleSubtreeStream(adaptor,"rule typename");
         try { dbg.enterRule(getGrammarFileName(), "arg");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -1551,7 +1546,7 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(41, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:41:13: ( IDF ':' typename -> ^( ARGU IDF typename ) | 'ref' IDF ':' typename -> ^( 'ref' IDF typename ) )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:41:13: ( IDF ':' typename -> ^( ARGU IDF typename ) | 'ref' IDF ':' typename -> ^( 'ref' IDF typename ) )
             int alt11=2;
             try { dbg.enterDecision(11);
 
@@ -1576,7 +1571,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:41:15: IDF ':' typename
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:41:15: IDF ':' typename
                     {
                     dbg.location(41,15);
                     IDF36=(Token)match(input,IDF,FOLLOW_IDF_in_arg533);  
@@ -1609,7 +1604,7 @@ public class fantastic4Parser extends DebugParser {
                     // 41:32: -> ^( ARGU IDF typename )
                     {
                         dbg.location(41,35);
-                        // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:41:35: ^( ARGU IDF typename )
+                        // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:41:35: ^( ARGU IDF typename )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(41,37);
@@ -1631,7 +1626,7 @@ public class fantastic4Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:42:15: 'ref' IDF ':' typename
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:42:15: 'ref' IDF ':' typename
                     {
                     dbg.location(42,15);
                     string_literal39=(Token)match(input,27,FOLLOW_27_in_arg563);  
@@ -1668,7 +1663,7 @@ public class fantastic4Parser extends DebugParser {
                     // 42:38: -> ^( 'ref' IDF typename )
                     {
                         dbg.location(42,41);
-                        // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:42:41: ^( 'ref' IDF typename )
+                        // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:42:41: ^( 'ref' IDF typename )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(42,43);
@@ -1722,7 +1717,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "instr"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:45:1: instr : ( 'if' expr 'then' instr ( 'else' instr )? 'fi' -> ^( 'if' expr ^( 'then' instr ) ( ^( 'else' instr ) )? ) | 'while' expr 'do' instr -> ^( 'while' expr ^( BLOCK instr ) ) | IDF '=' expr ';' -> ^( '=' IDF expr ) | 'return' returnable -> ^( 'return' returnable ) | IDF '(' exprlist ')' ';' -> ^( CALLFUNCTION IDF exprlist ) | '{' ( sequence )? '}' -> ( sequence )? | 'read' IDF ';' -> ^( 'read' IDF ) | 'write' writable ';' -> ^( 'write' writable ) );
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:45:1: instr : ( 'if' expr 'then' instr ( 'else' instr )? 'fi' -> ^( 'if' expr ^( 'then' instr ) ( ^( 'else' instr ) )? ) | 'while' expr 'do' instr -> ^( 'while' expr ^( BLOCK instr ) ) | IDF '=' expr ';' -> ^( '=' IDF expr ) | 'return' returnable -> ^( 'return' returnable ) | IDF '(' exprlist ')' ';' -> ^( CALLFUNCTION IDF exprlist ) | '{' ( sequence )? '}' -> ( sequence )? | 'read' IDF ';' -> ^( 'read' IDF ) | 'write' writable ';' -> ^( 'write' writable ) );
     public final fantastic4Parser.instr_return instr() throws RecognitionException {
         fantastic4Parser.instr_return retval = new fantastic4Parser.instr_return();
         retval.start = input.LT(1);
@@ -1792,35 +1787,35 @@ public class fantastic4Parser extends DebugParser {
         Object char_literal70_tree=null;
         Object string_literal71_tree=null;
         Object char_literal73_tree=null;
-        RewriteRuleTokenStream stream_IDF=new RewriteRuleTokenStream(adaptor,"token IDF");
-        RewriteRuleTokenStream stream_35=new RewriteRuleTokenStream(adaptor,"token 35");
-        RewriteRuleTokenStream stream_36=new RewriteRuleTokenStream(adaptor,"token 36");
-        RewriteRuleTokenStream stream_18=new RewriteRuleTokenStream(adaptor,"token 18");
         RewriteRuleTokenStream stream_33=new RewriteRuleTokenStream(adaptor,"token 33");
         RewriteRuleTokenStream stream_34=new RewriteRuleTokenStream(adaptor,"token 34");
+        RewriteRuleTokenStream stream_35=new RewriteRuleTokenStream(adaptor,"token 35");
         RewriteRuleTokenStream stream_25=new RewriteRuleTokenStream(adaptor,"token 25");
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+        RewriteRuleTokenStream stream_36=new RewriteRuleTokenStream(adaptor,"token 36");
         RewriteRuleTokenStream stream_26=new RewriteRuleTokenStream(adaptor,"token 26");
         RewriteRuleTokenStream stream_37=new RewriteRuleTokenStream(adaptor,"token 37");
-        RewriteRuleTokenStream stream_28=new RewriteRuleTokenStream(adaptor,"token 28");
         RewriteRuleTokenStream stream_38=new RewriteRuleTokenStream(adaptor,"token 38");
+        RewriteRuleTokenStream stream_28=new RewriteRuleTokenStream(adaptor,"token 28");
+        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
         RewriteRuleTokenStream stream_29=new RewriteRuleTokenStream(adaptor,"token 29");
+        RewriteRuleTokenStream stream_18=new RewriteRuleTokenStream(adaptor,"token 18");
+        RewriteRuleTokenStream stream_IDF=new RewriteRuleTokenStream(adaptor,"token IDF");
         RewriteRuleTokenStream stream_30=new RewriteRuleTokenStream(adaptor,"token 30");
-        RewriteRuleTokenStream stream_32=new RewriteRuleTokenStream(adaptor,"token 32");
         RewriteRuleTokenStream stream_31=new RewriteRuleTokenStream(adaptor,"token 31");
+        RewriteRuleTokenStream stream_32=new RewriteRuleTokenStream(adaptor,"token 32");
         RewriteRuleSubtreeStream stream_sequence=new RewriteRuleSubtreeStream(adaptor,"rule sequence");
-        RewriteRuleSubtreeStream stream_writable=new RewriteRuleSubtreeStream(adaptor,"rule writable");
-        RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
-        RewriteRuleSubtreeStream stream_exprlist=new RewriteRuleSubtreeStream(adaptor,"rule exprlist");
         RewriteRuleSubtreeStream stream_returnable=new RewriteRuleSubtreeStream(adaptor,"rule returnable");
         RewriteRuleSubtreeStream stream_instr=new RewriteRuleSubtreeStream(adaptor,"rule instr");
+        RewriteRuleSubtreeStream stream_exprlist=new RewriteRuleSubtreeStream(adaptor,"rule exprlist");
+        RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
+        RewriteRuleSubtreeStream stream_writable=new RewriteRuleSubtreeStream(adaptor,"rule writable");
         try { dbg.enterRule(getGrammarFileName(), "instr");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
         dbg.location(45, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:45:13: ( 'if' expr 'then' instr ( 'else' instr )? 'fi' -> ^( 'if' expr ^( 'then' instr ) ( ^( 'else' instr ) )? ) | 'while' expr 'do' instr -> ^( 'while' expr ^( BLOCK instr ) ) | IDF '=' expr ';' -> ^( '=' IDF expr ) | 'return' returnable -> ^( 'return' returnable ) | IDF '(' exprlist ')' ';' -> ^( CALLFUNCTION IDF exprlist ) | '{' ( sequence )? '}' -> ( sequence )? | 'read' IDF ';' -> ^( 'read' IDF ) | 'write' writable ';' -> ^( 'write' writable ) )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:45:13: ( 'if' expr 'then' instr ( 'else' instr )? 'fi' -> ^( 'if' expr ^( 'then' instr ) ( ^( 'else' instr ) )? ) | 'while' expr 'do' instr -> ^( 'while' expr ^( BLOCK instr ) ) | IDF '=' expr ';' -> ^( '=' IDF expr ) | 'return' returnable -> ^( 'return' returnable ) | IDF '(' exprlist ')' ';' -> ^( CALLFUNCTION IDF exprlist ) | '{' ( sequence )? '}' -> ( sequence )? | 'read' IDF ';' -> ^( 'read' IDF ) | 'write' writable ';' -> ^( 'write' writable ) )
             int alt14=8;
             try { dbg.enterDecision(14);
 
@@ -1838,7 +1833,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:45:15: 'if' expr 'then' instr ( 'else' instr )? 'fi'
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:45:15: 'if' expr 'then' instr ( 'else' instr )? 'fi'
                     {
                     dbg.location(45,15);
                     string_literal43=(Token)match(input,28,FOLLOW_28_in_instr618);  
@@ -1863,7 +1858,7 @@ public class fantastic4Parser extends DebugParser {
 
                     stream_instr.add(instr46.getTree());
                     dbg.location(45,38);
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:45:38: ( 'else' instr )?
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:45:38: ( 'else' instr )?
                     int alt12=2;
                     try { dbg.enterSubRule(12);
                     try { dbg.enterDecision(12);
@@ -1879,7 +1874,7 @@ public class fantastic4Parser extends DebugParser {
                         case 1 :
                             dbg.enterAlt(1);
 
-                            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:45:39: 'else' instr
+                            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:45:39: 'else' instr
                             {
                             dbg.location(45,39);
                             string_literal47=(Token)match(input,30,FOLLOW_30_in_instr627);  
@@ -1906,7 +1901,7 @@ public class fantastic4Parser extends DebugParser {
 
 
                     // AST REWRITE
-                    // elements: instr, instr, 29, expr, 28, 30
+                    // elements: instr, expr, instr, 29, 28, 30
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1919,7 +1914,7 @@ public class fantastic4Parser extends DebugParser {
                     // 45:60: -> ^( 'if' expr ^( 'then' instr ) ( ^( 'else' instr ) )? )
                     {
                         dbg.location(45,64);
-                        // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:45:64: ^( 'if' expr ^( 'then' instr ) ( ^( 'else' instr ) )? )
+                        // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:45:64: ^( 'if' expr ^( 'then' instr ) ( ^( 'else' instr ) )? )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(45,66);
@@ -1928,7 +1923,7 @@ public class fantastic4Parser extends DebugParser {
                         dbg.location(45,71);
                         adaptor.addChild(root_1, stream_expr.nextTree());
                         dbg.location(45,76);
-                        // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:45:76: ^( 'then' instr )
+                        // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:45:76: ^( 'then' instr )
                         {
                         Object root_2 = (Object)adaptor.nil();
                         dbg.location(45,78);
@@ -1940,10 +1935,10 @@ public class fantastic4Parser extends DebugParser {
                         adaptor.addChild(root_1, root_2);
                         }
                         dbg.location(45,92);
-                        // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:45:92: ( ^( 'else' instr ) )?
+                        // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:45:92: ( ^( 'else' instr ) )?
                         if ( stream_instr.hasNext()||stream_30.hasNext() ) {
                             dbg.location(45,92);
-                            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:45:92: ^( 'else' instr )
+                            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:45:92: ^( 'else' instr )
                             {
                             Object root_2 = (Object)adaptor.nil();
                             dbg.location(45,94);
@@ -1970,7 +1965,7 @@ public class fantastic4Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:46:15: 'while' expr 'do' instr
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:46:15: 'while' expr 'do' instr
                     {
                     dbg.location(46,15);
                     string_literal50=(Token)match(input,32,FOLLOW_32_in_instr672);  
@@ -1997,7 +1992,7 @@ public class fantastic4Parser extends DebugParser {
 
 
                     // AST REWRITE
-                    // elements: 32, instr, expr
+                    // elements: 32, expr, instr
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2010,7 +2005,7 @@ public class fantastic4Parser extends DebugParser {
                     // 46:39: -> ^( 'while' expr ^( BLOCK instr ) )
                     {
                         dbg.location(46,42);
-                        // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:46:42: ^( 'while' expr ^( BLOCK instr ) )
+                        // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:46:42: ^( 'while' expr ^( BLOCK instr ) )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(46,44);
@@ -2019,7 +2014,7 @@ public class fantastic4Parser extends DebugParser {
                         dbg.location(46,52);
                         adaptor.addChild(root_1, stream_expr.nextTree());
                         dbg.location(46,57);
-                        // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:46:57: ^( BLOCK instr )
+                        // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:46:57: ^( BLOCK instr )
                         {
                         Object root_2 = (Object)adaptor.nil();
                         dbg.location(46,59);
@@ -2042,7 +2037,7 @@ public class fantastic4Parser extends DebugParser {
                 case 3 :
                     dbg.enterAlt(3);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:47:15: IDF '=' expr ';'
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:47:15: IDF '=' expr ';'
                     {
                     dbg.location(47,15);
                     IDF54=(Token)match(input,IDF,FOLLOW_IDF_in_instr708);  
@@ -2066,7 +2061,7 @@ public class fantastic4Parser extends DebugParser {
 
 
                     // AST REWRITE
-                    // elements: 34, IDF, expr
+                    // elements: IDF, expr, 34
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2079,7 +2074,7 @@ public class fantastic4Parser extends DebugParser {
                     // 47:33: -> ^( '=' IDF expr )
                     {
                         dbg.location(47,36);
-                        // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:47:36: ^( '=' IDF expr )
+                        // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:47:36: ^( '=' IDF expr )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(47,38);
@@ -2101,7 +2096,7 @@ public class fantastic4Parser extends DebugParser {
                 case 4 :
                     dbg.enterAlt(4);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:48:15: 'return' returnable
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:48:15: 'return' returnable
                     {
                     dbg.location(48,15);
                     string_literal58=(Token)match(input,35,FOLLOW_35_in_instr741);  
@@ -2117,7 +2112,7 @@ public class fantastic4Parser extends DebugParser {
 
 
                     // AST REWRITE
-                    // elements: returnable, 35
+                    // elements: 35, returnable
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2130,7 +2125,7 @@ public class fantastic4Parser extends DebugParser {
                     // 48:35: -> ^( 'return' returnable )
                     {
                         dbg.location(48,38);
-                        // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:48:38: ^( 'return' returnable )
+                        // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:48:38: ^( 'return' returnable )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(48,40);
@@ -2150,7 +2145,7 @@ public class fantastic4Parser extends DebugParser {
                 case 5 :
                     dbg.enterAlt(5);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:49:15: IDF '(' exprlist ')' ';'
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:49:15: IDF '(' exprlist ')' ';'
                     {
                     dbg.location(49,15);
                     IDF60=(Token)match(input,IDF,FOLLOW_IDF_in_instr767);  
@@ -2178,7 +2173,7 @@ public class fantastic4Parser extends DebugParser {
 
 
                     // AST REWRITE
-                    // elements: IDF, exprlist
+                    // elements: exprlist, IDF
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2191,7 +2186,7 @@ public class fantastic4Parser extends DebugParser {
                     // 49:40: -> ^( CALLFUNCTION IDF exprlist )
                     {
                         dbg.location(49,44);
-                        // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:49:44: ^( CALLFUNCTION IDF exprlist )
+                        // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:49:44: ^( CALLFUNCTION IDF exprlist )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(49,46);
@@ -2213,14 +2208,14 @@ public class fantastic4Parser extends DebugParser {
                 case 6 :
                     dbg.enterAlt(6);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:50:15: '{' ( sequence )? '}'
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:50:15: '{' ( sequence )? '}'
                     {
                     dbg.location(50,15);
                     char_literal65=(Token)match(input,36,FOLLOW_36_in_instr803);  
                     stream_36.add(char_literal65);
 
                     dbg.location(50,19);
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:50:19: ( sequence )?
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:50:19: ( sequence )?
                     int alt13=2;
                     try { dbg.enterSubRule(13);
                     try { dbg.enterDecision(13);
@@ -2236,7 +2231,7 @@ public class fantastic4Parser extends DebugParser {
                         case 1 :
                             dbg.enterAlt(1);
 
-                            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:50:19: sequence
+                            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:50:19: sequence
                             {
                             dbg.location(50,19);
                             pushFollow(FOLLOW_sequence_in_instr805);
@@ -2272,7 +2267,7 @@ public class fantastic4Parser extends DebugParser {
                     // 50:33: -> ( sequence )?
                     {
                         dbg.location(50,37);
-                        // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:50:37: ( sequence )?
+                        // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:50:37: ( sequence )?
                         if ( stream_sequence.hasNext() ) {
                             dbg.location(50,37);
                             adaptor.addChild(root_0, stream_sequence.nextTree());
@@ -2288,7 +2283,7 @@ public class fantastic4Parser extends DebugParser {
                 case 7 :
                     dbg.enterAlt(7);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:51:15: 'read' IDF ';'
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:51:15: 'read' IDF ';'
                     {
                     dbg.location(51,15);
                     string_literal68=(Token)match(input,38,FOLLOW_38_in_instr830);  
@@ -2318,7 +2313,7 @@ public class fantastic4Parser extends DebugParser {
                     // 51:30: -> ^( 'read' IDF )
                     {
                         dbg.location(51,33);
-                        // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:51:33: ^( 'read' IDF )
+                        // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:51:33: ^( 'read' IDF )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(51,35);
@@ -2338,7 +2333,7 @@ public class fantastic4Parser extends DebugParser {
                 case 8 :
                     dbg.enterAlt(8);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:52:15: 'write' writable ';'
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:52:15: 'write' writable ';'
                     {
                     dbg.location(52,15);
                     string_literal71=(Token)match(input,39,FOLLOW_39_in_instr858);  
@@ -2358,7 +2353,7 @@ public class fantastic4Parser extends DebugParser {
 
 
                     // AST REWRITE
-                    // elements: writable, 39
+                    // elements: 39, writable
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2371,7 +2366,7 @@ public class fantastic4Parser extends DebugParser {
                     // 52:36: -> ^( 'write' writable )
                     {
                         dbg.location(52,39);
-                        // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:52:39: ^( 'write' writable )
+                        // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:52:39: ^( 'write' writable )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(52,41);
@@ -2423,7 +2418,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "returnable"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:55:1: returnable : expr ';' -> expr ;
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:55:1: returnable : expr ';' -> expr ;
     public final fantastic4Parser.returnable_return returnable() throws RecognitionException {
         fantastic4Parser.returnable_return retval = new fantastic4Parser.returnable_return();
         retval.start = input.LT(1);
@@ -2443,10 +2438,10 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(55, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:55:12: ( expr ';' -> expr )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:55:12: ( expr ';' -> expr )
             dbg.enterAlt(1);
 
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:55:14: expr ';'
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:55:14: expr ';'
             {
             dbg.location(55,14);
             pushFollow(FOLLOW_expr_in_returnable891);
@@ -2515,7 +2510,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "writable"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:59:1: writable : ( IDF -> IDF | cste -> cste );
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:59:1: writable : ( IDF -> IDF | cste -> cste );
     public final fantastic4Parser.writable_return writable() throws RecognitionException {
         fantastic4Parser.writable_return retval = new fantastic4Parser.writable_return();
         retval.start = input.LT(1);
@@ -2535,7 +2530,7 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(59, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:59:13: ( IDF -> IDF | cste -> cste )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:59:13: ( IDF -> IDF | cste -> cste )
             int alt15=2;
             try { dbg.enterDecision(15);
 
@@ -2560,7 +2555,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:59:15: IDF
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:59:15: IDF
                     {
                     dbg.location(59,15);
                     IDF76=(Token)match(input,IDF,FOLLOW_IDF_in_writable913);  
@@ -2592,7 +2587,7 @@ public class fantastic4Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:60:15: cste
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:60:15: cste
                     {
                     dbg.location(60,15);
                     pushFollow(FOLLOW_cste_in_writable933);
@@ -2659,7 +2654,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "sequence"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:63:1: sequence : instr ( sequence )? -> instr ( sequence )? ;
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:63:1: sequence : instr ( sequence )? -> instr ( sequence )? ;
     public final fantastic4Parser.sequence_return sequence() throws RecognitionException {
         fantastic4Parser.sequence_return retval = new fantastic4Parser.sequence_return();
         retval.start = input.LT(1);
@@ -2679,10 +2674,10 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(63, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:63:13: ( instr ( sequence )? -> instr ( sequence )? )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:63:13: ( instr ( sequence )? -> instr ( sequence )? )
             dbg.enterAlt(1);
 
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:63:16: instr ( sequence )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:63:16: instr ( sequence )?
             {
             dbg.location(63,16);
             pushFollow(FOLLOW_instr_in_sequence962);
@@ -2692,7 +2687,7 @@ public class fantastic4Parser extends DebugParser {
 
             stream_instr.add(instr78.getTree());
             dbg.location(63,23);
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:63:23: ( sequence )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:63:23: ( sequence )?
             int alt16=2;
             try { dbg.enterSubRule(16);
             try { dbg.enterDecision(16);
@@ -2708,7 +2703,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:63:23: sequence
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:63:23: sequence
                     {
                     dbg.location(63,23);
                     pushFollow(FOLLOW_sequence_in_sequence965);
@@ -2727,7 +2722,7 @@ public class fantastic4Parser extends DebugParser {
 
 
             // AST REWRITE
-            // elements: instr, sequence
+            // elements: sequence, instr
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2742,7 +2737,7 @@ public class fantastic4Parser extends DebugParser {
                 dbg.location(63,36);
                 adaptor.addChild(root_0, stream_instr.nextTree());
                 dbg.location(63,42);
-                // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:63:42: ( sequence )?
+                // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:63:42: ( sequence )?
                 if ( stream_sequence.hasNext() ) {
                     dbg.location(63,42);
                     adaptor.addChild(root_0, stream_sequence.nextTree());
@@ -2788,7 +2783,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "exprlist"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:66:1: exprlist : expr ( nextexpr )? -> expr ( nextexpr )? ;
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:66:1: exprlist : expr ( nextexpr )? -> expr ( nextexpr )? ;
     public final fantastic4Parser.exprlist_return exprlist() throws RecognitionException {
         fantastic4Parser.exprlist_return retval = new fantastic4Parser.exprlist_return();
         retval.start = input.LT(1);
@@ -2808,10 +2803,10 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(66, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:66:13: ( expr ( nextexpr )? -> expr ( nextexpr )? )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:66:13: ( expr ( nextexpr )? -> expr ( nextexpr )? )
             dbg.enterAlt(1);
 
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:66:15: expr ( nextexpr )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:66:15: expr ( nextexpr )?
             {
             dbg.location(66,15);
             pushFollow(FOLLOW_expr_in_exprlist1009);
@@ -2821,7 +2816,7 @@ public class fantastic4Parser extends DebugParser {
 
             stream_expr.add(expr80.getTree());
             dbg.location(66,20);
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:66:20: ( nextexpr )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:66:20: ( nextexpr )?
             int alt17=2;
             try { dbg.enterSubRule(17);
             try { dbg.enterDecision(17);
@@ -2837,7 +2832,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:66:20: nextexpr
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:66:20: nextexpr
                     {
                     dbg.location(66,20);
                     pushFollow(FOLLOW_nextexpr_in_exprlist1011);
@@ -2856,7 +2851,7 @@ public class fantastic4Parser extends DebugParser {
 
 
             // AST REWRITE
-            // elements: nextexpr, expr
+            // elements: expr, nextexpr
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2871,7 +2866,7 @@ public class fantastic4Parser extends DebugParser {
                 dbg.location(66,33);
                 adaptor.addChild(root_0, stream_expr.nextTree());
                 dbg.location(66,38);
-                // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:66:38: ( nextexpr )?
+                // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:66:38: ( nextexpr )?
                 if ( stream_nextexpr.hasNext() ) {
                     dbg.location(66,38);
                     adaptor.addChild(root_0, stream_nextexpr.nextTree());
@@ -2917,7 +2912,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "nextexpr"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:69:1: nextexpr : ',' exprlist -> exprlist ;
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:69:1: nextexpr : ',' exprlist -> exprlist ;
     public final fantastic4Parser.nextexpr_return nextexpr() throws RecognitionException {
         fantastic4Parser.nextexpr_return retval = new fantastic4Parser.nextexpr_return();
         retval.start = input.LT(1);
@@ -2937,10 +2932,10 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(69, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:69:13: ( ',' exprlist -> exprlist )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:69:13: ( ',' exprlist -> exprlist )
             dbg.enterAlt(1);
 
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:69:14: ',' exprlist
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:69:14: ',' exprlist
             {
             dbg.location(69,14);
             char_literal82=(Token)match(input,19,FOLLOW_19_in_nextexpr1042);  
@@ -3009,7 +3004,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "expr"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:72:1: expr : add -> add ;
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:72:1: expr : add -> add ;
     public final fantastic4Parser.expr_return expr() throws RecognitionException {
         fantastic4Parser.expr_return retval = new fantastic4Parser.expr_return();
         retval.start = input.LT(1);
@@ -3026,10 +3021,10 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(72, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:72:6: ( add -> add )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:72:6: ( add -> add )
             dbg.enterAlt(1);
 
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:72:9: add
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:72:9: add
             {
             dbg.location(72,9);
             pushFollow(FOLLOW_add_in_expr1070);
@@ -3094,7 +3089,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "add"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:75:1: add : mult ( addSubtractOp add )? ;
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:75:1: add : mult ( addSubtractOp add )? ;
     public final fantastic4Parser.add_return add() throws RecognitionException {
         fantastic4Parser.add_return retval = new fantastic4Parser.add_return();
         retval.start = input.LT(1);
@@ -3115,10 +3110,10 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(75, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:75:5: ( mult ( addSubtractOp add )? )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:75:5: ( mult ( addSubtractOp add )? )
             dbg.enterAlt(1);
 
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:75:7: mult ( addSubtractOp add )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:75:7: mult ( addSubtractOp add )?
             {
             root_0 = (Object)adaptor.nil();
 
@@ -3130,7 +3125,7 @@ public class fantastic4Parser extends DebugParser {
 
             adaptor.addChild(root_0, mult85.getTree());
             dbg.location(75,12);
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:75:12: ( addSubtractOp add )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:75:12: ( addSubtractOp add )?
             int alt18=2;
             try { dbg.enterSubRule(18);
             try { dbg.enterDecision(18);
@@ -3146,7 +3141,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:75:13: addSubtractOp add
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:75:13: addSubtractOp add
                     {
                     dbg.location(75,26);
                     pushFollow(FOLLOW_addSubtractOp_in_add1092);
@@ -3205,7 +3200,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "mult"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:79:1: mult : and ( multiplyDivideOp mult )? ;
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:79:1: mult : and ( multiplyDivideOp mult )? ;
     public final fantastic4Parser.mult_return mult() throws RecognitionException {
         fantastic4Parser.mult_return retval = new fantastic4Parser.mult_return();
         retval.start = input.LT(1);
@@ -3226,10 +3221,10 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(79, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:80:2: ( and ( multiplyDivideOp mult )? )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:80:2: ( and ( multiplyDivideOp mult )? )
             dbg.enterAlt(1);
 
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:80:4: and ( multiplyDivideOp mult )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:80:4: and ( multiplyDivideOp mult )?
             {
             root_0 = (Object)adaptor.nil();
 
@@ -3241,7 +3236,7 @@ public class fantastic4Parser extends DebugParser {
 
             adaptor.addChild(root_0, and88.getTree());
             dbg.location(80,8);
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:80:8: ( multiplyDivideOp mult )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:80:8: ( multiplyDivideOp mult )?
             int alt19=2;
             try { dbg.enterSubRule(19);
             try { dbg.enterDecision(19);
@@ -3257,7 +3252,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:80:9: multiplyDivideOp mult
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:80:9: multiplyDivideOp mult
                     {
                     dbg.location(80,25);
                     pushFollow(FOLLOW_multiplyDivideOp_in_mult1116);
@@ -3316,7 +3311,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "and"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:83:1: and : comp ( '&&' and )? ;
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:83:1: and : comp ( '&&' and )? ;
     public final fantastic4Parser.and_return and() throws RecognitionException {
         fantastic4Parser.and_return retval = new fantastic4Parser.and_return();
         retval.start = input.LT(1);
@@ -3337,10 +3332,10 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(83, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:84:2: ( comp ( '&&' and )? )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:84:2: ( comp ( '&&' and )? )
             dbg.enterAlt(1);
 
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:84:4: comp ( '&&' and )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:84:4: comp ( '&&' and )?
             {
             root_0 = (Object)adaptor.nil();
 
@@ -3352,7 +3347,7 @@ public class fantastic4Parser extends DebugParser {
 
             adaptor.addChild(root_0, comp91.getTree());
             dbg.location(84,9);
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:84:9: ( '&&' and )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:84:9: ( '&&' and )?
             int alt20=2;
             try { dbg.enterSubRule(20);
             try { dbg.enterDecision(20);
@@ -3368,7 +3363,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:84:10: '&&' and
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:84:10: '&&' and
                     {
                     dbg.location(84,14);
                     string_literal92=(Token)match(input,40,FOLLOW_40_in_and1143); 
@@ -3425,7 +3420,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "comp"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:87:1: comp : or ( comparatorOp comp )? ;
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:87:1: comp : or ( comparatorOp comp )? ;
     public final fantastic4Parser.comp_return comp() throws RecognitionException {
         fantastic4Parser.comp_return retval = new fantastic4Parser.comp_return();
         retval.start = input.LT(1);
@@ -3446,10 +3441,10 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(87, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:88:2: ( or ( comparatorOp comp )? )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:88:2: ( or ( comparatorOp comp )? )
             dbg.enterAlt(1);
 
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:88:4: or ( comparatorOp comp )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:88:4: or ( comparatorOp comp )?
             {
             root_0 = (Object)adaptor.nil();
 
@@ -3461,7 +3456,7 @@ public class fantastic4Parser extends DebugParser {
 
             adaptor.addChild(root_0, or94.getTree());
             dbg.location(88,7);
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:88:7: ( comparatorOp comp )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:88:7: ( comparatorOp comp )?
             int alt21=2;
             try { dbg.enterSubRule(21);
             try { dbg.enterDecision(21);
@@ -3477,7 +3472,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:88:8: comparatorOp comp
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:88:8: comparatorOp comp
                     {
                     dbg.location(88,20);
                     pushFollow(FOLLOW_comparatorOp_in_comp1165);
@@ -3536,7 +3531,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "or"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:91:1: or : puis ( '||' or )? ;
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:91:1: or : puis ( '||' or )? ;
     public final fantastic4Parser.or_return or() throws RecognitionException {
         fantastic4Parser.or_return retval = new fantastic4Parser.or_return();
         retval.start = input.LT(1);
@@ -3557,10 +3552,10 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(91, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:91:5: ( puis ( '||' or )? )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:91:5: ( puis ( '||' or )? )
             dbg.enterAlt(1);
 
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:91:7: puis ( '||' or )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:91:7: puis ( '||' or )?
             {
             root_0 = (Object)adaptor.nil();
 
@@ -3572,7 +3567,7 @@ public class fantastic4Parser extends DebugParser {
 
             adaptor.addChild(root_0, puis97.getTree());
             dbg.location(91,12);
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:91:12: ( '||' or )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:91:12: ( '||' or )?
             int alt22=2;
             try { dbg.enterSubRule(22);
             try { dbg.enterDecision(22);
@@ -3588,7 +3583,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:91:13: '||' or
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:91:13: '||' or
                     {
                     dbg.location(91,17);
                     string_literal98=(Token)match(input,41,FOLLOW_41_in_or1190); 
@@ -3645,7 +3640,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "puis"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:94:1: puis : negExpression ( '^' puis )? ;
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:94:1: puis : negExpression ( '^' puis )? ;
     public final fantastic4Parser.puis_return puis() throws RecognitionException {
         fantastic4Parser.puis_return retval = new fantastic4Parser.puis_return();
         retval.start = input.LT(1);
@@ -3666,10 +3661,10 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(94, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:95:2: ( negExpression ( '^' puis )? )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:95:2: ( negExpression ( '^' puis )? )
             dbg.enterAlt(1);
 
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:95:5: negExpression ( '^' puis )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:95:5: negExpression ( '^' puis )?
             {
             root_0 = (Object)adaptor.nil();
 
@@ -3681,7 +3676,7 @@ public class fantastic4Parser extends DebugParser {
 
             adaptor.addChild(root_0, negExpression100.getTree());
             dbg.location(95,19);
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:95:19: ( '^' puis )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:95:19: ( '^' puis )?
             int alt23=2;
             try { dbg.enterSubRule(23);
             try { dbg.enterDecision(23);
@@ -3697,7 +3692,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:95:20: '^' puis
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:95:20: '^' puis
                     {
                     dbg.location(95,23);
                     char_literal101=(Token)match(input,42,FOLLOW_42_in_puis1214); 
@@ -3754,7 +3749,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "negExpression"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:98:1: negExpression : ( neg )? expressionAtom ;
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:98:1: negExpression : ( neg )? expressionAtom ;
     public final fantastic4Parser.negExpression_return negExpression() throws RecognitionException {
         fantastic4Parser.negExpression_return retval = new fantastic4Parser.negExpression_return();
         retval.start = input.LT(1);
@@ -3773,15 +3768,15 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(98, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:98:14: ( ( neg )? expressionAtom )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:98:14: ( ( neg )? expressionAtom )
             dbg.enterAlt(1);
 
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:98:16: ( neg )? expressionAtom
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:98:16: ( neg )? expressionAtom
             {
             root_0 = (Object)adaptor.nil();
 
             dbg.location(98,16);
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:98:16: ( neg )?
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:98:16: ( neg )?
             int alt24=2;
             try { dbg.enterSubRule(24);
             try { dbg.enterDecision(24);
@@ -3797,7 +3792,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:98:16: neg
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:98:16: neg
                     {
                     dbg.location(98,16);
                     pushFollow(FOLLOW_neg_in_negExpression1229);
@@ -3856,7 +3851,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "expressionAtom"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:101:2: expressionAtom : ( -> EPSILON | cste -> cste | IDF -> IDF | ( '(' add ')' ) -> add | IDF '(' exprlist ')' -> ^( IDF exprlist ) );
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:101:2: expressionAtom : ( -> EPSILON | cste -> cste | IDF -> IDF | ( '(' add ')' ) -> add | IDF '(' exprlist ')' -> ^( IDF exprlist ) );
     public final fantastic4Parser.expressionAtom_return expressionAtom() throws RecognitionException {
         fantastic4Parser.expressionAtom_return retval = new fantastic4Parser.expressionAtom_return();
         retval.start = input.LT(1);
@@ -3882,19 +3877,19 @@ public class fantastic4Parser extends DebugParser {
         Object IDF110_tree=null;
         Object char_literal111_tree=null;
         Object char_literal113_tree=null;
-        RewriteRuleTokenStream stream_IDF=new RewriteRuleTokenStream(adaptor,"token IDF");
         RewriteRuleTokenStream stream_25=new RewriteRuleTokenStream(adaptor,"token 25");
         RewriteRuleTokenStream stream_26=new RewriteRuleTokenStream(adaptor,"token 26");
-        RewriteRuleSubtreeStream stream_cste=new RewriteRuleSubtreeStream(adaptor,"rule cste");
-        RewriteRuleSubtreeStream stream_exprlist=new RewriteRuleSubtreeStream(adaptor,"rule exprlist");
+        RewriteRuleTokenStream stream_IDF=new RewriteRuleTokenStream(adaptor,"token IDF");
         RewriteRuleSubtreeStream stream_add=new RewriteRuleSubtreeStream(adaptor,"rule add");
+        RewriteRuleSubtreeStream stream_exprlist=new RewriteRuleSubtreeStream(adaptor,"rule exprlist");
+        RewriteRuleSubtreeStream stream_cste=new RewriteRuleSubtreeStream(adaptor,"rule cste");
         try { dbg.enterRule(getGrammarFileName(), "expressionAtom");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
         dbg.location(101, 2);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:101:17: ( -> EPSILON | cste -> cste | IDF -> IDF | ( '(' add ')' ) -> add | IDF '(' exprlist ')' -> ^( IDF exprlist ) )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:101:17: ( -> EPSILON | cste -> cste | IDF -> IDF | ( '(' add ')' ) -> add | IDF '(' exprlist ')' -> ^( IDF exprlist ) )
             int alt25=5;
             try { dbg.enterDecision(25);
 
@@ -3965,7 +3960,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:101:19: 
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:101:19: 
                     {
 
                     // AST REWRITE
@@ -3992,7 +3987,7 @@ public class fantastic4Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:102:9: cste
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:102:9: cste
                     {
                     dbg.location(102,9);
                     pushFollow(FOLLOW_cste_in_expressionAtom1256);
@@ -4027,7 +4022,7 @@ public class fantastic4Parser extends DebugParser {
                 case 3 :
                     dbg.enterAlt(3);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:103:9: IDF
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:103:9: IDF
                     {
                     dbg.location(103,9);
                     IDF106=(Token)match(input,IDF,FOLLOW_IDF_in_expressionAtom1270);  
@@ -4059,13 +4054,13 @@ public class fantastic4Parser extends DebugParser {
                 case 4 :
                     dbg.enterAlt(4);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:104:8: ( '(' add ')' )
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:104:8: ( '(' add ')' )
                     {
                     dbg.location(104,8);
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:104:8: ( '(' add ')' )
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:104:8: ( '(' add ')' )
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:104:10: '(' add ')'
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:104:10: '(' add ')'
                     {
                     dbg.location(104,10);
                     char_literal107=(Token)match(input,25,FOLLOW_25_in_expressionAtom1285);  
@@ -4111,7 +4106,7 @@ public class fantastic4Parser extends DebugParser {
                 case 5 :
                     dbg.enterAlt(5);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:105:7: IDF '(' exprlist ')'
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:105:7: IDF '(' exprlist ')'
                     {
                     dbg.location(105,7);
                     IDF110=(Token)match(input,IDF,FOLLOW_IDF_in_expressionAtom1303);  
@@ -4135,7 +4130,7 @@ public class fantastic4Parser extends DebugParser {
 
 
                     // AST REWRITE
-                    // elements: IDF, exprlist
+                    // elements: exprlist, IDF
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -4148,7 +4143,7 @@ public class fantastic4Parser extends DebugParser {
                     // 105:28: -> ^( IDF exprlist )
                     {
                         dbg.location(105,31);
-                        // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:105:31: ^( IDF exprlist )
+                        // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:105:31: ^( IDF exprlist )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(105,33);
@@ -4200,7 +4195,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "addSubtractOp"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:107:1: addSubtractOp : ( '+' -> '+' | '-' -> '-' );
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:107:1: addSubtractOp : ( '+' -> '+' | '-' -> '-' );
     public final fantastic4Parser.addSubtractOp_return addSubtractOp() throws RecognitionException {
         fantastic4Parser.addSubtractOp_return retval = new fantastic4Parser.addSubtractOp_return();
         retval.start = input.LT(1);
@@ -4212,8 +4207,8 @@ public class fantastic4Parser extends DebugParser {
 
         Object char_literal114_tree=null;
         Object char_literal115_tree=null;
-        RewriteRuleTokenStream stream_43=new RewriteRuleTokenStream(adaptor,"token 43");
         RewriteRuleTokenStream stream_44=new RewriteRuleTokenStream(adaptor,"token 44");
+        RewriteRuleTokenStream stream_43=new RewriteRuleTokenStream(adaptor,"token 43");
 
         try { dbg.enterRule(getGrammarFileName(), "addSubtractOp");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -4221,7 +4216,7 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(107, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:108:2: ( '+' -> '+' | '-' -> '-' )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:108:2: ( '+' -> '+' | '-' -> '-' )
             int alt26=2;
             try { dbg.enterDecision(26);
 
@@ -4246,7 +4241,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:108:4: '+'
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:108:4: '+'
                     {
                     dbg.location(108,4);
                     char_literal114=(Token)match(input,43,FOLLOW_43_in_addSubtractOp1331);  
@@ -4278,7 +4273,7 @@ public class fantastic4Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:109:6: '-'
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:109:6: '-'
                     {
                     dbg.location(109,6);
                     char_literal115=(Token)match(input,44,FOLLOW_44_in_addSubtractOp1342);  
@@ -4342,7 +4337,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "multiplyDivideOp"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:112:1: multiplyDivideOp : ( '*' -> '*' | '/' -> '/' );
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:112:1: multiplyDivideOp : ( '*' -> '*' | '/' -> '/' );
     public final fantastic4Parser.multiplyDivideOp_return multiplyDivideOp() throws RecognitionException {
         fantastic4Parser.multiplyDivideOp_return retval = new fantastic4Parser.multiplyDivideOp_return();
         retval.start = input.LT(1);
@@ -4363,7 +4358,7 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(112, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:113:2: ( '*' -> '*' | '/' -> '/' )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:113:2: ( '*' -> '*' | '/' -> '/' )
             int alt27=2;
             try { dbg.enterDecision(27);
 
@@ -4388,7 +4383,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:113:4: '*'
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:113:4: '*'
                     {
                     dbg.location(113,4);
                     char_literal116=(Token)match(input,45,FOLLOW_45_in_multiplyDivideOp1363);  
@@ -4420,7 +4415,7 @@ public class fantastic4Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:114:6: '/'
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:114:6: '/'
                     {
                     dbg.location(114,6);
                     char_literal117=(Token)match(input,46,FOLLOW_46_in_multiplyDivideOp1374);  
@@ -4484,7 +4479,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "comparatorOp"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:118:1: comparatorOp : ( '>' -> '>' | '<' -> '<' | '>=' -> '>=' | '<=' -> '<=' | '!=' -> '!=' );
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:118:1: comparatorOp : ( '>' -> '>' | '<' -> '<' | '>=' -> '>=' | '<=' -> '<=' | '!=' -> '!=' );
     public final fantastic4Parser.comparatorOp_return comparatorOp() throws RecognitionException {
         fantastic4Parser.comparatorOp_return retval = new fantastic4Parser.comparatorOp_return();
         retval.start = input.LT(1);
@@ -4502,11 +4497,11 @@ public class fantastic4Parser extends DebugParser {
         Object string_literal120_tree=null;
         Object string_literal121_tree=null;
         Object string_literal122_tree=null;
-        RewriteRuleTokenStream stream_49=new RewriteRuleTokenStream(adaptor,"token 49");
-        RewriteRuleTokenStream stream_48=new RewriteRuleTokenStream(adaptor,"token 48");
         RewriteRuleTokenStream stream_47=new RewriteRuleTokenStream(adaptor,"token 47");
-        RewriteRuleTokenStream stream_51=new RewriteRuleTokenStream(adaptor,"token 51");
+        RewriteRuleTokenStream stream_48=new RewriteRuleTokenStream(adaptor,"token 48");
+        RewriteRuleTokenStream stream_49=new RewriteRuleTokenStream(adaptor,"token 49");
         RewriteRuleTokenStream stream_50=new RewriteRuleTokenStream(adaptor,"token 50");
+        RewriteRuleTokenStream stream_51=new RewriteRuleTokenStream(adaptor,"token 51");
 
         try { dbg.enterRule(getGrammarFileName(), "comparatorOp");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -4514,7 +4509,7 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(118, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:119:2: ( '>' -> '>' | '<' -> '<' | '>=' -> '>=' | '<=' -> '<=' | '!=' -> '!=' )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:119:2: ( '>' -> '>' | '<' -> '<' | '>=' -> '>=' | '<=' -> '<=' | '!=' -> '!=' )
             int alt28=5;
             try { dbg.enterDecision(28);
 
@@ -4558,7 +4553,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:119:4: '>'
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:119:4: '>'
                     {
                     dbg.location(119,4);
                     char_literal118=(Token)match(input,47,FOLLOW_47_in_comparatorOp1396);  
@@ -4590,7 +4585,7 @@ public class fantastic4Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:120:5: '<'
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:120:5: '<'
                     {
                     dbg.location(120,5);
                     char_literal119=(Token)match(input,48,FOLLOW_48_in_comparatorOp1406);  
@@ -4622,7 +4617,7 @@ public class fantastic4Parser extends DebugParser {
                 case 3 :
                     dbg.enterAlt(3);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:121:5: '>='
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:121:5: '>='
                     {
                     dbg.location(121,5);
                     string_literal120=(Token)match(input,49,FOLLOW_49_in_comparatorOp1416);  
@@ -4654,7 +4649,7 @@ public class fantastic4Parser extends DebugParser {
                 case 4 :
                     dbg.enterAlt(4);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:122:4: '<='
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:122:4: '<='
                     {
                     dbg.location(122,4);
                     string_literal121=(Token)match(input,50,FOLLOW_50_in_comparatorOp1425);  
@@ -4686,7 +4681,7 @@ public class fantastic4Parser extends DebugParser {
                 case 5 :
                     dbg.enterAlt(5);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:123:4: '!='
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:123:4: '!='
                     {
                     dbg.location(123,4);
                     string_literal122=(Token)match(input,51,FOLLOW_51_in_comparatorOp1434);  
@@ -4750,7 +4745,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "cste"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:126:1: cste : ( CSTEINT -> CSTEINT | CSTEBOOL -> CSTEBOOL | CSTESTRING -> CSTESTRING );
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:126:1: cste : ( CSTEINT -> CSTEINT | CSTEBOOL -> CSTEBOOL | CSTESTRING -> CSTESTRING );
     public final fantastic4Parser.cste_return cste() throws RecognitionException {
         fantastic4Parser.cste_return retval = new fantastic4Parser.cste_return();
         retval.start = input.LT(1);
@@ -4764,9 +4759,9 @@ public class fantastic4Parser extends DebugParser {
         Object CSTEINT123_tree=null;
         Object CSTEBOOL124_tree=null;
         Object CSTESTRING125_tree=null;
-        RewriteRuleTokenStream stream_CSTEBOOL=new RewriteRuleTokenStream(adaptor,"token CSTEBOOL");
-        RewriteRuleTokenStream stream_CSTEINT=new RewriteRuleTokenStream(adaptor,"token CSTEINT");
         RewriteRuleTokenStream stream_CSTESTRING=new RewriteRuleTokenStream(adaptor,"token CSTESTRING");
+        RewriteRuleTokenStream stream_CSTEINT=new RewriteRuleTokenStream(adaptor,"token CSTEINT");
+        RewriteRuleTokenStream stream_CSTEBOOL=new RewriteRuleTokenStream(adaptor,"token CSTEBOOL");
 
         try { dbg.enterRule(getGrammarFileName(), "cste");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -4774,7 +4769,7 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(126, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:126:7: ( CSTEINT -> CSTEINT | CSTEBOOL -> CSTEBOOL | CSTESTRING -> CSTESTRING )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:126:7: ( CSTEINT -> CSTEINT | CSTEBOOL -> CSTEBOOL | CSTESTRING -> CSTESTRING )
             int alt29=3;
             try { dbg.enterDecision(29);
 
@@ -4808,7 +4803,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:126:9: CSTEINT
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:126:9: CSTEINT
                     {
                     dbg.location(126,9);
                     CSTEINT123=(Token)match(input,CSTEINT,FOLLOW_CSTEINT_in_cste1449);  
@@ -4840,7 +4835,7 @@ public class fantastic4Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:127:6: CSTEBOOL
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:127:6: CSTEBOOL
                     {
                     dbg.location(127,6);
                     CSTEBOOL124=(Token)match(input,CSTEBOOL,FOLLOW_CSTEBOOL_in_cste1460);  
@@ -4872,7 +4867,7 @@ public class fantastic4Parser extends DebugParser {
                 case 3 :
                     dbg.enterAlt(3);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:128:6: CSTESTRING
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:128:6: CSTESTRING
                     {
                     dbg.location(128,6);
                     CSTESTRING125=(Token)match(input,CSTESTRING,FOLLOW_CSTESTRING_in_cste1471);  
@@ -4936,7 +4931,7 @@ public class fantastic4Parser extends DebugParser {
     };
 
     // $ANTLR start "neg"
-    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:131:1: neg : ( 'not' -> 'not' | '!' -> '!' );
+    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:131:1: neg : ( 'not' -> 'not' | '!' -> '!' );
     public final fantastic4Parser.neg_return neg() throws RecognitionException {
         fantastic4Parser.neg_return retval = new fantastic4Parser.neg_return();
         retval.start = input.LT(1);
@@ -4957,7 +4952,7 @@ public class fantastic4Parser extends DebugParser {
         dbg.location(131, 1);
 
         try {
-            // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:131:13: ( 'not' -> 'not' | '!' -> '!' )
+            // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:131:13: ( 'not' -> 'not' | '!' -> '!' )
             int alt30=2;
             try { dbg.enterDecision(30);
 
@@ -4982,7 +4977,7 @@ public class fantastic4Parser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:131:15: 'not'
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:131:15: 'not'
                     {
                     dbg.location(131,15);
                     string_literal126=(Token)match(input,52,FOLLOW_52_in_neg1507);  
@@ -5014,7 +5009,7 @@ public class fantastic4Parser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /Users/baudo/Documents/TELECOM Nancy/Projet/Compilation/fantastic4.g:132:3: '!'
+                    // C:\\Users\\Hugo\\Desktop\\Cours\\Compil4Fantastic\\fantastic4.g:132:3: '!'
                     {
                     dbg.location(132,3);
                     char_literal127=(Token)match(input,53,FOLLOW_53_in_neg1515);  
@@ -5086,7 +5081,7 @@ public class fantastic4Parser extends DebugParser {
     static final String DFA10_maxS =
         "\1\33\1\21\1\11\1\27\1\21\4\32\1\27\2\uffff\4\32";
     static final String DFA10_acceptS =
-        "\12\uffff\1\2\1\1\4\uffff";
+        "\12\uffff\1\1\1\2\4\uffff";
     static final String DFA10_specialS =
         "\20\uffff}>";
     static final String[] DFA10_transitionS = {
@@ -5095,17 +5090,17 @@ public class fantastic4Parser extends DebugParser {
             "\1\4",
             "\1\5\1\6\1\7\1\10",
             "\1\11",
-            "\1\12\6\uffff\1\13",
-            "\1\12\6\uffff\1\13",
-            "\1\12\6\uffff\1\13",
-            "\1\12\6\uffff\1\13",
+            "\1\13\6\uffff\1\12",
+            "\1\13\6\uffff\1\12",
+            "\1\13\6\uffff\1\12",
+            "\1\13\6\uffff\1\12",
             "\1\14\1\15\1\16\1\17",
             "",
             "",
-            "\1\12\6\uffff\1\13",
-            "\1\12\6\uffff\1\13",
-            "\1\12\6\uffff\1\13",
-            "\1\12\6\uffff\1\13"
+            "\1\13\6\uffff\1\12",
+            "\1\13\6\uffff\1\12",
+            "\1\13\6\uffff\1\12",
+            "\1\13\6\uffff\1\12"
     };
 
     static final short[] DFA10_eot = DFA.unpackEncodedString(DFA10_eotS);
